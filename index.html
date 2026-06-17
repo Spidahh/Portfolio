@@ -20,6 +20,7 @@
   a{color:inherit; text-decoration:none;}
   .display{font-family:'Bricolage Grotesque',sans-serif; font-weight:800; letter-spacing:-.03em; line-height:.95;}
   .wrap{max-width:1160px; margin:0 auto; padding:0 28px;}
+  section[id],#lavori,#musica,#info,#contatti{scroll-margin-top:84px;}
   ::selection{background:var(--accent); color:var(--accent-ink);}
 
   body::after{content:''; position:fixed; inset:0; z-index:1; pointer-events:none; opacity:.04;
@@ -119,7 +120,9 @@
   .reveal.in{opacity:1; transform:none;}
 
   @media(max-width:820px){
-    .nav-links{display:none;}
+    .nav-links{display:flex; gap:14px; font-size:12px;}
+    .clock{display:none;}
+    .brand{font-size:13px;}
     .proj .inner{grid-template-columns:1fr; gap:30px;}
     .proj.flip .media{order:0;}
     .media{aspect-ratio:16/10;}
@@ -142,7 +145,7 @@
     <div class="wrap">
       <span class="eyebrow"><span class="dot"></span> Francesco Magistà — Portfolio · Spidah</span>
       <h1 class="display">Storie, codice,<br>musica, <span class="gr">giochi.</span></h1>
-      <p>Lavoro in campi diversi. Qui sotto i cinque progetti a cui tengo — uno alla volta, ognuno con il suo: alcuni li puoi già usare, altri li sto ancora costruendo.</p>
+      <p>Lavoro su progetti in ambiti diversi — web, editoria, musica e videogiochi. Di seguito una selezione: alcuni già online, altri in fase di sviluppo.</p>
       <span class="scrollcue">Scorri <span class="ar">↓</span></span>
     </div>
   </header>
@@ -156,7 +159,7 @@
       <div class="copy reveal">
         <div class="top"><span class="kind">Web · Curatela</span><span class="status">Online</span></div>
         <h3 class="display">Consigli Anime</h3>
-        <p class="desc">Cosa guardare in base all'umore, non agli algoritmi pubblicitari. Percorsi e generi curati a mano — dai primi passi ai titoli più densi — con schede senza spoiler, la durata reale (quante ore ti porta via davvero) e dove vederlo legalmente. I dati arrivano da AniList, sempre aggiornati.</p>
+        <p class="desc">Una guida per scegliere cosa guardare in base ai gusti e al tempo disponibile. Percorsi e generi curati, schede prive di spoiler, durata effettiva di ogni serie e disponibilità sulle piattaforme legali. I dati provengono da AniList e si aggiornano automaticamente.</p>
         <div class="specs">
           <div><div class="k">Ruolo</div><div class="v">Ideazione, design, sviluppo</div></div>
           <div><div class="k">Stack</div><div class="v">Vanilla JS · AniList · Firebase</div></div>
@@ -184,7 +187,7 @@
       <div class="copy reveal">
         <div class="top"><span class="kind">App · Prodotto</span><span class="status">Beta</span></div>
         <h3 class="display">Organizzamici</h3>
-        <p class="desc">Mette d'accordo un gruppo senza 200 messaggi. Ognuno propone date e mete, tutti votano, e un algoritmo sceglie la combinazione migliore: pesa le disponibilità di ciascuno, i tempi di viaggio (auto, treno, aereo), se serve dormire fuori e quanti posti in macchina ci sono. Dentro trovi anche risorse condivise — voli, hotel — e una chat.</p>
+        <p class="desc">Uno strumento per organizzare viaggi ed eventi di gruppo. I partecipanti propongono date e mete e votano; un algoritmo individua la combinazione ottimale tenendo conto di disponibilità, tempi di viaggio, alloggi e posti disponibili. Include risorse condivise e una chat integrata.</p>
         <div class="specs">
           <div><div class="k">Ruolo</div><div class="v">Product, design, sviluppo</div></div>
           <div><div class="k">Stack</div><div class="v">React · Vite · Supabase</div></div>
@@ -208,7 +211,7 @@
       <div class="copy reveal">
         <div class="top"><span class="kind">Gioco</span><span class="status">In sviluppo</span></div>
         <h3 class="display">RageQuit</h3>
-        <p class="desc">Un action PvP in 3D, multiplayer, giocatore contro giocatore in tempo reale: o vinci o tiri il pad. Difficile per scelta, non per sbaglio. Ci sto ancora lavorando — non è su Steam, non ho una data, e non è detto che esca davvero.</p>
+        <p class="desc">Un gioco d'azione PvP in 3D, multiplayer in tempo reale, costruito su una difficoltà elevata e voluta. Attualmente in sviluppo; piattaforma e data di uscita non sono ancora definite.</p>
         <div class="specs">
           <div><div class="k">Ruolo</div><div class="v">Game design, sviluppo</div></div>
           <div><div class="k">Genere</div><div class="v">Action PvP · 3D</div></div>
@@ -232,7 +235,7 @@
       <div class="copy reveal">
         <div class="top"><span class="kind">Libro · Narrativa</span><span class="status">In scrittura</span></div>
         <h3 class="display">Frattura</h3>
-        <p class="desc">Un dark fantasy mystery-box. Una storia lunga, intricata, piena di misteri che si aprono piano piano.</p>
+        <p class="desc">Un romanzo dark fantasy a struttura mystery-box: una narrazione ampia e stratificata, costruita su misteri che si svelano progressivamente.</p>
         <div class="specs">
           <div><div class="k">Ruolo</div><div class="v">Autore</div></div>
           <div><div class="k">Formato</div><div class="v">Romanzo · dark fantasy</div></div>
@@ -254,7 +257,7 @@
   <section id="musica" class="sec">
     <div class="wrap">
       <div class="head reveal"><h2>Musica</h2><span class="num">05 · Spotify</span></div>
-      <p class="lead reveal">Anni di ascolti messi in ordine per stato d'animo. Dodici playlist, sempre aggiornate — apri quella che ti va.</p>
+      <p class="lead reveal">Una raccolta di dodici playlist, organizzate per atmosfera e aggiornate con costanza. Curate e pubblicate su Spotify.</p>
       <div class="pl-grid">
         <a class="pl reveal" href="https://open.spotify.com/playlist/30I943TwY7ANxtmVrgoeLZ" target="_blank" rel="noopener"><div class="cov"><img src="https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8420ea0d36e5815e4df35e247b" alt="" loading="lazy"></div><div class="n">Sottosfondo</div><div class="g">Lo-fi · Chill</div></a>
         <a class="pl reveal" href="https://open.spotify.com/playlist/5wp0oohWN1HoAzvZqhIcBV" target="_blank" rel="noopener"><div class="cov"><img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84b4421e92ef24c2cda422cc50" alt="" loading="lazy"></div><div class="n">Definitivamente bella</div><div class="g">Hit · Mix</div></a>
@@ -277,8 +280,8 @@
   <section id="info" class="sec about">
     <div class="wrap">
       <div class="head reveal"><h2>Chi sono</h2></div>
-      <p class="reveal">Mi piace costruire cose in campi diversi: cambia il mezzo, non il modo di lavorarci.</p>
-      <p class="sub reveal">Storie, codice, musica, un gioco. Preferisco lasciar parlare i progetti — qui sopra ci sono quelli a cui tengo di più.</p>
+      <p class="reveal">Lavoro su discipline diverse con lo stesso metodo: ricerca, struttura e cura del dettaglio.</p>
+      <p class="sub reveal">Scrittura, sviluppo software, curatela musicale e game design. Ogni progetto qui sopra rappresenta uno di questi ambiti.</p>
     </div>
   </section>
 
