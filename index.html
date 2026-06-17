@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Spidah — Portfolio</title>
-<meta name="description" content="Portfolio di F. 'Spidah' Magistà: storie, software, musica e giochi.">
+<title>Francesco Magistà — Portfolio</title>
+<meta name="description" content="Portfolio di Francesco Magistà (Spidah): storie, software, musica e giochi.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#f4f2ec; --surface:#ffffff; --ink:#1a1714; --muted:#6f6a61;
-    --line:#e4e0d6; --accent:#3d3ad4; --accent-soft:#ecebfb;
-    --green:#1f8f5f; --amber:#b3760a; --violet:#6b4bd6;
+    --bg:#100f0d; --surface:#1a1916; --ink:#f2f0ea; --muted:#9b958b;
+    --line:rgba(255,255,255,.09); --accent:#8d88ff; --accent-soft:rgba(141,136,255,.15);
+    --green:#4ade80; --amber:#f5b942; --violet:#a78bff;
     --radius:18px;
   }
   *{box-sizing:border-box; margin:0; padding:0;}
@@ -23,7 +23,7 @@
   .serif{font-family:'Fraunces',serif;}
 
   /* header */
-  header{position:sticky; top:0; z-index:50; background:rgba(244,242,236,.82); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
+  header{position:sticky; top:0; z-index:50; background:rgba(16,15,13,.82); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
   .nav{display:flex; align-items:center; justify-content:space-between; padding:16px 28px; max-width:1080px; margin:0 auto;}
   .brand{display:flex; align-items:center; gap:9px; font-weight:700; letter-spacing:-.01em;}
   .dot{width:9px; height:9px; border-radius:50%; background:var(--accent);}
@@ -49,16 +49,16 @@
   /* project cards */
   .projects{display:flex; flex-direction:column; gap:20px;}
   .card{display:grid; grid-template-columns:300px 1fr; background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; transition:transform .2s ease, box-shadow .2s ease;}
-  .card:hover{transform:translateY(-3px); box-shadow:0 18px 40px rgba(26,23,20,.08);}
+  .card:hover{transform:translateY(-3px); box-shadow:0 18px 44px rgba(0,0,0,.45); border-color:rgba(255,255,255,.16);}
   .card-media{position:relative; min-height:240px; background:var(--accent-soft); overflow:hidden;}
   .poster-grid{position:absolute; inset:0; display:grid; grid-template-columns:repeat(3,1fr);}
   .poster-grid img{width:100%; height:100%; object-fit:cover;}
   .card-body{padding:30px 32px;}
   .badges{display:flex; gap:8px; margin-bottom:14px; flex-wrap:wrap;}
   .badge{font-size:11px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; padding:4px 11px; border-radius:100px;}
-  .b-live{color:var(--green); background:#e4f3ea;}
+  .b-live{color:var(--green); background:rgba(74,222,128,.14);}
   .b-beta{color:var(--accent); background:var(--accent-soft);}
-  .b-wip{color:var(--amber); background:#f6edda;}
+  .b-wip{color:var(--amber); background:rgba(245,185,66,.14);}
   .card-body h3{font-size:1.7rem; letter-spacing:-.02em; font-weight:700; margin-bottom:10px;}
   .card-body p{color:var(--muted); font-size:1.02rem; max-width:560px;}
   .meta{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px;}
@@ -72,9 +72,9 @@
   /* media tiles for projects without photos */
   .glyph{position:absolute; inset:0; display:flex; align-items:center; justify-content:center;}
   .glyph svg{width:76px; height:76px;}
-  .m-book{background:linear-gradient(140deg,#efe9ff,#d9ccff);} .m-book svg{color:var(--violet);}
-  .m-app{background:linear-gradient(140deg,#e7f0ff,#cfe0ff);} .m-app svg{color:var(--accent);}
-  .m-game{background:linear-gradient(140deg,#fff0d6,#ffe0a8);} .m-game svg{color:var(--amber);}
+  .m-book{background:linear-gradient(140deg,#241c3a,#181225);} .m-book svg{color:var(--violet);}
+  .m-app{background:linear-gradient(140deg,#16213c,#0f1626);} .m-app svg{color:var(--accent);}
+  .m-game{background:linear-gradient(140deg,#2b2113,#1b1610);} .m-game svg{color:var(--amber);}
 
   /* playlists */
   .pl-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:16px;}
@@ -105,7 +105,7 @@
 
 <header>
   <div class="nav">
-    <a href="#top" class="brand"><span class="dot"></span> Spidah</a>
+    <a href="#top" class="brand"><span class="dot"></span> Francesco Magistà</a>
     <nav class="nav-links">
       <a href="#lavori">Lavori</a>
       <a href="#info">Chi sono</a>
@@ -119,9 +119,9 @@
   <!-- HERO -->
   <section class="hero">
     <div class="wrap">
-      <span class="kicker"><span class="dot"></span> F. "Spidah" Magistà — Portfolio</span>
+      <span class="kicker"><span class="dot"></span> Francesco Magistà — Portfolio</span>
       <h1>Quello che faccio,<br>e quello che <em>sto facendo</em>.</h1>
-      <p>Mi chiamo Spidah. Lavoro in campi diversi — storie, software, musica e giochi. Qui sotto ci sono i cinque progetti a cui tengo: alcuni li puoi già usare, altri sono ancora in lavorazione.</p>
+      <p>Mi chiamo Francesco Magistà — online, Spidah. Lavoro in campi diversi — storie, software, musica e giochi. Qui sotto ci sono i cinque progetti a cui tengo: alcuni li puoi già usare, altri sono ancora in lavorazione.</p>
       <div class="roles">
         <span class="role">Scrittore</span>
         <span class="role">Developer</span>
@@ -250,7 +250,7 @@
 
 <footer>
   <div class="wrap foot">
-    <div>© 2026 — F. "Spidah" Magistà</div>
+    <div>© 2026 — Francesco Magistà</div>
     <div style="display:flex; gap:18px;">
       <a href="https://open.spotify.com/user/uhlxjkxuufd9gbsgn62oz00ep" target="_blank" rel="noopener">Spotify</a>
       <a href="https://www.instagram.com/francesco_noncista/" target="_blank" rel="noopener">Instagram</a>
