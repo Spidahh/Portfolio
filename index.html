@@ -51,19 +51,19 @@
   @keyframes bob{0%,100%{transform:translateY(0);}50%{transform:translateY(5px);}}
 
   /* project sections — separati */
-  .proj{position:relative; padding:96px 0; border-top:1px solid var(--line); overflow:hidden;}
+  .proj{position:relative; padding:112px 0; border-top:1px solid var(--line); overflow:hidden;}
   .proj .ghost{position:absolute; top:34px; right:18px; font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:clamp(110px,20vw,250px); line-height:.8; color:transparent; -webkit-text-stroke:1px rgba(255,255,255,.055); z-index:0; pointer-events:none; user-select:none;}
-  .proj .inner{position:relative; z-index:1; display:grid; grid-template-columns:1.02fr .98fr; gap:58px; align-items:center;}
+  .proj .inner{position:relative; z-index:1; display:grid; grid-template-columns:1.02fr .98fr; gap:72px; align-items:center;}
   .proj.flip .media{order:-1;}
   .top{display:flex; align-items:center; gap:13px; margin-bottom:18px;}
   .kind{font-size:12px; letter-spacing:.09em; text-transform:uppercase; color:var(--muted);}
   .status{font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; padding:5px 12px; border-radius:100px; border:1px solid var(--pa); color:var(--pa);}
   .copy h3{font-family:'Bricolage Grotesque',sans-serif; font-weight:700; letter-spacing:-.02em; font-size:clamp(2.1rem,4.6vw,3.3rem); line-height:1; margin-bottom:18px;}
   .desc{color:var(--muted); font-size:1.07rem; line-height:1.62; max-width:520px;}
-  .specs{display:grid; grid-template-columns:repeat(3,1fr); margin:26px 0 6px; border-top:1px solid var(--line);}
-  .specs div{padding:14px 14px 14px 0; border-bottom:1px solid var(--line);}
-  .specs .k{font-size:10.5px; text-transform:uppercase; letter-spacing:.07em; color:var(--muted); margin-bottom:5px;}
-  .specs .v{font-size:.9rem;}
+  .specs{margin:24px 0 8px; border-top:1px solid var(--line); max-width:480px;}
+  .specs .row{display:grid; grid-template-columns:120px 1fr; gap:18px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--line);}
+  .specs .k{font-size:11px; text-transform:uppercase; letter-spacing:.07em; color:var(--muted);}
+  .specs .v{font-size:.95rem;}
   .cta{display:inline-flex; align-items:center; gap:8px; font-weight:600; color:var(--pa); font-size:.98rem; margin-top:10px;}
   .note{display:inline-block; margin-top:10px; font-size:.9rem; color:var(--muted); border:1px solid var(--line); padding:8px 14px; border-radius:100px;}
 
@@ -171,9 +171,9 @@
           <li>Dati da AniList, aggiornati in automatico</li>
         </ul>
         <div class="specs">
-          <div><div class="k">Ruolo</div><div class="v">Ideazione, design, sviluppo</div></div>
-          <div><div class="k">Stack</div><div class="v">Vanilla JS · AniList · Firebase</div></div>
-          <div><div class="k">Stato</div><div class="v">Online</div></div>
+          <div class="row"><div class="k">Ruolo</div><div class="v">Ideazione, design, sviluppo</div></div>
+          <div class="row"><div class="k">Stack</div><div class="v">Vanilla JS · AniList · Firebase</div></div>
+          <div class="row"><div class="k">Stato</div><div class="v">Online</div></div>
         </div>
         <a class="cta" href="https://guardalo.vercel.app/" target="_blank" rel="noopener">Visita il sito →</a>
       </div>
@@ -197,9 +197,9 @@
           <li>Risorse condivise e chat integrata</li>
         </ul>
         <div class="specs">
-          <div><div class="k">Ruolo</div><div class="v">Product, design, sviluppo</div></div>
-          <div><div class="k">Stack</div><div class="v">React · Vite · Supabase</div></div>
-          <div><div class="k">Stato</div><div class="v">Beta online</div></div>
+          <div class="row"><div class="k">Ruolo</div><div class="v">Product, design, sviluppo</div></div>
+          <div class="row"><div class="k">Stack</div><div class="v">React · Vite · Supabase</div></div>
+          <div class="row"><div class="k">Stato</div><div class="v">Beta online</div></div>
         </div>
         <a class="cta" href="https://spidahh.github.io/Organizzamici/" target="_blank" rel="noopener">Entra nella beta →</a>
       </div>
@@ -223,9 +223,9 @@
           <li>In sviluppo — piattaforma e uscita ancora da definire</li>
         </ul>
         <div class="specs">
-          <div><div class="k">Ruolo</div><div class="v">Game design, sviluppo</div></div>
-          <div><div class="k">Genere</div><div class="v">Action PvP · 3D</div></div>
-          <div><div class="k">Stato</div><div class="v">In sviluppo</div></div>
+          <div class="row"><div class="k">Ruolo</div><div class="v">Game design, sviluppo</div></div>
+          <div class="row"><div class="k">Genere</div><div class="v">Action PvP · 3D</div></div>
+          <div class="row"><div class="k">Stato</div><div class="v">In sviluppo</div></div>
         </div>
         <span class="note">Non ancora giocabile</span>
       </div>
@@ -252,9 +252,9 @@
           <li>Attualmente in fase di scrittura</li>
         </ul>
         <div class="specs">
-          <div><div class="k">Ruolo</div><div class="v">Autore</div></div>
-          <div><div class="k">Formato</div><div class="v">Romanzo · dark fantasy</div></div>
-          <div><div class="k">Stato</div><div class="v">In scrittura</div></div>
+          <div class="row"><div class="k">Ruolo</div><div class="v">Autore</div></div>
+          <div class="row"><div class="k">Formato</div><div class="v">Romanzo · dark fantasy</div></div>
+          <div class="row"><div class="k">Stato</div><div class="v">In scrittura</div></div>
         </div>
         <span class="note">Estratto in arrivo</span>
       </div>
