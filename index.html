@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Francesco Magistà — Portfolio</title>
-<meta name="description" content="Portfolio di Francesco Magistà (Spidah): storie, software, musica e giochi.">
+<meta name="description" content="Portfolio di Francesco Magistà (Spidah): software, giochi, scrittura e musica.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0a0c'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23c8ff3d'/%3E%3C/svg%3E">
 <meta name="theme-color" content="#0a0a0c">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Francesco Magistà — Portfolio">
-<meta property="og:description" content="Storie, software, musica e giochi. I progetti di Francesco Magistà.">
+<meta property="og:description" content="Software, giochi, scrittura e musica. I progetti di Francesco Magistà.">
 <meta property="og:url" content="https://spidahh.github.io/Portfolio/">
 <meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,68 +25,96 @@
   html{scroll-behavior:smooth;}
   body{background:var(--bg); color:var(--ink); font-family:'Inter',sans-serif; line-height:1.55; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
   a{color:inherit; text-decoration:none;}
+  img{display:block; max-width:100%;}
   .display{font-family:'Bricolage Grotesque',sans-serif; font-weight:800; letter-spacing:-.03em; line-height:.95;}
   .wrap{max-width:1160px; margin:0 auto; padding:0 28px;}
-  section[id],#lavori,#musica,#info,#contatti{scroll-margin-top:84px;}
+  section[id]{scroll-margin-top:88px;}
   ::selection{background:var(--accent); color:var(--accent-ink);}
 
   body::after{content:''; position:fixed; inset:0; z-index:1; pointer-events:none; opacity:.04;
     background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
   .bar{position:fixed; top:0; left:0; height:3px; width:100%; transform:scaleX(0); transform-origin:0; background:var(--accent); z-index:60;}
 
-  header{position:fixed; top:0; left:0; right:0; z-index:50; backdrop-filter:blur(12px); background:rgba(10,10,12,.6); border-bottom:1px solid var(--line);}
-  .nav{display:flex; align-items:center; justify-content:space-between; padding:15px 28px; max-width:1160px; margin:0 auto;}
+  header{position:fixed; top:0; left:0; right:0; z-index:50; backdrop-filter:blur(14px) saturate(1.3); background:rgba(10,10,12,.82); border-bottom:1px solid rgba(255,255,255,.14); box-shadow:0 6px 24px rgba(0,0,0,.35);}
+  .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 28px; max-width:1160px; margin:0 auto;}
   .brand{display:flex; align-items:center; gap:9px; font-weight:600; font-size:15px;}
   .dot{width:9px; height:9px; border-radius:50%; background:var(--accent); box-shadow:0 0 14px var(--glow);}
   .nav-links{display:flex; gap:24px; font-size:14px; color:var(--muted);}
   .nav-links a:hover{color:var(--ink);}
   .clock{font-size:12.5px; color:var(--muted); font-variant-numeric:tabular-nums;}
 
-  .hero{position:relative; min-height:100vh; display:flex; flex-direction:column; justify-content:center; padding:120px 0 80px; overflow:hidden;}
-  .hero::before{content:''; position:absolute; inset:-25%; z-index:0; pointer-events:none; filter:blur(70px); opacity:.6;
-    background:radial-gradient(38% 38% at 25% 30%, var(--glow), transparent 70%),radial-gradient(34% 34% at 78% 25%, rgba(120,90,255,.18), transparent 70%),radial-gradient(40% 40% at 60% 82%, rgba(255,80,140,.12), transparent 70%);
+  /* ===== HERO ===== */
+  .hero{position:relative; min-height:100vh; display:flex; align-items:center; overflow:hidden; padding:120px 0 70px;}
+  .hero::before{content:''; position:absolute; inset:-25%; z-index:0; pointer-events:none; filter:blur(75px); opacity:.6;
+    background:radial-gradient(34% 34% at 18% 30%, var(--glow), transparent 70%),radial-gradient(30% 30% at 85% 25%, rgba(120,90,255,.20), transparent 70%),radial-gradient(36% 36% at 70% 85%, rgba(245,166,35,.14), transparent 70%);
     animation:drift 16s ease-in-out infinite;}
-  @keyframes drift{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(2%,3%) scale(1.08);}}
-  .hero .wrap{position:relative; z-index:2;}
-  .eyebrow{display:inline-flex; align-items:center; gap:9px; font-size:13px; color:var(--muted); border:1px solid var(--line); padding:7px 15px; border-radius:100px; margin-bottom:28px;}
-  .hero h1{font-size:clamp(2.8rem,10vw,7.5rem); text-transform:uppercase;}
+  @keyframes drift{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(2%,3%) scale(1.06);}}
+  .hero-grid{position:relative; z-index:2; display:grid; grid-template-columns:1.05fr .95fr; gap:56px; align-items:center; width:100%;}
+  .eyebrow{display:inline-flex; align-items:center; gap:9px; font-size:13px; color:var(--muted); border:1px solid var(--line); padding:7px 15px; border-radius:100px; margin-bottom:24px;}
+  .hero h1{font-size:clamp(2.5rem,6.4vw,5.4rem); text-transform:uppercase;}
   .hero h1 .gr{background:linear-gradient(90deg,var(--accent),var(--accent2),var(--accent)); background-size:200% 100%; -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; animation:shine 6s linear infinite;}
   @keyframes shine{to{background-position:200% 0;}}
-  .hero p{font-size:clamp(1.05rem,2.2vw,1.35rem); color:var(--muted); max-width:620px; margin-top:30px;}
-  .scrollcue{margin-top:42px; font-size:13px; color:var(--muted); display:inline-flex; gap:9px;}
-  .scrollcue .ar{animation:bob 1.6s ease-in-out infinite;}
-  @keyframes bob{0%,100%{transform:translateY(0);}50%{transform:translateY(5px);}}
+  .hero p{font-size:clamp(1.02rem,1.7vw,1.2rem); color:var(--muted); max-width:520px; margin-top:22px;}
+  .btns{display:flex; gap:12px; margin-top:30px; flex-wrap:wrap;}
+  .btn{display:inline-flex; align-items:center; gap:8px; padding:13px 22px; border-radius:100px; font-weight:600; font-size:.95rem; transition:transform .2s, border-color .2s, color .2s, filter .2s;}
+  .btn.primary{background:var(--accent); color:var(--accent-ink);}
+  .btn.primary:hover{filter:brightness(1.08); transform:translateY(-2px);}
+  .btn.ghost{border:1px solid var(--line); color:var(--ink);}
+  .btn.ghost:hover{border-color:var(--accent); color:var(--accent);}
 
-  /* project sections — separati */
-  .proj{position:relative; padding:112px 0; border-top:1px solid var(--line); overflow:hidden;}
-  .proj .ghost{position:absolute; top:34px; right:18px; font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:clamp(110px,20vw,250px); line-height:.8; color:transparent; -webkit-text-stroke:1px rgba(255,255,255,.055); z-index:0; pointer-events:none; user-select:none;}
-  .proj .inner{position:relative; z-index:1; display:grid; grid-template-columns:1.02fr .98fr; gap:72px; align-items:center;}
-  .proj.flip .media{order:-1;}
-  .top{display:flex; align-items:center; gap:13px; margin-bottom:18px;}
+  /* hero panel = indice funzionale */
+  .panel{background:rgba(20,20,25,.55); backdrop-filter:blur(10px); border:1px solid var(--line); border-radius:24px; padding:10px; box-shadow:0 30px 80px rgba(0,0,0,.45);}
+  .panel-cap{font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); padding:14px 16px 10px;}
+  .hp-row{display:flex; align-items:center; gap:18px; padding:0 16px; min-height:74px; border-radius:16px; transition:background .2s, transform .2s;}
+  .hp-row:hover{background:var(--surface2); transform:translateX(3px);}
+  .hp-row + .hp-row{border-top:1px solid var(--line);}
+  .hp-num{font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:1.5rem; color:var(--accent); min-width:34px; line-height:1;}
+  .hp-row:nth-child(3) .hp-num,.hp-row:nth-child(5) .hp-num{color:var(--accent2);}
+  .hp-txt{display:flex; flex-direction:column; gap:3px; min-width:0;}
+  .hp-txt .t{font-weight:600; font-size:1.02rem;}
+  .hp-txt .d{font-size:.85rem; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+  .hp-arrow{margin-left:auto; color:var(--muted); transition:transform .2s, color .2s;}
+  .hp-row:hover .hp-arrow{color:var(--ink); transform:translateX(4px);}
+
+  /* ===== AMBITI — intestazioni di sezione ===== */
+  .cat{position:relative; padding-bottom:44px;}
+  .cat-head{border-top:1px solid var(--line); padding:54px 0 30px;}
+  .cat-kicker{display:flex; align-items:baseline; gap:16px; margin-bottom:12px;}
+  .cat-num{font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:clamp(40px,6vw,72px); line-height:.8; color:var(--pa); letter-spacing:-.03em;}
+  .cat-kicker .tag{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); font-weight:600;}
+  .cat-head h2{font-family:'Bricolage Grotesque',sans-serif; font-weight:800; letter-spacing:-.03em; font-size:clamp(2rem,4.6vw,3.2rem); line-height:1; margin-bottom:12px;}
+  .cat-head .lead{color:var(--muted); font-size:1.06rem; max-width:560px; line-height:1.5;}
+
+  /* ===== PROGETTI = CARD ===== */
+  .card{position:relative; background:var(--surface); border:1px solid var(--line); border-radius:26px; padding:40px; overflow:hidden; transition:border-color .3s, transform .3s;}
+  .card:hover{border-color:rgba(255,255,255,.2);}
+  .card + .card{margin-top:26px;}
+  .inner{display:grid; grid-template-columns:1.02fr .98fr; gap:48px; align-items:center;}
+  .card.flip .media{order:-1;}
+  .top{display:flex; align-items:center; gap:13px; margin-bottom:16px;}
   .kind{font-size:12px; letter-spacing:.09em; text-transform:uppercase; color:var(--muted);}
   .status{font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; padding:5px 12px; border-radius:100px; border:1px solid var(--pa); color:var(--pa);}
-  .copy h3{font-family:'Bricolage Grotesque',sans-serif; font-weight:700; letter-spacing:-.02em; font-size:clamp(2.1rem,4.6vw,3.3rem); line-height:1; margin-bottom:18px;}
-  .desc{color:var(--muted); font-size:1.07rem; line-height:1.62; max-width:520px;}
-  .specs{margin:24px 0 8px; border-top:1px solid var(--line); max-width:480px;}
+  .copy h3{font-family:'Bricolage Grotesque',sans-serif; font-weight:700; letter-spacing:-.02em; font-size:clamp(2rem,4.2vw,3rem); line-height:1; margin-bottom:14px;}
+  .hook{font-family:'Bricolage Grotesque',sans-serif; font-weight:500; font-size:clamp(1.12rem,2vw,1.42rem); line-height:1.3; letter-spacing:-.01em; color:var(--ink); margin-bottom:16px;}
+  .desc{color:var(--muted); font-size:1.03rem; line-height:1.6; max-width:520px;}
+  .blab{font-size:11px; text-transform:uppercase; letter-spacing:.1em; color:var(--pa); font-weight:600; margin:24px 0 10px;}
+  .feats{list-style:none; display:grid; gap:9px; max-width:520px;}
+  .feats li{position:relative; padding-left:20px; font-size:.95rem; line-height:1.5;}
+  .feats li::before{content:''; position:absolute; left:0; top:8px; width:7px; height:7px; border-radius:2px; background:var(--pa);}
+  .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:20px;}
+  .chip{font-size:12px; color:var(--ink); background:var(--surface2); border:1px solid var(--line); padding:6px 12px; border-radius:100px;}
+  .specs{margin:26px 0 8px; border-top:1px solid var(--line);}
   .specs .row{display:grid; grid-template-columns:120px 1fr; gap:18px; align-items:baseline; padding:13px 0; border-bottom:1px solid var(--line);}
   .specs .k{font-size:11px; text-transform:uppercase; letter-spacing:.07em; color:var(--muted);}
   .specs .v{font-size:.95rem;}
-  .cta{display:inline-flex; align-items:center; gap:8px; font-weight:600; color:var(--pa); font-size:.98rem; margin-top:10px;}
-  .note{display:inline-block; margin-top:10px; font-size:.9rem; color:var(--muted); border:1px solid var(--line); padding:8px 14px; border-radius:100px;}
+  .cta{display:inline-flex; align-items:center; gap:8px; font-weight:600; color:var(--pa); font-size:.98rem; margin-top:14px; transition:gap .2s ease;}
+  .cta:hover{gap:13px;}
+  .note{display:inline-block; margin-top:14px; font-size:.9rem; color:var(--muted); border:1px solid var(--line); padding:8px 14px; border-radius:100px;}
 
-  .media{position:relative; border-radius:var(--r); overflow:hidden; border:1px solid var(--line); aspect-ratio:4/3;}
-  .posters{position:absolute; inset:0; display:grid; grid-template-columns:repeat(3,1fr);}
-  .posters img{width:100%; height:100%; object-fit:cover; transition:transform .5s ease;}
-  .media:hover .posters img{transform:scale(1.05);}
-  .phones{position:absolute; inset:0; display:flex; gap:16px; align-items:center; justify-content:center; background:linear-gradient(150deg,#171a2e,#101019);}
-  .phone{width:42%; max-width:150px; aspect-ratio:150/320; border-radius:20px; border:1px solid #34384f; padding:13px; display:flex; flex-direction:column; gap:7px; overflow:hidden;}
-  .phone.dark2{background:#0f1018;} .phone.acc{background:#7d9bff; color:#0c0f1f;}
-  .ph-l{font-size:8.5px; letter-spacing:.1em; opacity:.7; text-transform:uppercase;}
-  .ph-r{font-size:9px; border-radius:6px; padding:6px 7px;}
-  .phone.dark2 .ph-r{background:#191b27; color:#cfd2e6;}
-  .phone.acc .ph-r{background:#0c0f1f; color:#cfd6ff;}
-  .ph-btn{margin-top:auto; font-size:9px; font-weight:700; text-align:center; border-radius:7px; padding:7px;}
-  .phone.dark2 .ph-btn{background:#7d9bff; color:#0c0f1f;} .phone.acc .ph-btn{background:#0c0f1f; color:#cfd6ff;}
+  .media{position:relative; border-radius:16px; overflow:hidden; border:1px solid var(--line); aspect-ratio:4/3; background:var(--surface2); transition:transform .35s cubic-bezier(.2,.8,.2,1), border-color .35s;}
+  .media:hover{border-color:rgba(255,255,255,.28);}
+  .media>img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:top center; transition:transform .5s ease;}
+  .media:hover>img{transform:scale(1.04);}
   .keyart{position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; background:radial-gradient(circle at 50% 38%,#2c1e08,#100c08);}
   .keyart .strip{position:absolute; left:0; right:0; height:13px; background:repeating-linear-gradient(45deg,#f5a623 0 11px,#100c08 11px 22px);}
   .keyart .strip.t{top:0;} .keyart .strip.b{bottom:0;}
@@ -97,33 +125,30 @@
   .cover .ct{font-family:'Bricolage Grotesque',sans-serif; font-weight:800; text-transform:uppercase; font-size:clamp(2rem,5.5vw,3rem); line-height:.86;}
   .cover .ct b{color:#c8ff3d;}
   .cover .crack{position:absolute; top:-10%; bottom:-10%; left:58%; width:2px; background:linear-gradient(#c8ff3d,transparent); transform:rotate(9deg);}
-  .frame{position:absolute; inset:0; overflow:hidden; background:var(--surface2);}
-  .frame iframe{position:absolute; top:0; left:0; width:250%; height:250%; border:0; transform:scale(.4); transform-origin:0 0; pointer-events:none;}
-  .feats{list-style:none; margin:18px 0 4px; display:grid; gap:9px;}
-  .feats li{position:relative; padding-left:20px; font-size:.95rem;}
-  .feats li::before{content:''; position:absolute; left:0; top:8px; width:7px; height:7px; border-radius:2px; background:var(--pa);}
 
-  /* musica */
-  .sec{padding:96px 0; border-top:1px solid var(--line);}
-  .head{display:flex; align-items:baseline; justify-content:space-between; margin-bottom:14px;}
-  .head h2{font-family:'Bricolage Grotesque',sans-serif; font-size:clamp(1.9rem,4vw,3rem); font-weight:700; letter-spacing:-.02em;}
-  .head .num{font-size:13px; color:var(--muted);}
-  .sec .lead{color:var(--muted); max-width:560px; margin-bottom:34px;}
-  .pl-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:14px;}
+  /* ===== MUSICA ===== */
+  .pl-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:14px; margin-top:30px;}
   .pl{border:1px solid var(--line); border-radius:14px; padding:10px; background:var(--surface); transition:transform .25s, border-color .25s;}
   .pl:hover{transform:translateY(-4px); border-color:rgba(255,255,255,.25);}
   .pl .cov{overflow:hidden; border-radius:9px; aspect-ratio:1;}
-  .pl img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .4s ease; background:var(--surface2);}
+  .pl img{width:100%; height:100%; object-fit:cover; transition:transform .4s ease; background:var(--surface2);}
   .pl:hover img{transform:scale(1.08);}
   .pl .n{font-weight:600; font-size:.9rem; margin-top:9px;}
   .pl .g{font-size:.76rem; color:var(--muted);}
-  .pl-cta{display:inline-flex; align-items:center; gap:8px; margin-top:26px; font-weight:600; color:var(--accent);}
+  .pl-cta{display:inline-flex; align-items:center; gap:8px; margin-top:26px; font-weight:600; color:var(--pa);}
 
-  .about p{font-family:'Bricolage Grotesque',sans-serif; font-weight:500; font-size:clamp(1.5rem,3.4vw,2.4rem); line-height:1.3; letter-spacing:-.02em; max-width:880px;}
-  .about .sub{font-family:'Inter'; font-weight:400; font-size:1.05rem; color:var(--muted); margin-top:22px; max-width:660px; line-height:1.6;}
-  .contact{text-align:center; padding:120px 0;}
-  .contact a{font-family:'Bricolage Grotesque',sans-serif; font-weight:800; text-transform:uppercase; font-size:clamp(2.6rem,9vw,7rem); letter-spacing:-.03em; line-height:.9; transition:color .25s;}
-  .contact a:hover{color:var(--accent);}
+  /* ===== CHI SONO + CONTATTI ===== */
+  .sec{padding:80px 0; border-top:1px solid var(--line);}
+  .head{display:flex; align-items:baseline; justify-content:space-between; margin-bottom:24px;}
+  .head h2{font-family:'Bricolage Grotesque',sans-serif; font-size:clamp(1.9rem,4vw,3rem); font-weight:700; letter-spacing:-.02em;}
+  .about-grid{display:grid; grid-template-columns:auto 1fr; gap:38px; align-items:start;}
+  .avatar{width:128px; height:128px; border-radius:22px; border:1px solid var(--line); background:linear-gradient(150deg,var(--surface2),#0e0e13); display:flex; align-items:center; justify-content:center; font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:2.2rem; color:var(--accent); overflow:hidden; flex-shrink:0;}
+  .avatar img{width:100%; height:100%; object-fit:cover;}
+  .about p.lead-txt{font-family:'Bricolage Grotesque',sans-serif; font-weight:500; font-size:clamp(1.5rem,3.4vw,2.4rem); line-height:1.25; letter-spacing:-.02em; max-width:760px;}
+  .about .sub{font-family:'Inter'; font-weight:400; font-size:1.05rem; color:var(--muted); margin-top:20px; max-width:640px; line-height:1.65;}
+  .contact{text-align:center; padding:100px 0; border-top:1px solid var(--line);}
+  .contact a.big{font-family:'Bricolage Grotesque',sans-serif; font-weight:800; text-transform:uppercase; font-size:clamp(2.6rem,9vw,7rem); letter-spacing:-.03em; line-height:.9; transition:color .25s;}
+  .contact a.big:hover{color:var(--accent);}
   footer{border-top:1px solid var(--line); padding:30px 0;}
   .foot{display:flex; flex-wrap:wrap; gap:18px; justify-content:space-between; font-size:13px; color:var(--muted);}
   .foot a:hover{color:var(--accent);}
@@ -134,18 +159,23 @@
   .nav-links a{position:relative;}
   .nav-links a::after{content:''; position:absolute; left:0; right:0; bottom:-5px; height:1.5px; background:var(--accent); transform:scaleX(0); transform-origin:0; transition:transform .25s ease;}
   .nav-links a:hover::after{transform:scaleX(1);}
-  .media{transition:transform .35s cubic-bezier(.2,.8,.2,1), border-color .35s;}
-  .media:hover{transform:translateY(-4px); border-color:rgba(255,255,255,.28);}
-  .cta{transition:gap .2s ease;}
-  .cta:hover{gap:13px;}
 
+  @media(max-width:900px){
+    .hero{min-height:auto; padding:130px 0 70px;}
+    .hero-grid{grid-template-columns:1fr; gap:36px;}
+  }
   @media(max-width:820px){
-    .nav-links{display:flex; gap:14px; font-size:12px;}
+    .nav-links{gap:13px; font-size:12px;}
     .clock{display:none;}
     .brand{font-size:13px;}
-    .proj .inner{grid-template-columns:1fr; gap:30px;}
-    .proj.flip .media{order:0;}
+    .inner{grid-template-columns:1fr; gap:28px;}
+    .card.flip .media{order:0;}
+    .card{padding:26px;}
     .media{aspect-ratio:16/10;}
+    .about-grid{grid-template-columns:1fr; gap:24px;}
+  }
+  @media(max-width:560px){
+    .nav-links{display:none;}
   }
 </style>
 </head>
@@ -155,139 +185,214 @@
 <header>
   <div class="nav">
     <a href="#top" class="brand"><span class="dot"></span> Francesco Magistà</a>
-    <nav class="nav-links"><a href="#lavori">Lavori</a><a href="#musica">Musica</a><a href="#info">Chi sono</a><a href="#contatti">Contatti</a></nav>
+    <nav class="nav-links"><a href="#software">Software</a><a href="#giochi">Giochi</a><a href="#scrittura">Scrittura</a><a href="#musica">Musica</a></nav>
     <div class="clock" id="clock">--:--</div>
   </div>
 </header>
 
 <main id="top">
-  <header class="hero">
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-left">
+        <span class="eyebrow"><span class="dot"></span> Francesco Magistà · in arte Spidah</span>
+        <h1 class="display">Software, storie,<br>musica, <span class="gr">giochi.</span></h1>
+        <p>Quattro mestieri, una testa sola. Sviluppo, scrivo, gioco e curo musica — e qui trovi tutto, in ordine.</p>
+        <div class="btns">
+          <a class="btn primary" href="mailto:magistaf@gmail.com">Scrivimi →</a>
+          <a class="btn ghost" href="#software">Guarda i progetti ↓</a>
+        </div>
+      </div>
+      <nav class="panel" aria-label="Indice progetti">
+        <div class="panel-cap">Cosa trovi qui</div>
+        <a class="hp-row" href="#software">
+          <span class="hp-num">01</span>
+          <span class="hp-txt"><span class="t">Software &amp; app</span><span class="d">Due app già online</span></span>
+          <span class="hp-arrow">→</span>
+        </a>
+        <a class="hp-row" href="#giochi">
+          <span class="hp-num">02</span>
+          <span class="hp-txt"><span class="t">Giochi</span><span class="d">Un PvP 3D in sviluppo</span></span>
+          <span class="hp-arrow">→</span>
+        </a>
+        <a class="hp-row" href="#scrittura">
+          <span class="hp-num">03</span>
+          <span class="hp-txt"><span class="t">Scrittura</span><span class="d">Un romanzo dark fantasy</span></span>
+          <span class="hp-arrow">→</span>
+        </a>
+        <a class="hp-row" href="#musica">
+          <span class="hp-num">04</span>
+          <span class="hp-txt"><span class="t">Musica</span><span class="d">12 playlist su Spotify</span></span>
+          <span class="hp-arrow">→</span>
+        </a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ===== AMBITO 01 — SOFTWARE & APP ===== -->
+  <section id="software" class="cat" style="--pa:#c8ff3d">
     <div class="wrap">
-      <span class="eyebrow"><span class="dot"></span> Francesco Magistà — Portfolio · Spidah</span>
-      <h1 class="display">Storie, codice,<br>musica, <span class="gr">giochi.</span></h1>
-      <p>Lavoro su progetti in ambiti diversi — web, editoria, musica e videogiochi. Di seguito una selezione: alcuni già online, altri in fase di sviluppo.</p>
-      <span class="scrollcue">Scorri <span class="ar">↓</span></span>
-    </div>
-  </header>
-
-  <div id="lavori"></div>
-
-  <!-- 01 CONSIGLI ANIME -->
-  <section class="proj" style="--pa:#c8ff3d">
-    <span class="ghost">01</span>
-    <div class="wrap inner">
-      <div class="copy reveal">
-        <div class="top"><span class="kind">Sito web</span><span class="status">Online</span></div>
-        <h3 class="display">Consigli Anime</h3>
-        <p class="desc">Una guida che aiuta a scegliere cosa guardare, in base ai gusti e al tempo disponibile.</p>
-        <ul class="feats">
-          <li>Percorsi e generi curati, schede senza spoiler</li>
-          <li>Durata effettiva di ogni serie e dove vederla (solo piattaforme legali)</li>
-          <li>Dati da AniList, aggiornati in automatico</li>
-        </ul>
-        <div class="specs">
-          <div class="row"><div class="k">Ruolo</div><div class="v">Ideazione, design, sviluppo</div></div>
-          <div class="row"><div class="k">Stack</div><div class="v">Vanilla JS · AniList · Firebase</div></div>
-          <div class="row"><div class="k">Stato</div><div class="v">Online</div></div>
-        </div>
-        <a class="cta" href="https://guardalo.vercel.app/" target="_blank" rel="noopener">Visita il sito →</a>
+      <div class="cat-head reveal">
+        <div class="cat-kicker"><span class="cat-num">01</span><span class="tag">Ambito 01 / 04</span></div>
+        <h2>Software &amp; app</h2>
+        <p class="lead">Roba che gira in un browser e, nella maggior parte dei casi, fa anche quello che promette.</p>
       </div>
-      <a class="media reveal" href="https://guardalo.vercel.app/" target="_blank" rel="noopener">
-        <div class="frame"><iframe src="https://guardalo.vercel.app/" loading="lazy" title="Anteprima del sito Consigli Anime" scrolling="no" tabindex="-1"></iframe></div>
-      </a>
-    </div>
-  </section>
 
-  <!-- 02 ORGANIZZAMICI -->
-  <section class="proj flip" style="--pa:#f5a623">
-    <span class="ghost">02</span>
-    <div class="wrap inner">
-      <div class="copy reveal">
-        <div class="top"><span class="kind">Applicazione web</span><span class="status">Beta</span></div>
-        <h3 class="display">Organizzamici</h3>
-        <p class="desc">Un'applicazione per organizzare viaggi ed eventi di gruppo, dalla proposta alla decisione.</p>
-        <ul class="feats">
-          <li>I partecipanti propongono date e mete e votano</li>
-          <li>Un algoritmo sceglie la combinazione ottimale: disponibilità, viaggi, alloggi, posti</li>
-          <li>Risorse condivise e chat integrata</li>
-        </ul>
-        <div class="specs">
-          <div class="row"><div class="k">Ruolo</div><div class="v">Product, design, sviluppo</div></div>
-          <div class="row"><div class="k">Stack</div><div class="v">React · Vite · Supabase</div></div>
-          <div class="row"><div class="k">Stato</div><div class="v">Beta online</div></div>
+      <!-- Consigli Anime -->
+      <div class="card reveal">
+        <div class="inner">
+          <div class="copy">
+            <div class="top"><span class="kind">Sito web</span><span class="status">Online</span></div>
+            <h3 class="display">Consigli Anime</h3>
+            <p class="hook">Anime scelti e spiegati uno per uno. Senza spoiler, senza perdere tempo.</p>
+            <p class="desc">Apri la lista, scrolli per mezz'ora e chiudi senza aver deciso niente. Consigli Anime ti fa scegliere in due mosse.</p>
+            <div class="blab">Cosa fa</div>
+            <ul class="feats">
+              <li>Filtra per il tempo che hai davvero: una sera, un weekend o una maratona</li>
+              <li>18 generi e 6 percorsi guidati, da "Da Zero a Otaku" ad "Antieroi &amp; Vendetta"</li>
+              <li>Schede senza spoiler: atmosfera, durata reale e dove vederlo (solo piattaforme legali)</li>
+              <li>Account con i progressi sincronizzati tra dispositivi</li>
+              <li>Dati da AniList, aggiornati da soli</li>
+            </ul>
+            <div class="chips"><span class="chip">18 generi</span><span class="chip">6 percorsi</span><span class="chip">Dati AniList live</span><span class="chip">Zero spoiler</span></div>
+            <div class="specs">
+              <div class="row"><div class="k">Ruolo</div><div class="v">Idea, design, sviluppo</div></div>
+              <div class="row"><div class="k">Stack</div><div class="v">Vanilla JS · AniList · Firebase</div></div>
+              <div class="row"><div class="k">Stato</div><div class="v">Online</div></div>
+            </div>
+            <a class="cta" href="https://guardalo.vercel.app/" target="_blank" rel="noopener">Visita il sito →</a>
+          </div>
+          <a class="media" href="https://guardalo.vercel.app/" target="_blank" rel="noopener">
+            <img src="assets/consigli-anime.png" alt="Schermata del sito Consigli Anime" loading="lazy">
+          </a>
         </div>
-        <a class="cta" href="https://spidahh.github.io/Organizzamici/" target="_blank" rel="noopener">Entra nella beta →</a>
       </div>
-      <a class="media reveal" href="https://spidahh.github.io/Organizzamici/" target="_blank" rel="noopener">
-        <div class="frame"><iframe src="https://spidahh.github.io/Organizzamici/" loading="lazy" title="Anteprima dell'app Organizzamici" scrolling="no" tabindex="-1"></iframe></div>
-      </a>
-    </div>
-  </section>
 
-  <!-- 03 RAGEQUIT -->
-  <section class="proj" style="--pa:#f5a623">
-    <span class="ghost">03</span>
-    <div class="wrap inner">
-      <div class="copy reveal">
-        <div class="top"><span class="kind">Videogioco</span><span class="status">In sviluppo</span></div>
-        <h3 class="display">RageQuit</h3>
-        <p class="desc">Un gioco d'azione PvP in 3D, multiplayer in tempo reale.</p>
-        <ul class="feats">
-          <li>Giocatore contro giocatore, online</li>
-          <li>Difficoltà elevata e voluta</li>
-          <li>In sviluppo — piattaforma e uscita ancora da definire</li>
-        </ul>
-        <div class="specs">
-          <div class="row"><div class="k">Ruolo</div><div class="v">Game design, sviluppo</div></div>
-          <div class="row"><div class="k">Genere</div><div class="v">Action PvP · 3D</div></div>
-          <div class="row"><div class="k">Stato</div><div class="v">In sviluppo</div></div>
-        </div>
-        <span class="note">Non ancora giocabile</span>
-      </div>
-      <div class="media reveal">
-        <div class="keyart">
-          <div class="strip t"></div><div class="strip b"></div>
-          <div class="ttl">Rage<b>Quit</b></div>
+      <!-- Organizzamici -->
+      <div class="card flip reveal">
+        <div class="inner">
+          <div class="copy">
+            <div class="top"><span class="kind">App web</span><span class="status">Beta</span></div>
+            <h3 class="display">Organizzamici</h3>
+            <p class="hook">Trova la data perfetta per il gruppo, senza che la chat finisca in rissa.</p>
+            <p class="desc">Mettere d'accordo dieci amici su quando vedersi è un incubo. Crei l'evento, condividi un link, e l'app fa i conti al posto tuo.</p>
+            <div class="blab">Cosa fa</div>
+            <ul class="feats">
+              <li>Voti in tempo reale: gli amici scelgono le date da qualsiasi telefono, tu vedi tutto aggiornarsi all'istante</li>
+              <li>Data ottimale calcolata: l'algoritmo incrocia presenze, coesione del gruppo e sforzo di viaggio</li>
+              <li>Carpooling &amp; posti letto: chi ha l'auto, quanti posti, chi dorme dove — la logistica si organizza da sola</li>
+              <li>Mete votate dal gruppo: proponi destinazioni e si vota con ❤️, 👍 o 👎</li>
+            </ul>
+            <div class="chips"><span class="chip">Voti live</span><span class="chip">Match automatico</span><span class="chip">Carpooling</span><span class="chip">Gratis</span></div>
+            <div class="specs">
+              <div class="row"><div class="k">Ruolo</div><div class="v">Product, design, sviluppo</div></div>
+              <div class="row"><div class="k">Stack</div><div class="v">React · Vite · Supabase</div></div>
+              <div class="row"><div class="k">Stato</div><div class="v">Beta — gratis, niente carta</div></div>
+            </div>
+            <a class="cta" href="https://spidahh.github.io/Organizzamici/" target="_blank" rel="noopener">Entra nella beta →</a>
+          </div>
+          <a class="media" href="https://spidahh.github.io/Organizzamici/" target="_blank" rel="noopener">
+            <img src="assets/organizzamici.png" alt="Schermata dell'app Organizzamici" loading="lazy">
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 04 FRATTURA -->
-  <section class="proj flip" style="--pa:#c8ff3d">
-    <span class="ghost">04</span>
-    <div class="wrap inner">
-      <div class="copy reveal">
-        <div class="top"><span class="kind">Romanzo</span><span class="status">In scrittura</span></div>
-        <h3 class="display">Frattura</h3>
-        <p class="desc">Un romanzo dark fantasy a struttura mystery-box.</p>
-        <ul class="feats">
-          <li>Narrazione ampia e stratificata</li>
-          <li>Misteri che si svelano progressivamente</li>
-          <li>Attualmente in fase di scrittura</li>
-        </ul>
-        <div class="specs">
-          <div class="row"><div class="k">Ruolo</div><div class="v">Autore</div></div>
-          <div class="row"><div class="k">Formato</div><div class="v">Romanzo · dark fantasy</div></div>
-          <div class="row"><div class="k">Stato</div><div class="v">In scrittura</div></div>
-        </div>
-        <span class="note">Estratto in arrivo</span>
-      </div>
-      <div class="media reveal">
-        <div class="cover">
-          <div class="crack"></div>
-          <div class="cl">Romanzo · in scrittura</div>
-          <div class="ct">Frat<b>tura</b></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- MUSICA -->
-  <section id="musica" class="sec">
+  <!-- ===== AMBITO 02 — GIOCHI ===== -->
+  <section id="giochi" class="cat" style="--pa:#f5a623">
     <div class="wrap">
-      <div class="head reveal"><h2>Musica</h2><span class="num">05 · Spotify</span></div>
-      <p class="lead reveal">Una raccolta di dodici playlist, organizzate per atmosfera e aggiornate con costanza. Curate e pubblicate su Spotify.</p>
+      <div class="cat-head reveal">
+        <div class="cat-kicker"><span class="cat-num">02</span><span class="tag">Ambito 02 / 04</span></div>
+        <h2>Giochi</h2>
+        <p class="lead">Per ora uno solo, ma promette di farti arrabbiare. Il nome non è un caso.</p>
+      </div>
+
+      <!-- RageQuit -->
+      <div class="card reveal">
+        <div class="inner">
+          <div class="copy">
+            <div class="top"><span class="kind">Videogioco</span><span class="status">In sviluppo</span></div>
+            <h3 class="display">RageQuit</h3>
+            <p class="hook">Un PvP in cui, se a un certo punto lanci il controller, vuol dire che sta funzionando.</p>
+            <p class="desc">Difficile per scelta. Un gioco pensato per chi vuole sudarsi ogni vittoria, non per chi cerca una passeggiata.</p>
+            <div class="blab">Cosa sarà</div>
+            <ul class="feats">
+              <li>Giocatore contro giocatore, online e in tempo reale, in 3D</li>
+              <li>Difficoltà alta e voluta — non è un bug, è il punto</li>
+              <li>Piattaforma e data di uscita ancora da definire</li>
+            </ul>
+            <div class="chips"><span class="chip">PvP</span><span class="chip">3D</span><span class="chip">Online</span><span class="chip">Real-time</span></div>
+            <div class="specs">
+              <div class="row"><div class="k">Ruolo</div><div class="v">Game design, sviluppo</div></div>
+              <div class="row"><div class="k">Genere</div><div class="v">Action PvP · 3D</div></div>
+              <div class="row"><div class="k">Stato</div><div class="v">In sviluppo</div></div>
+            </div>
+            <span class="note">Non ancora giocabile</span>
+          </div>
+          <div class="media">
+            <div class="keyart">
+              <div class="strip t"></div><div class="strip b"></div>
+              <div class="ttl">Rage<b>Quit</b></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AMBITO 03 — SCRITTURA ===== -->
+  <section id="scrittura" class="cat" style="--pa:#c8ff3d">
+    <div class="wrap">
+      <div class="cat-head reveal">
+        <div class="cat-kicker"><span class="cat-num">03</span><span class="tag">Ambito 03 / 04</span></div>
+        <h2>Scrittura</h2>
+        <p class="lead">Dove i bug si chiamano refusi e nessuno me li segnala in tempo.</p>
+      </div>
+
+      <!-- Frattura -->
+      <div class="card flip reveal">
+        <div class="inner">
+          <div class="copy">
+            <div class="top"><span class="kind">Romanzo</span><span class="status">In scrittura</span></div>
+            <h3 class="display">Frattura</h3>
+            <p class="hook">Dark fantasy a scatole cinesi: ogni risposta apre due domande nuove.</p>
+            <p class="desc">Una storia ampia e stratificata, costruita come un mistero che si svela un pezzo alla volta.</p>
+            <div class="blab">Di cosa si tratta</div>
+            <ul class="feats">
+              <li>Mondo dark fantasy con struttura mystery-box</li>
+              <li>Indizi e rivelazioni dosati capitolo dopo capitolo</li>
+              <li>Attualmente in fase di scrittura</li>
+            </ul>
+            <div class="chips"><span class="chip">Dark fantasy</span><span class="chip">Mystery-box</span><span class="chip">Romanzo</span></div>
+            <div class="specs">
+              <div class="row"><div class="k">Ruolo</div><div class="v">Autore</div></div>
+              <div class="row"><div class="k">Formato</div><div class="v">Romanzo · dark fantasy</div></div>
+              <div class="row"><div class="k">Stato</div><div class="v">In scrittura</div></div>
+            </div>
+            <span class="note">Estratto in arrivo</span>
+          </div>
+          <div class="media">
+            <div class="cover">
+              <div class="crack"></div>
+              <div class="cl">Romanzo · in scrittura</div>
+              <div class="ct">Frat<b>tura</b></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AMBITO 04 — MUSICA ===== -->
+  <section id="musica" class="cat" style="--pa:#f5a623">
+    <div class="wrap">
+      <div class="cat-head reveal">
+        <div class="cat-kicker"><span class="cat-num">04</span><span class="tag">Ambito 04 / 04</span></div>
+        <h2>Musica</h2>
+        <p class="lead">Non scrivo canzoni, le ordino. Dodici playlist curate su Spotify, una per ogni stato d'animo che riesco a nominare.</p>
+        <div class="chips"><span class="chip">12 playlist</span><span class="chip">Aggiornate spesso</span><span class="chip">Una per ogni mood</span></div>
+      </div>
       <div class="pl-grid">
         <a class="pl reveal" href="https://open.spotify.com/playlist/30I943TwY7ANxtmVrgoeLZ" target="_blank" rel="noopener"><div class="cov"><img src="https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8420ea0d36e5815e4df35e247b" alt="" loading="lazy"></div><div class="n">Sottosfondo</div><div class="g">Lo-fi · Chill</div></a>
         <a class="pl reveal" href="https://open.spotify.com/playlist/5wp0oohWN1HoAzvZqhIcBV" target="_blank" rel="noopener"><div class="cov"><img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84b4421e92ef24c2cda422cc50" alt="" loading="lazy"></div><div class="n">Definitivamente bella</div><div class="g">Hit · Mix</div></a>
@@ -306,20 +411,26 @@
     </div>
   </section>
 
-  <!-- CHI SONO -->
+  <!-- ===== CHI SONO ===== -->
   <section id="info" class="sec about">
     <div class="wrap">
       <div class="head reveal"><h2>Chi sono</h2></div>
-      <p class="reveal">Lavoro su discipline diverse con lo stesso metodo: ricerca, struttura e cura del dettaglio.</p>
-      <p class="sub reveal">Scrittura, sviluppo software, curatela musicale e game design. Ogni progetto qui sopra rappresenta uno di questi ambiti.</p>
+      <div class="about-grid reveal">
+        <!-- Per mettere una tua foto: salva il file come assets/me.jpg e sostituisci il monogramma con <img src="assets/me.jpg" alt="Francesco Magistà"> -->
+        <div class="avatar">FM</div>
+        <div>
+          <p class="lead-txt">Una persona, quattro ossessioni che si sono prese fin troppo sul serio.</p>
+          <p class="sub">Sviluppo software, scrivo storie, costruisco un gioco e metto in fila canzoni. Cambia il mezzo, non il metodo: parto da un'idea, la smonto per capire come sta in piedi, e non la mollo finché non funziona da sola. Il resto è caffè.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- CONTATTI -->
+  <!-- ===== CONTATTI ===== -->
   <section id="contatti" class="contact">
     <div class="wrap">
-      <div class="reveal" style="font-size:13px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-bottom:22px;">Lavoriamo insieme?</div>
-      <a class="display reveal" href="mailto:magistaf@gmail.com">Scrivimi →</a>
+      <div class="reveal" style="font-size:13px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin-bottom:22px;">Hai un'idea, un'offerta o solo voglia di parlare di anime?</div>
+      <a class="big reveal" href="mailto:magistaf@gmail.com">Scrivimi →</a>
     </div>
   </section>
 </main>
