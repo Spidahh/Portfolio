@@ -1,294 +1,228 @@
-(function () {
-  "use strict";
+const dataUrl = "data/projects.json";
 
-  const categoryLabels = {
-    apps: "App & siti",
-    games: "Giochi",
-    stories: "Storie"
+const projectList = document.querySelector("#project-list");
+const jumpList = document.querySelector("#project-jump-list");
+const dialog = document.querySelector("#project-dialog");
+const closeDialogButton = dialog.querySelector(".dialog-close");
+
+const accentByTheme = {
+  guardalo: "#0b97c4",
+  organizzamici: "#25d5c5",
+  smem0: "#3b2cc3",
+  chatfreevideo: "#8b5cf6",
+  politicometro: "#d72828",
+  ragequit: "#ff5a1f",
+  frattura: "#e58b39"
+};
+
+let projects = [];
+
+const visualAltById = {
+  guardalo: "La home reale di GUARDALO con ricerca, generi e percorsi editoriali.",
+  organizzamici: "La home reale di Organizzamici con il pulsante per creare un evento.",
+  smem0: "L’interfaccia reale di Smem0 con una conversazione, una scadenza e le fonti collegate.",
+  webchat: "La home reale di ChatFreeVideo con accesso immediato a chat e videochat.",
+  politicometro: "Concept editoriale di Politicometro con promessa, fatto, prova ed esito.",
+  ragequit: "L’artwork di RAGEQUIT con un arciere colpito nell’arena.",
+  frattura: "La copertina di Frattura, una città verticale spezzata nel buio."
+};
+
+function normalizeProject(item) {
+  const copy = item.publicCopy;
+  const dialogAction = {
+    label: copy.dialogCta,
+    dialog: true,
+    primary: !item.publicUrl
   };
 
-  const root = document.querySelector("#project-grid");
-  const progress = document.querySelector("#progress");
-  const menuButton = document.querySelector(".menu-button");
-  const mobileNav = document.querySelector("#mobile-nav");
-  const toastNode = document.querySelector("#toast");
-  const backToTop = document.querySelector("#back-to-top");
-  const dialog = document.querySelector("#project-dialog");
-  const dialogContent = document.querySelector("#dialog-content");
-  const dialogClose = document.querySelector(".dialog-close");
-  const filterButtons = [...document.querySelectorAll("[data-filter]")];
-  let allProjects = [];
-
-  function escapeHtml(value) {
-    return String(value ?? "")
-      .replaceAll("&", "&amp;")
-      .replaceAll("<", "&lt;")
-      .replaceAll(">", "&gt;")
-      .replaceAll('"', "&quot;")
-      .replaceAll("'", "&#039;");
+  let secondAction;
+  if (item.publicUrl) {
+    secondAction = {
+      label: copy.cta,
+      href: item.publicUrl,
+      external: true,
+      primary: true
+    };
+  } else if (item.repositoryPublic && item.repositoryUrl) {
+    secondAction = {
+      label: "Vedi il repository",
+      href: item.repositoryUrl,
+      external: true
+    };
+  } else {
+    secondAction = {
+      label: "Parliamone",
+      href: "#contatti"
+    };
   }
 
-  function safeClass(value, fallback = "default") {
-    const safe = String(value || "").toLowerCase().replace(/[^a-z0-9-]/g, "");
-    return safe || fallback;
-  }
+  return {
+    id: item.id,
+    name: item.displayName || item.name,
+    kind: copy.kind,
+    status: copy.status,
+    theme: copy.theme,
+    logo: copy.logo,
+    visual: copy.visual,
+    visualAlt: visualAltById[item.id] || `Anteprima di ${item.displayName || item.name}.`,
+    strap: copy.tagline,
+    pitch: copy.pitch,
+    role: copy.role.replaceAll(" · ", ", "),
+    actions: item.publicUrl ? [secondAction, dialogAction] : [dialogAction, secondAction],
+    detail: copy.detail
+  };
+}
 
-  function safeAccent(value) {
-    return /^#[0-9a-f]{6}$/i.test(String(value || "")) ? value : "#c8ff3d";
-  }
+function escapeHtml(value = "") {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
 
-  function renderArt(project, context = "card") {
-    const copy = project.publicCopy || {};
-    const status = copy.status || project.phase;
+function brandMarkup(project, compact = false) {
+  const name = escapeHtml(project.name);
 
-    if (copy.variant === "press") {
-      return `
-        <div class="project-art press-art" aria-hidden="true">
-          <span>QUELLO CHE DICONO</span>
-          <strong>FATTI<br>ALLA<br>MANO.</strong>
-          <i>QUELLO CHE SUCCEDE</i>
-        </div>
-      `;
-    }
-
-    if (!copy.visual) {
-      return `
-        <div class="project-art type-art" aria-hidden="true">
-          <strong>${escapeHtml(project.displayName)}</strong>
-        </div>
-      `;
-    }
+  if (project.logo) {
+    const full = project.theme === "ragequit";
+    const imageClass = compact
+      ? `dialog-logo${full ? " dialog-logo--full" : ""}`
+      : `project-logo${full ? " project-logo--full" : ""}`;
 
     return `
-      <div class="project-art">
-        <img
-          src="${escapeHtml(copy.visual)}"
-          alt="${context === "dialog" ? `Anteprima di ${escapeHtml(project.displayName)}` : ""}"
-          loading="${context === "dialog" ? "eager" : "lazy"}">
-        <span class="art-label">${escapeHtml(status)}</span>
-      </div>
+      <img class="${imageClass}" src="${escapeHtml(project.logo)}" alt="">
+      ${full ? "" : `<${compact ? "strong" : "span"} class="${compact ? "" : "project-wordmark"}">${name}</${compact ? "strong" : "span"}>`}
     `;
   }
 
-  function renderCardLinks(project) {
-    const copy = project.publicCopy || {};
-    const links = [
-      `<button class="project-more" type="button" data-open-project="${escapeHtml(project.id)}">SCOPRI <span>→</span></button>`
-    ];
+  return `<${compact ? "strong" : "span"} class="${compact ? "" : `project-wordmark project-wordmark--${escapeHtml(project.theme)}`}">${name}</${compact ? "strong" : "span"}>`;
+}
 
-    if (project.publicUrl) {
-      links.push(`<a class="project-link project-link--live" href="${escapeHtml(project.publicUrl)}" target="_blank" rel="noopener">${escapeHtml(copy.cta || "APRI")} <span>↗</span></a>`);
-    } else if (project.repositoryPublic && project.repositoryUrl) {
-      links.push(`<a class="project-link" href="${escapeHtml(project.repositoryUrl)}" target="_blank" rel="noopener">GITHUB <span>↗</span></a>`);
-    }
+function actionMarkup(action, project, location = "card") {
+  const className = location === "dialog"
+    ? "dialog-action"
+    : `project-action${action.primary ? " project-action--primary" : ""}`;
+  const label = escapeHtml(action.label);
 
-    return links.join("");
+  if (action.dialog) {
+    return `<button class="${className}" type="button" data-project-dialog="${escapeHtml(project.id)}">${label} <span aria-hidden="true">→</span></button>`;
   }
 
-  function renderProject(project) {
-    const copy = project.publicCopy || {};
-    const variant = safeClass(copy.variant);
-    const layout = safeClass(copy.layout, "standard");
-    const category = safeClass(copy.category, "apps");
+  const external = action.external ? ' target="_blank" rel="noopener"' : "";
+  const arrow = action.external ? "↗" : "→";
+  return `<a class="${className}" href="${escapeHtml(action.href)}"${external}>${label} <span aria-hidden="true">${arrow}</span></a>`;
+}
 
-    return `
-      <article
-        class="project-card project--${variant} project--${layout}"
-        id="${escapeHtml(project.id)}"
-        data-category="${escapeHtml(category)}"
-        style="--project-accent:${safeAccent(project.accent)}">
-        <button class="project-visual-button" type="button" data-open-project="${escapeHtml(project.id)}" aria-label="Scopri ${escapeHtml(project.displayName)}">
-          ${renderArt(project)}
-        </button>
-        <div class="project-copy">
-          <div class="project-topline">
-            <span>${escapeHtml(copy.kind || categoryLabels[category] || "Progetto")}</span>
-            <span>${escapeHtml(copy.status || project.phase)}</span>
-          </div>
-          <h3>${escapeHtml(project.displayName)}</h3>
-          <p class="project-tagline">${escapeHtml(copy.tagline || "")}</p>
-          <p class="project-pitch">${escapeHtml(copy.pitch || "")}</p>
-          <div class="project-actions">${renderCardLinks(project)}</div>
+function renderJumpList() {
+  jumpList.innerHTML = projects.map((project, index) => `
+    <li>
+      <a href="#${escapeHtml(project.id)}">
+        <span class="jump-index">${String(index + 1).padStart(2, "0")}</span>
+        <span class="jump-name">${escapeHtml(project.name)}</span>
+        <span class="jump-state">${escapeHtml(project.status)}</span>
+      </a>
+    </li>
+  `).join("");
+}
+
+function renderProjects() {
+  projectList.innerHTML = projects.map((project, index) => `
+    <article class="project-story project-story--${escapeHtml(project.theme)}" id="${escapeHtml(project.id)}" data-project="${escapeHtml(project.id)}">
+      <div class="project-copy">
+        <div class="project-brand">
+          ${brandMarkup(project)}
         </div>
-      </article>
-    `;
-  }
-
-  function render(projects) {
-    allProjects = projects;
-    root.innerHTML = projects.map(renderProject).join("");
-    bindProjectButtons();
-    revealHashProject();
-  }
-
-  function renderDialogActions(project) {
-    const copy = project.publicCopy || {};
-    const actions = [];
-
-    if (project.publicUrl) {
-      actions.push(`<a class="dialog-action dialog-action--primary" href="${escapeHtml(project.publicUrl)}" target="_blank" rel="noopener">${escapeHtml(copy.cta || "Apri il progetto")} <span>↗</span></a>`);
-    }
-
-    if (project.repositoryPublic && project.repositoryUrl) {
-      actions.push(`<a class="dialog-action" href="${escapeHtml(project.repositoryUrl)}" target="_blank" rel="noopener">Vedi il codice <span>↗</span></a>`);
-    }
-
-    actions.push(`<button class="dialog-action" type="button" data-share-project="${escapeHtml(project.id)}" data-share-name="${escapeHtml(project.displayName)}">Condividi <span>↗</span></button>`);
-    return actions.join("");
-  }
-
-  function openProject(projectId, updateHash = true) {
-    const project = allProjects.find((item) => item.id === projectId);
-    if (!project || !dialog || !dialogContent) return;
-
-    const copy = project.publicCopy || {};
-    const details = Array.isArray(copy.details) ? copy.details : [];
-    dialog.style.setProperty("--project-accent", safeAccent(project.accent));
-    dialog.dataset.variant = safeClass(copy.variant);
-    dialogContent.innerHTML = `
-      <div class="dialog-layout">
-        <div class="dialog-art">${renderArt(project, "dialog")}</div>
-        <div class="dialog-copy">
-          <div class="dialog-meta">
-            <span>${escapeHtml(categoryLabels[copy.category] || copy.kind || "Progetto")}</span>
-            <span>${escapeHtml(copy.status || project.phase)}</span>
-          </div>
-          <p class="dialog-kind">${escapeHtml(copy.kind || "")}</p>
-          <h2 id="dialog-title">${escapeHtml(project.displayName)}</h2>
-          <p class="dialog-tagline">${escapeHtml(copy.tagline || "")}</p>
-          <p class="dialog-pitch">${escapeHtml(copy.pitch || "")}</p>
-          ${details.length ? `<ul class="dialog-details">${details.map((detail) => `<li>${escapeHtml(detail)}</li>`).join("")}</ul>` : ""}
-          <p class="dialog-role">${escapeHtml(copy.role || "")}</p>
-          <div class="dialog-actions">${renderDialogActions(project)}</div>
+        <div class="project-meta">
+          <span>${String(index + 1).padStart(2, "0")} · ${escapeHtml(project.kind)}</span>
+          <span class="project-status">${escapeHtml(project.status)}</span>
+        </div>
+        <h3>${escapeHtml(project.strap)}</h3>
+        <p class="project-pitch">${escapeHtml(project.pitch)}</p>
+        <p class="project-role">${escapeHtml(project.role)}</p>
+        <div class="project-actions">
+          ${project.actions.map((action) => actionMarkup(action, project)).join("")}
         </div>
       </div>
-    `;
+      <div class="project-visual">
+        <div class="project-shot-wrap">
+          <img
+            class="project-shot"
+            src="${escapeHtml(project.visual)}"
+            alt="${escapeHtml(project.visualAlt)}"
+            ${index === 0 ? 'fetchpriority="high"' : 'loading="lazy"'}
+          >
+        </div>
+      </div>
+    </article>
+  `).join("");
+}
 
-    bindShareButtons(dialogContent);
-    if (!dialog.open) dialog.showModal();
-    if (updateHash) history.replaceState(null, "", `#${project.id}`);
+function openProjectDialog(projectId) {
+  const project = projects.find((item) => item.id === projectId);
+  if (!project) return;
+
+  dialog.style.setProperty("--dialog-accent", accentByTheme[project.theme] || "#171713");
+  dialog.querySelector("#dialog-brand").innerHTML = brandMarkup(project, true);
+  dialog.querySelector("#dialog-kind").textContent = `${project.kind} · ${project.status}`;
+  dialog.querySelector("#dialog-title").textContent = project.strap;
+  dialog.querySelector("#dialog-lead").textContent = project.detail.lead;
+  dialog.querySelector("#dialog-body").textContent = project.detail.body;
+  dialog.querySelector("#dialog-now").textContent = project.detail.now;
+
+  const publicActions = project.actions.filter((action) => !action.dialog);
+  dialog.querySelector("#dialog-actions").innerHTML = publicActions.length
+    ? publicActions.map((action) => actionMarkup(action, project, "dialog")).join("")
+    : `<a class="dialog-action" href="#contatti">Parliamone <span aria-hidden="true">→</span></a>`;
+
+  document.body.classList.add("dialog-open");
+  dialog.showModal();
+}
+
+function closeProjectDialog() {
+  dialog.close();
+  document.body.classList.remove("dialog-open");
+}
+
+async function init() {
+  const response = await fetch(dataUrl);
+  if (!response.ok) {
+    throw new Error(`Catalogo non disponibile (${response.status})`);
   }
 
-  function closeProjectDialog() {
-    if (dialog?.open) dialog.close();
+  const data = await response.json();
+  projects = data.projects.map(normalizeProject);
+  renderJumpList();
+  renderProjects();
+}
+
+document.addEventListener("click", (event) => {
+  const trigger = event.target.closest("[data-project-dialog]");
+  if (trigger) {
+    openProjectDialog(trigger.dataset.projectDialog);
   }
 
-  function bindProjectButtons() {
-    document.querySelectorAll("[data-open-project]").forEach((button) => {
-      button.addEventListener("click", () => openProject(button.dataset.openProject));
-    });
+  const dialogAnchor = event.target.closest(".project-dialog a[href^='#']");
+  if (dialogAnchor) {
+    closeProjectDialog();
   }
+});
 
-  function applyFilter(filter) {
-    document.querySelectorAll(".project-card").forEach((card) => {
-      card.hidden = filter !== "all" && card.dataset.category !== filter;
-    });
+closeDialogButton.addEventListener("click", closeProjectDialog);
 
-    filterButtons.forEach((button) => {
-      const active = button.dataset.filter === filter;
-      button.classList.toggle("is-active", active);
-      button.setAttribute("aria-pressed", String(active));
-    });
+dialog.addEventListener("click", (event) => {
+  if (event.target === dialog) {
+    closeProjectDialog();
   }
+});
 
-  function showToast(message) {
-    if (!toastNode) return;
-    toastNode.textContent = message;
-    toastNode.classList.add("visible");
-    clearTimeout(showToast.timer);
-    showToast.timer = setTimeout(() => toastNode.classList.remove("visible"), 2200);
-  }
+dialog.addEventListener("cancel", () => {
+  document.body.classList.remove("dialog-open");
+});
 
-  function projectShareUrl(projectId) {
-    return `${window.location.origin}${window.location.pathname}#${projectId}`;
-  }
+document.querySelector("#year").textContent = new Date().getFullYear();
 
-  function bindShareButtons(scope = document) {
-    scope.querySelectorAll("[data-share-project]").forEach((button) => {
-      button.addEventListener("click", async () => {
-        const url = projectShareUrl(button.dataset.shareProject);
-        const name = button.dataset.shareName;
-
-        if (navigator.share) {
-          try {
-            await navigator.share({
-              title: `${name} — Spidah`,
-              text: `${name}, un progetto di Francesco Magistà.`,
-              url
-            });
-            return;
-          } catch (error) {
-            if (error?.name === "AbortError") return;
-          }
-        }
-
-        try {
-          await navigator.clipboard.writeText(url);
-          showToast(`Link di ${name} copiato.`);
-        } catch {
-          showToast(url);
-        }
-      });
-    });
-  }
-
-  function revealHashProject() {
-    const id = window.location.hash.slice(1);
-    if (!id || !allProjects.some((project) => project.id === id)) return;
-    openProject(id, false);
-  }
-
-  function updateProgress() {
-    const page = document.documentElement;
-    const max = page.scrollHeight - page.clientHeight;
-    if (progress) progress.style.transform = `scaleX(${max > 0 ? page.scrollTop / max : 0})`;
-    if (backToTop) backToTop.classList.toggle("visible", window.scrollY > 900);
-  }
-
-  filterButtons.forEach((button) => {
-    button.addEventListener("click", () => applyFilter(button.dataset.filter));
-  });
-
-  if (dialog) {
-    dialog.addEventListener("click", (event) => {
-      if (event.target === dialog) closeProjectDialog();
-    });
-    dialog.addEventListener("close", () => {
-      if (window.location.hash && allProjects.some((project) => `#${project.id}` === window.location.hash)) {
-        history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
-      }
-    });
-  }
-
-  dialogClose?.addEventListener("click", closeProjectDialog);
-
-  if (menuButton && mobileNav) {
-    menuButton.addEventListener("click", () => {
-      const open = menuButton.getAttribute("aria-expanded") === "true";
-      menuButton.setAttribute("aria-expanded", String(!open));
-      mobileNav.hidden = open;
-    });
-    mobileNav.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        mobileNav.hidden = true;
-        menuButton.setAttribute("aria-expanded", "false");
-      });
-    });
-  }
-
-  window.addEventListener("scroll", updateProgress, { passive: true });
-  window.addEventListener("hashchange", revealHashProject);
-  backToTop?.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
-  document.querySelector("#year").textContent = new Date().getFullYear();
-  updateProgress();
-
-  fetch("data/projects.json", { cache: "no-store" })
-    .then((response) => {
-      if (!response.ok) throw new Error("Catalogo non disponibile");
-      return response.json();
-    })
-    .then((data) => render(data.projects || []))
-    .catch(() => {
-      root.innerHTML = `<p class="loading">Il catalogo non si è caricato. Riprova tra poco.</p>`;
-    });
-})();
+init().catch((error) => {
+  projectList.innerHTML = `<p class="load-error">Non riesco a caricare i progetti. ${escapeHtml(error.message)}</p>`;
+});

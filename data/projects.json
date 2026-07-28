@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-28T15:29:01.7767320+02:00",
+  "generatedAt": "2026-07-28T15:58:01.9954117+02:00",
   "projects": [
     {
       "id": "guardalo",
@@ -12,15 +12,23 @@
       "visualInk": "#090a0d",
       "publicCopy": {
         "kind": "Guida agli anime",
-        "tagline": "Meno scrolling. Più serie giuste.",
-        "pitch": "GUARDALO non ti scarica addosso un catalogo infinito: ti porta da «non so cosa vedere» a un titolo preciso, con percorsi curati, durata reale, zero spoiler e link legali.",
-        "role": "Ideazione · editoriale · sviluppo",
+        "tagline": "La serata è corta. Il catalogo è infinito.",
+        "pitch": "GUARDALO ti porta da «non so cosa vedere» a un anime preciso, senza scaricarti addosso altre cento scelte. Parti dal tempo che hai, dall’atmosfera o da un percorso curato; arrivi a una scheda senza spoiler, con durata reale e piattaforma legale.",
+        "role": "Ideazione · direzione editoriale · sviluppo",
         "status": "Online",
         "cta": "Apri GUARDALO",
+        "dialogCta": "Vedi come funziona",
         "category": "apps",
+        "theme": "guardalo",
         "variant": "guide",
+        "logo": "assets/logos/guardalo.svg",
         "visual": "assets/projects/guardalo-live.png",
         "layout": "wide",
+        "detail": {
+          "lead": "Il punto non è trovare un anime. È trovarne uno che abbia senso proprio stasera.",
+          "body": "GUARDALO organizza la scelta come farebbe un amico che conosce bene il catalogo e non ha voglia di impressionarti. I percorsi danno un ingresso leggibile a generi e autori; le schede dicono che esperienza aspettarsi, quanto dura davvero e dove si vede, senza rovinare la storia.",
+          "now": "È già online e utilizzabile gratuitamente."
+        },
         "details": [
           "Percorsi editoriali per entrare in un genere senza partire alla cieca.",
           "Schede spoiler-free con atmosfera, durata e punto di partenza.",
@@ -41,15 +49,23 @@
       "visualInk": "#090a0d",
       "publicCopy": {
         "kind": "Organizzatore di gruppo",
-        "tagline": "Il gruppo smette di discutere. La data appare.",
-        "pitch": "Crei l’evento, mandi un link e ognuno segna quando c’è. Organizzamici incrocia disponibilità, viaggi, auto e posti letto per trasformare la chat infinita in un piano vero.",
+        "tagline": "La chat di gruppo non organizza niente.",
+        "pitch": "Crei il ritrovo, mandi un link e ognuno segna quando può. Organizzamici mette insieme date, viaggi, auto, posti letto e cose da portare, poi mostra l’incastro che fa perdere meno tempo a tutti.",
         "role": "Ideazione · prodotto · sviluppo",
         "status": "Beta online",
-        "cta": "Prova Organizzamici",
+        "cta": "Crea un evento",
+        "dialogCta": "Vedi come funziona",
         "category": "apps",
+        "theme": "organizzamici",
         "variant": "social",
+        "logo": "assets/logos/organizzamici.svg",
         "visual": "assets/projects/organizzamici-live.png",
         "layout": "standard",
+        "detail": {
+          "lead": "Nasce per quel momento in cui dodici persone scrivono «per me va bene tutto» e nessuno decide niente.",
+          "body": "L’organizzatore condivide un solo link. Le disponibilità arrivano nello stesso posto e la data migliore viene spiegata, non estratta da una scatola nera. Quando il gruppo deve anche muoversi o dormire fuori, auto, tratte, posti letto e risorse restano attaccati all’evento.",
+          "now": "La beta è online: si può già creare e condividere un evento."
+        },
         "details": [
           "Un solo link per invitare il gruppo e raccogliere le disponibilità.",
           "La data migliore viene spiegata, non estratta da una scatola nera.",
@@ -70,15 +86,23 @@
       "visualInk": "#090a0d",
       "publicCopy": {
         "kind": "Memoria personale",
-        "tagline": "Una memoria che conserva anche il perché.",
-        "pitch": "Gli racconti una cosa, incolli un documento o mandi una nota vocale. Smem0 tiene l’originale, collega ciò che cambia, segnala i conflitti e riporta a galla scadenze e promesse aperte.",
+        "tagline": "Sa cosa hai detto. E cosa avevi detto prima.",
+        "pitch": "A Smem0 mandi una nota, un documento, un vocale o una scadenza. Quando qualcosa cambia, conserva l’originale, collega la nuova versione e ti fa vedere da dove arriva ogni risposta. Una memoria che non riscrive il passato per sembrare sicura.",
         "role": "Ideazione · prodotto · sviluppo",
         "status": "Pilot locale",
         "cta": "",
+        "dialogCta": "Guarda il progetto",
         "category": "apps",
+        "theme": "smem0",
         "variant": "memory",
+        "logo": "assets/logos/smem0.svg",
         "visual": "assets/projects/smem0.png",
         "layout": "standard",
+        "detail": {
+          "lead": "Scrivi «la consegna è il 12». Smem0 ricorda anche che prima era il 10, chi l’ha cambiata e dove lo avevi letto.",
+          "body": "Testo, file, immagini e audio entrano dalla stessa conversazione. Gli originali restano intatti; modifiche, contraddizioni, prestiti, promesse e scadenze diventano collegamenti verificabili invece di appunti persi fra applicazioni diverse.",
+          "now": "La prova locale funziona. Il percorso cloud è ancora in collaudo e non viene presentato come servizio pubblico."
+        },
         "details": [
           "Testo, documenti, immagini e audio entrano dalla stessa conversazione.",
           "Ogni aggiornamento conserva la fonte originale e mostra i conflitti.",
@@ -99,15 +123,23 @@
       "visualInk": "#ffffff",
       "publicCopy": {
         "kind": "Chat e videochat 18+",
-        "tagline": "Una stanza, una faccia, nessun profilo da costruire.",
-        "pitch": "ChatFreeVideo è una piattaforma 18+ di chat e videochat senza registrazione: stanze per lingua e interessi, conversazioni private, roulette e moderazione. Il prodotto è pronto al pilot, ma non è ancora pubblico.",
+        "tagline": "Entri. Parli. Nessun profilo da lucidare.",
+        "pitch": "Scegli una lingua, scrivi un nickname e sei dentro. ChatFreeVideo è una piattaforma 18+ per conversazioni immediate fra stanze, messaggi privati, video uno a uno e roulette, con moderazione incorporata fin dall’inizio.",
         "role": "Identità visiva e grafica · team CFV",
         "status": "Pilot da pubblicare",
         "cta": "",
+        "dialogCta": "Guarda il progetto",
         "category": "apps",
+        "theme": "chatfreevideo",
         "variant": "community",
+        "logo": "assets/logos/chatfreevideo.svg",
         "visual": "assets/projects/chatfreevideo-live.png",
         "layout": "wide",
+        "detail": {
+          "lead": "L’idea è togliere l’anticamera: niente registrazione, niente profilo da riempire, niente feed da mantenere.",
+          "body": "L’esperienza parte da area e lingua, poi passa alle stanze, alle conversazioni private o alla roulette video. L’interfaccia è pensata per quattordici lingue e per rendere visibili moderazione, segnalazioni e limiti di un prodotto destinato esclusivamente a maggiorenni.",
+          "now": "Il prodotto è pronto per un pilot controllato, ma non è ancora aperto al pubblico."
+        },
         "details": [
           "Ingresso con nickname, senza costruire un profilo o registrare un account.",
           "Chat, video 1:1, stanze, roulette e interfaccia in quattordici lingue.",
@@ -128,15 +160,23 @@
       "visualInk": "#ffffff",
       "publicCopy": {
         "kind": "Memoria politica",
-        "tagline": "La politica senza la curva.",
-        "pitch": "Politicometro segue un caso oltre il titolo del giorno: cosa è stato detto, cosa è successo davvero, quali prove esistono e che fine ha fatto. Il progetto è in fase di definizione editoriale.",
+        "tagline": "La notizia passa. Il conto resta.",
+        "pitch": "Politicometro segue dichiarazioni, decisioni e soldi pubblici dopo che hanno smesso di fare rumore. Ogni caso mette in fila promessa, fatti, fonti, responsabilità e conseguenze, lasciando ben visibile anche ciò che ancora non si sa.",
         "role": "Ideazione · ricerca · prodotto",
         "status": "In progettazione",
         "cta": "",
+        "dialogCta": "Dentro l’idea",
         "category": "apps",
+        "theme": "politicometro",
         "variant": "press",
-        "visual": "",
+        "logo": "",
+        "visual": "assets/projects/politicometro-concept.svg",
         "layout": "standard",
+        "detail": {
+          "lead": "Un titolo racconta l’annuncio. Politicometro vuole raccontare che cosa è successo dopo.",
+          "body": "Una scheda separa ciò che è stato dichiarato da ciò che è documentabile. Le fonti restano collegate, le correzioni sono pubbliche e un caso continua a vivere quando arrivano nuovi atti o conseguenze. Il tono non assegna voti alle persone: rende leggibile il percorso dei fatti.",
+          "now": "Metodo e formato sono definiti. L’immagine mostrata è un concept editoriale; il prototipo navigabile deve ancora essere costruito."
+        },
         "details": [
           "Ogni scheda separa dichiarazioni, fatti, prove, responsabilità e parti ancora ignote.",
           "I casi vengono seguiti nel tempo invece di morire con il ciclo delle notizie.",
@@ -157,15 +197,23 @@
       "visualInk": "#090a0d",
       "publicCopy": {
         "kind": "Arena FPS multiplayer",
-        "tagline": "Costruisci otto abilità. Poi prova a sopravvivere.",
-        "pitch": "RAGEQUIT è un arena FPS multiplayer nel browser con quattro classi, loadout da otto abilità e combattimento gestito dal server. Il server gira già; il prossimo passo è un client pubblico da playtest.",
+        "tagline": "Otto abilità. Due secondi per usarle bene.",
+        "pitch": "RAGEQUIT è un arena FPS multiplayer nel browser. Scegli una classe, costruisci un loadout da otto abilità e scopri molto in fretta se la tua grande strategia regge quando qualcuno ti arriva addosso.",
         "role": "Game design · sviluppo",
         "status": "Playtest in preparazione",
         "cta": "",
+        "dialogCta": "Dentro l’arena",
         "category": "games",
+        "theme": "ragequit",
         "variant": "game",
+        "logo": "assets/logos/ragequit.webp",
         "visual": "assets/projects/ragequit.webp",
         "layout": "standard",
+        "detail": {
+          "lead": "Quattro classi e cinquantatré abilità servono a costruire il proprio modo di combattere, non a riempire un menu.",
+          "body": "Tank, Arciere, Mago e Ibrido cambiano ritmo, distanza e rischio. Il combattimento è gestito da un server autoritativo; training, bot e persistenza permettono già di provare il sistema senza fingere che il gioco sia pronto per il pubblico.",
+          "now": "Il server è online. Manca ancora un client pubblico raggiungibile con un link per il primo playtest."
+        },
         "details": [
           "Tank, Arciere, Mago e Ibrido costruiscono loadout diversi con cinquantatré abilità.",
           "Training, bot, persistenza e server multiplayer sono già implementati.",
@@ -186,15 +234,23 @@
       "visualInk": "#090a0d",
       "publicCopy": {
         "kind": "Progression fantasy",
-        "tagline": "Un mondo immenso si spezza. Kel decide di usarne la crepa.",
-        "pitch": "Frattura è una saga adulta in quattro volumi: città impossibili, poteri con un costo fisico e una Compagnia nata durante una catastrofe. La storia globale è approvata; l’apertura del primo volume è in revisione.",
+        "tagline": "Il mondo si spezza. Kel ci vede un’impresa.",
+        "pitch": "Frattura è una progression fantasy adulta in quattro volumi: regioni separate da ferite fisiche, poteri che restituiscono sempre il colpo e due fondatori che trasformano una catastrofe nell’occasione di costruire la propria Compagnia.",
         "role": "Autore · worldbuilding",
         "status": "Apertura in revisione",
         "cta": "",
+        "dialogCta": "Entra nella storia",
         "category": "stories",
+        "theme": "frattura",
         "variant": "story",
+        "logo": "",
         "visual": "assets/projects/frattura.png",
         "layout": "wide",
+        "detail": {
+          "lead": "La magia non apre porte senza chiedere qualcosa in cambio. Kel decide comunque di attraversarle.",
+          "body": "Nel mondo di Frattura le distanze sono politiche, fisiche e mostruose. Kel e Mira incontrano una crepa capace di collegare regioni lontane e capiscono che può diventare il primo affare della loro Compagnia. Ogni potere ha una regola, una via, un ritorno e una frattura che resta addosso a chi lo usa.",
+          "now": "La saga e l’architettura dei quattro volumi sono approvate. L’apertura del primo volume è in revisione; la prosa non è ancora ripartita."
+        },
         "details": [
           "Kel e Mira trasformano una frattura fra regioni lontane nell’occasione di fondare una Compagnia propria.",
           "I poteri non sono mosse gratuite: hanno una regola, una via, un ritorno e una crepa.",
