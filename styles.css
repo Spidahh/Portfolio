@@ -22,7 +22,7 @@ body {
   background:
     radial-gradient(circle at 8% 2%, rgba(255, 255, 255, 0.9), transparent 26rem),
     var(--paper);
-  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -100,9 +100,9 @@ img {
   place-items: center;
   border: 1px solid var(--ink);
   border-radius: 50%;
-  font-family: "Instrument Serif", serif;
+  font-family: "Inter", system-ui, sans-serif;
   font-size: 20px;
-  font-style: italic;
+  font-weight: 700;
 }
 
 .main-nav {
@@ -113,7 +113,7 @@ img {
 
 .main-nav a {
   color: var(--ink);
-  font-family: "DM Mono", monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 11px;
   font-weight: 500;
   text-decoration: none;
@@ -128,9 +128,9 @@ img {
 
 .hero {
   width: var(--shell);
-  min-height: 490px;
+  min-height: 410px;
   margin: 0 auto;
-  padding: 78px 0 64px;
+  padding: 58px 0 54px;
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(310px, 0.65fr);
   gap: clamp(42px, 8vw, 120px);
@@ -139,7 +139,7 @@ img {
 
 .kicker {
   margin: 0 0 18px;
-  font-family: "DM Mono", monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 11px;
   font-weight: 500;
   text-transform: uppercase;
@@ -149,15 +149,9 @@ img {
 .hero h1 {
   max-width: 780px;
   margin: 0;
-  font-size: clamp(58px, 7vw, 104px);
-  line-height: 0.86;
-  letter-spacing: -0.075em;
-}
-
-.hero h1 em,
-.playlist-heading h2 em {
-  font-family: "Instrument Serif", serif;
-  font-weight: 400;
+  font-size: clamp(50px, 6.3vw, 88px);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
 }
 
 .hero-intro {
@@ -190,7 +184,7 @@ img {
 
 .jump-title {
   margin: 0 0 12px;
-  font-family: "DM Mono", monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 10px;
   font-weight: 500;
   text-transform: uppercase;
@@ -221,7 +215,7 @@ img {
 .jump-index,
 .jump-state {
   color: var(--muted);
-  font-family: "DM Mono", monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 9px;
   font-weight: 500;
   text-transform: uppercase;
@@ -256,8 +250,8 @@ img {
 .section-heading h2 {
   margin: 0;
   font-size: clamp(40px, 5.5vw, 74px);
-  line-height: 0.95;
-  letter-spacing: -0.055em;
+  line-height: 1;
+  letter-spacing: -0.045em;
 }
 
 .project-list {
@@ -271,7 +265,7 @@ img {
   position: relative;
   isolation: isolate;
   scroll-margin-top: 82px;
-  min-height: 610px;
+  min-height: 620px;
   overflow: hidden;
   border: 1px solid rgba(0, 0, 0, 0.26);
   border-radius: var(--radius);
@@ -281,7 +275,8 @@ img {
 
 .project-copy {
   z-index: 1;
-  padding: clamp(34px, 4.8vw, 68px);
+  min-width: 0;
+  padding: clamp(32px, 4vw, 54px);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -319,14 +314,14 @@ img {
   padding: 8px 10px;
   border-top: 3px solid currentColor;
   border-bottom: 1px solid currentColor;
-  font-family: "Instrument Serif", serif;
+  font-family: Georgia, serif;
   font-size: 27px;
   font-weight: 400;
   letter-spacing: -0.02em;
 }
 
 .project-wordmark--frattura {
-  font-family: "DM Mono", monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 24px;
   font-weight: 300;
   text-transform: uppercase;
@@ -340,7 +335,7 @@ img {
   align-items: center;
   justify-content: space-between;
   gap: 14px;
-  font-family: "DM Mono", monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 10px;
   font-weight: 500;
   text-transform: uppercase;
@@ -365,23 +360,23 @@ img {
 .project-story h3 {
   max-width: 620px;
   margin: 0;
-  font-size: clamp(38px, 4.7vw, 68px);
-  line-height: 0.94;
-  letter-spacing: -0.06em;
+  font-size: clamp(36px, 4vw, 56px);
+  line-height: 1.03;
+  letter-spacing: -0.045em;
 }
 
 .project-pitch {
   max-width: 610px;
   margin: 24px 0 0;
   font-size: clamp(16px, 1.45vw, 19px);
-  line-height: 1.56;
+  line-height: 1.62;
   letter-spacing: -0.018em;
 }
 
 .project-role {
   margin: auto 0 0;
   padding-top: 34px;
-  font-family: "DM Mono", monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -478,7 +473,7 @@ img {
 }
 
 .project-story--guardalo {
-  grid-template-columns: 0.86fr 1.34fr;
+  grid-template-columns: 1fr 1.2fr;
   color: #082133;
   background: #f6fafb;
   --button-bg: #0b97c4;
@@ -519,7 +514,7 @@ img {
 }
 
 .project-story--smem0 {
-  grid-template-columns: 0.78fr 1.42fr;
+  grid-template-columns: 0.92fr 1.28fr;
   color: #18152f;
   background: #f7f6ff;
   --button-bg: #3b2cc3;
@@ -539,7 +534,7 @@ img {
 }
 
 .project-story--chatfreevideo {
-  grid-template-columns: 0.95fr 1.25fr;
+  grid-template-columns: 1fr 1.2fr;
   color: #fff;
   background: linear-gradient(145deg, #271064, #7a19e8 62%, #e800c6);
   --button-bg: #fff;
@@ -558,7 +553,7 @@ img {
 }
 
 .project-story--politicometro {
-  grid-template-columns: 0.9fr 1.3fr;
+  grid-template-columns: 1fr 1.2fr;
   color: #151515;
   background:
     linear-gradient(rgba(21, 21, 21, 0.035) 1px, transparent 1px),
@@ -663,15 +658,15 @@ img {
 .playlist-heading h2 {
   margin: 0;
   font-size: clamp(46px, 6.7vw, 88px);
-  line-height: 0.9;
-  letter-spacing: -0.06em;
+  line-height: 1;
+  letter-spacing: -0.045em;
 }
 
 .playlist-profile {
   flex: 0 0 auto;
   padding-bottom: 5px;
   border-bottom: 1px solid currentColor;
-  font-family: "DM Mono", monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 11px;
   text-decoration: none;
   text-transform: uppercase;
@@ -721,7 +716,7 @@ img {
 .playlist-number {
   align-self: end;
   color: var(--acid);
-  font-family: "DM Mono", monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 10px;
 }
 
@@ -739,7 +734,7 @@ img {
   border-radius: 5px;
   color: #151515;
   background: var(--acid);
-  font-family: "DM Mono", monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 10px;
   font-weight: 500;
   text-transform: uppercase;
@@ -762,8 +757,8 @@ img {
   max-width: 940px;
   margin: 0 auto;
   font-size: clamp(48px, 7.5vw, 104px);
-  line-height: 0.9;
-  letter-spacing: -0.07em;
+  line-height: 1;
+  letter-spacing: -0.05em;
 }
 
 .contact-links {
@@ -800,7 +795,7 @@ img {
   display: flex;
   justify-content: space-between;
   color: var(--muted);
-  font-family: "DM Mono", monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -870,7 +865,7 @@ img {
 
 .dialog-kind {
   margin: 28px 0 12px;
-  font-family: "DM Mono", monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -880,15 +875,16 @@ img {
   max-width: 590px;
   margin: 0;
   font-size: clamp(40px, 7vw, 66px);
-  line-height: 0.94;
-  letter-spacing: -0.055em;
+  line-height: 1;
+  letter-spacing: -0.045em;
 }
 
 .dialog-lead {
   margin: 26px 0 0;
-  font-family: "Instrument Serif", serif;
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 600;
   font-size: clamp(24px, 4vw, 32px);
-  line-height: 1.15;
+  line-height: 1.3;
 }
 
 .dialog-body {
@@ -906,7 +902,7 @@ img {
 }
 
 .dialog-now span {
-  font-family: "DM Mono", monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 9px;
   font-weight: 500;
   text-transform: uppercase;
@@ -1040,7 +1036,7 @@ noscript {
   }
 
   .hero {
-    padding: 52px 0 58px;
+    padding: 48px 0 46px;
   }
 
   .hero h1 {
@@ -1053,8 +1049,7 @@ noscript {
   }
 
   .project-jump {
-    padding: 18px;
-    box-shadow: 5px 5px 0 var(--ink);
+    display: none;
   }
 
   .projects {
@@ -1089,10 +1084,11 @@ noscript {
 
   .project-meta {
     margin-top: 22px;
+    flex-wrap: wrap;
   }
 
   .project-story h3 {
-    font-size: clamp(38px, 12vw, 52px);
+    font-size: clamp(36px, 10.5vw, 46px);
   }
 
   .project-pitch {
@@ -1135,7 +1131,7 @@ noscript {
   }
 
   .project-story--frattura .project-shot-wrap {
-    height: 440px;
+    height: 360px;
   }
 
   .playlists {

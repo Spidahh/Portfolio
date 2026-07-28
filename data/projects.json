@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-28T16:09:39.8566822+02:00",
+  "generatedAt": "2026-07-28T16:26:02.0774963+02:00",
   "projects": [
     {
       "id": "guardalo",
@@ -11,9 +11,9 @@
       "accent": "#c8ff3d",
       "visualInk": "#090a0d",
       "publicCopy": {
-        "kind": "Guida agli anime",
-        "tagline": "La serata è corta. Il catalogo è infinito.",
-        "pitch": "GUARDALO ti porta da «non so cosa vedere» a un anime preciso, senza scaricarti addosso altre cento scelte. Parti dal tempo che hai, dall’atmosfera o da un percorso curato; arrivi a una scheda senza spoiler, con durata reale e piattaforma legale.",
+        "kind": "Consigli anime · IT / EN",
+        "tagline": "Anime consigliati in base ai tuoi gusti.",
+        "pitch": "GUARDALO è un sito in italiano e inglese che consiglia anime in base ai gusti e al tempo disponibile. Aiuta chi comincia a trovare un punto d’ingresso e chi ne ha già visti molti a scoprire titoli meno ovvi.",
         "role": "Ideazione · direzione editoriale · sviluppo",
         "status": "Online",
         "cta": "Apri GUARDALO",
@@ -25,9 +25,9 @@
         "visual": "assets/projects/guardalo-live.png",
         "layout": "wide",
         "detail": {
-          "lead": "Il punto non è trovare un anime. È trovarne uno che abbia senso proprio stasera.",
-          "body": "GUARDALO organizza la scelta come farebbe un amico che conosce bene il catalogo e non ha voglia di impressionarti. I percorsi danno un ingresso leggibile a generi e autori; le schede dicono che esperienza aspettarsi, quanto dura davvero e dove si vede, senza rovinare la storia.",
-          "now": "È già online e utilizzabile gratuitamente."
+          "lead": "Per chi vuole iniziare bene. E per chi pensa di aver già visto tutto.",
+          "body": "Il motore di consigli parte dai gusti, dal tempo disponibile e dal tipo di esperienza cercata. I percorsi guidano chi è nuovo; chi conosce già molti titoli può evitare le classifiche ripetitive. Le schede sono senza spoiler e indicano durata reale e streaming legale.",
+          "now": "Online in italiano e inglese, gratis e senza account."
         },
         "details": [
           "Percorsi editoriali per entrare in un genere senza partire alla cieca.",
@@ -48,9 +48,9 @@
       "accent": "#ffb13d",
       "visualInk": "#090a0d",
       "publicCopy": {
-        "kind": "Organizzatore di gruppo",
-        "tagline": "La chat di gruppo non organizza niente.",
-        "pitch": "Crei il ritrovo, mandi un link e ognuno segna quando può. Organizzamici mette insieme date, viaggi, auto, posti letto e cose da portare, poi mostra l’incastro che fa perdere meno tempo a tutti.",
+        "kind": "Eventi di gruppo",
+        "tagline": "Trova la data che funziona davvero per il gruppo.",
+        "pitch": "Organizzamici raccoglie in un solo link disponibilità, spostamenti, auto e posti letto, poi mostra la data migliore. È pensato per cene, viaggi e ritrovi che non dovrebbero richiedere cento messaggi.",
         "role": "Ideazione · prodotto · sviluppo",
         "status": "Beta online",
         "cta": "Crea un evento",
@@ -62,8 +62,8 @@
         "visual": "assets/projects/organizzamici-live.png",
         "layout": "standard",
         "detail": {
-          "lead": "Nasce per quel momento in cui dodici persone scrivono «per me va bene tutto» e nessuno decide niente.",
-          "body": "L’organizzatore condivide un solo link. Le disponibilità arrivano nello stesso posto e la data migliore viene spiegata, non estratta da una scatola nera. Quando il gruppo deve anche muoversi o dormire fuori, auto, tratte, posti letto e risorse restano attaccati all’evento.",
+          "lead": "Un link al posto di cento messaggi.",
+          "body": "L’organizzatore condivide l’invito e ognuno indica disponibilità e spostamenti. Il risultato mostra l’opzione migliore e spiega perché, mentre auto, tratte, posti letto e cose da portare restano collegati allo stesso evento.",
           "now": "La beta è online: si può già creare e condividere un evento."
         },
         "details": [
@@ -86,8 +86,8 @@
       "visualInk": "#090a0d",
       "publicCopy": {
         "kind": "Memoria personale",
-        "tagline": "Sa cosa hai detto. E cosa avevi detto prima.",
-        "pitch": "A Smem0 mandi una nota, un documento, un vocale o una scadenza. Quando qualcosa cambia, conserva l’originale, collega la nuova versione e ti fa vedere da dove arriva ogni risposta. Una memoria che non riscrive il passato per sembrare sicura.",
+        "tagline": "Una memoria personale che conserva fonti e cambiamenti.",
+        "pitch": "Smem0 raccoglie note, documenti, vocali e scadenze e permette di ritrovarli facendo una domanda. Conserva le fonti e distingue ciò che era vero prima da ciò che è cambiato.",
         "role": "Ideazione · prodotto · sviluppo",
         "status": "Pilot locale",
         "cta": "",
@@ -99,8 +99,8 @@
         "visual": "assets/projects/smem0.png",
         "layout": "standard",
         "detail": {
-          "lead": "Scrivi «la consegna è il 12». Smem0 ricorda anche che prima era il 10, chi l’ha cambiata e dove lo avevi letto.",
-          "body": "Testo, file, immagini e audio entrano dalla stessa conversazione. Gli originali restano intatti; modifiche, contraddizioni, prestiti, promesse e scadenze diventano collegamenti verificabili invece di appunti persi fra applicazioni diverse.",
+          "lead": "Le informazioni cambiano. La loro storia non dovrebbe sparire.",
+          "body": "Testo, file, immagini e audio entrano dalla stessa conversazione. Smem0 collega ogni risposta all’originale e rende visibili aggiornamenti, contraddizioni, prestiti, promesse e scadenze.",
           "now": "La prova locale funziona. Il percorso cloud è ancora in collaudo e non viene presentato come servizio pubblico."
         },
         "details": [
@@ -123,8 +123,8 @@
       "visualInk": "#ffffff",
       "publicCopy": {
         "kind": "Chat e videochat 18+",
-        "tagline": "Entri. Parli. Nessun profilo da lucidare.",
-        "pitch": "Scegli una lingua, scrivi un nickname e sei dentro. ChatFreeVideo è una piattaforma 18+ per conversazioni immediate fra stanze, messaggi privati, video uno a uno e roulette, con moderazione incorporata fin dall’inizio.",
+        "tagline": "Chat e videochat senza registrazione.",
+        "pitch": "ChatFreeVideo è una piattaforma 18+ per entrare in chat o videochat con un nickname, senza creare un account. Stanze per lingua e interessi, conversazioni private, roulette e moderazione rendono l’ingresso immediato.",
         "role": "Identità visiva e grafica · team CFV",
         "status": "Pilot da pubblicare",
         "cta": "",
@@ -136,8 +136,8 @@
         "visual": "assets/projects/chatfreevideo-live.png",
         "layout": "wide",
         "detail": {
-          "lead": "L’idea è togliere l’anticamera: niente registrazione, niente profilo da riempire, niente feed da mantenere.",
-          "body": "L’esperienza parte da area e lingua, poi passa alle stanze, alle conversazioni private o alla roulette video. L’interfaccia è pensata per quattordici lingue e per rendere visibili moderazione, segnalazioni e limiti di un prodotto destinato esclusivamente a maggiorenni.",
+          "lead": "Scegli un nickname e sei dentro.",
+          "body": "L’esperienza parte da area e lingua, poi passa alle stanze, alle conversazioni private o alla roulette video. L’interfaccia supporta quattordici lingue e integra moderazione, segnalazioni e limiti per un prodotto destinato esclusivamente a maggiorenni.",
           "now": "Il prodotto è pronto per un pilot controllato, ma non è ancora aperto al pubblico."
         },
         "details": [
@@ -159,13 +159,13 @@
       "accent": "#ff5f57",
       "visualInk": "#ffffff",
       "publicCopy": {
-        "kind": "Memoria politica",
-        "tagline": "La notizia passa. Il conto resta.",
-        "pitch": "Politicometro segue dichiarazioni, decisioni e soldi pubblici dopo che hanno smesso di fare rumore. Ogni caso mette in fila promessa, fatti, fonti, responsabilità e conseguenze, lasciando ben visibile anche ciò che ancora non si sa.",
+        "kind": "Progetto civico-editoriale",
+        "tagline": "Segui una promessa politica fino alle conseguenze.",
+        "pitch": "Politicometro trasforma dichiarazioni e decisioni pubbliche in casi che restano aggiornati nel tempo. Collega promesse, fatti, fonti, responsabilità e correzioni, così una notizia non scompare quando finisce il rumore.",
         "role": "Ideazione · ricerca · prodotto",
         "status": "In progettazione",
         "cta": "",
-        "dialogCta": "Dentro l’idea",
+        "dialogCta": "Vedi il concept",
         "category": "apps",
         "theme": "politicometro",
         "variant": "press",
@@ -173,8 +173,8 @@
         "visual": "assets/projects/politicometro-concept.svg",
         "layout": "standard",
         "detail": {
-          "lead": "Un titolo racconta l’annuncio. Politicometro vuole raccontare che cosa è successo dopo.",
-          "body": "Una scheda separa ciò che è stato dichiarato da ciò che è documentabile. Le fonti restano collegate, le correzioni sono pubbliche e un caso continua a vivere quando arrivano nuovi atti o conseguenze. Il tono non assegna voti alle persone: rende leggibile il percorso dei fatti.",
+          "lead": "Il titolo del giorno è solo l’inizio del caso.",
+          "body": "Ogni scheda separa dichiarazioni, fatti documentabili e parti ancora sconosciute. Le fonti restano collegate, le correzioni sono pubbliche e il caso continua ad aggiornarsi quando arrivano nuovi atti o conseguenze.",
           "now": "Metodo e formato sono definiti. L’immagine mostrata è un concept editoriale; il prototipo navigabile deve ancora essere costruito."
         },
         "details": [
@@ -197,12 +197,12 @@
       "visualInk": "#090a0d",
       "publicCopy": {
         "kind": "Arena FPS multiplayer",
-        "tagline": "Otto abilità. Due secondi per usarle bene.",
-        "pitch": "RAGEQUIT è un arena FPS multiplayer nel browser. Scegli una classe, costruisci un loadout da otto abilità e scopri molto in fretta se la tua grande strategia regge quando qualcuno ti arriva addosso.",
+        "tagline": "Scegli otto abilità e costruisci il tuo stile di combattimento.",
+        "pitch": "RAGEQUIT è un arena FPS multiplayer nel browser con quattro classi e un loadout da otto abilità scelto dal giocatore. Ogni partita dipende da come combini movimento, controllo, difesa e danno.",
         "role": "Game design · sviluppo",
         "status": "Playtest in preparazione",
         "cta": "",
-        "dialogCta": "Dentro l’arena",
+        "dialogCta": "Vedi il gioco",
         "category": "games",
         "theme": "ragequit",
         "variant": "game",
@@ -210,8 +210,8 @@
         "visual": "assets/projects/ragequit.webp",
         "layout": "standard",
         "detail": {
-          "lead": "Quattro classi e cinquantatré abilità servono a costruire il proprio modo di combattere, non a riempire un menu.",
-          "body": "Tank, Arciere, Mago e Ibrido cambiano ritmo, distanza e rischio. Il combattimento è gestito da un server autoritativo; training, bot e persistenza permettono già di provare il sistema senza fingere che il gioco sia pronto per il pubblico.",
+          "lead": "Il loadout è la tua vera classe.",
+          "body": "Tank, Arciere, Mago e Ibrido cambiano ritmo, distanza e rischio. Cinquantatré abilità permettono di costruire combinazioni diverse; training, bot e persistenza sono già implementati per preparare il primo playtest pubblico.",
           "now": "Il server è online. Manca ancora un client pubblico raggiungibile con un link per il primo playtest."
         },
         "details": [
@@ -233,13 +233,13 @@
       "accent": "#e7ff66",
       "visualInk": "#090a0d",
       "publicCopy": {
-        "kind": "Progression fantasy",
-        "tagline": "La montagna si apre. Sotto, qualcuno è già passato.",
-        "pitch": "Kel e Mira hanno scommesso tre anni di guadagni sul Nero di Vetta: abbatterlo significa fondare la loro Compagnia. Ma durante la caccia la montagna si apre e li inghiotte con la creatura. In fondo trovano un mare verticale, il campo di una spedizione vecchia di ottant’anni e un potere che Kel non avrebbe dovuto avere.",
+        "kind": "Saga progression fantasy",
+        "tagline": "Una caccia. Una montagna aperta. Un campo vecchio di ottant’anni.",
+        "pitch": "Kel e Mira rischiano tutto nella caccia al Nero di Vetta per fondare la loro Compagnia. Quando la montagna li inghiotte insieme alla creatura, trovano un mare verticale, il campo di una spedizione scomparsa e il primo indizio di un mistero molto più grande.",
         "role": "Scritto da Francesco Magistà",
         "status": "Storia in revisione",
         "cta": "",
-        "dialogCta": "Entra nella storia",
+        "dialogCta": "Leggi la storia",
         "category": "stories",
         "theme": "frattura",
         "variant": "story",
