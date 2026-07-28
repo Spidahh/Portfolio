@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-28T14:12:11.6903785+02:00",
+  "generatedAt": "2026-07-28T14:44:15.1708463+02:00",
   "projects": [
     {
       "id": "guardalo",
@@ -18,7 +18,7 @@
         "cta": "Apri GUARDALO",
         "category": "app-web",
         "variant": "guide",
-        "visual": "assets/projects/guardalo.png"
+        "visual": "assets/projects/guardalo-live.png"
       },
       "publicUrl": "https://guardalo.vercel.app/",
       "repositoryUrl": "https://github.com/Spidahh/guardalo",
@@ -33,14 +33,14 @@
       "accent": "#ffb13d",
       "visualInk": "#090a0d",
       "publicCopy": {
-        "tagline": "Mettere d’accordo gli amici, finalmente.",
-        "pitch": "Date, mete, auto, posti letto e risorse condivise in un solo evento. Il gruppo vota; Organizzamici trova la soluzione meno dolorosa.",
+        "tagline": "Il gruppo vota. L’algoritmo si prende la colpa.",
+        "pitch": "Condividi un link. Ognuno indica date, mete e vincoli. Organizzamici incrocia lavoro, viaggi, auto e posti letto e propone la soluzione che fa protestare meno persone.",
         "role": "Ideazione · prodotto · sviluppo",
         "status": "Beta online",
         "cta": "Prova Organizzamici",
         "category": "app-web",
         "variant": "social",
-        "visual": "assets/projects/organizzamici.png"
+        "visual": "assets/projects/organizzamici-live.png"
       },
       "publicUrl": "https://spidahh.github.io/Organizzamici/",
       "repositoryUrl": "https://github.com/Spidahh/Organizzamici",
@@ -55,8 +55,8 @@
       "accent": "#7aa2ff",
       "visualInk": "#090a0d",
       "publicCopy": {
-        "tagline": "La memoria che non si limita a prendere appunti.",
-        "pitch": "Gli racconti una cosa una volta. Quando serve, ritrova l’originale, i collegamenti e anche quella promessa che speravi avesse dimenticato.",
+        "tagline": "Memoria personale, con le ricevute.",
+        "pitch": "Scrivi una cosa una volta. Smem0 conserva l’originale, collega quello che torna, segnala le contraddizioni e ti ricorda i conti rimasti aperti. Tutto sul tuo dispositivo.",
         "role": "Ideazione · prodotto · sviluppo",
         "status": "Prova locale",
         "cta": "",
@@ -77,14 +77,14 @@
       "accent": "#8d73ff",
       "visualInk": "#ffffff",
       "publicCopy": {
-        "tagline": "Entra. Parla. Accendi la camera se ti va.",
-        "pitch": "Una chat e videochat per adulti che parte senza registrazione e lascia scegliere tra stanze, incontri casuali e conversazioni private. La mia parte è l’identità grafica.",
+        "tagline": "Meno profili. Più conversazioni.",
+        "pitch": "Chat e videochat per adulti, senza registrazione: scegli un’area, un nickname e sei dentro. Stanze, incontri casuali e privati; io ne ho curato l’identità grafica nel team CFV.",
         "role": "Grafica nel team CFV",
         "status": "Codice pronto · non online",
         "cta": "",
         "category": "community",
         "variant": "community",
-        "visual": "assets/projects/chatfreevideo.svg"
+        "visual": "assets/projects/chatfreevideo-live.png"
       },
       "publicUrl": "",
       "repositoryUrl": "",
@@ -100,7 +100,7 @@
       "visualInk": "#ffffff",
       "publicCopy": {
         "tagline": "Prima il fatto, poi il partito.",
-        "pitch": "Schede rapide e verificabili che collegano dichiarazioni, decisioni e conseguenze. Fonti, cronologie e correzioni al posto della solita curva.",
+        "pitch": "Mette dichiarazioni, decisioni e conseguenze sulla stessa linea temporale. Ogni scheda mostra fonti e correzioni: abbastanza per farsi un’opinione senza sorbirsi un talk show.",
         "role": "Ideazione · ricerca · prodotto",
         "status": "Progetto editoriale",
         "cta": "",
@@ -144,7 +144,7 @@
       "visualInk": "#090a0d",
       "publicCopy": {
         "tagline": "Quattro volumi. Ogni potere lascia una crepa.",
-        "pitch": "Dark fantasy d’azione. Kel parte dal fondo verticale di Vaekh e si fa strada con coraggio, brutalità e un dono che smette di funzionare proprio quando dovrebbe salvarlo. Il Volume I è in scrittura.",
+        "pitch": "Kel risale Vaekh, una città costruita dentro una ferita verticale, usando un potere che gli presenta il conto ogni volta. La saga copre quattro volumi; il primo è in scrittura.",
         "role": "Autore · worldbuilding",
         "status": "Volume I in scrittura",
         "cta": "",

@@ -6,31 +6,31 @@
       id: "app-web",
       index: "A",
       label: "APP / WEB",
-      title: "Meno caos. Più tempo."
+      title: "Il software deve togliere lavoro."
     },
     {
       id: "community",
       index: "B",
       label: "COMMUNITY",
-      title: "Internet, con qualcuno dentro."
+      title: "Persone vere. Frizione minima."
     },
     {
       id: "editoriale",
       index: "C",
       label: "EDITORIALE",
-      title: "La politica senza il teatrino."
+      title: "Prima i fatti. Poi il rumore."
     },
     {
       id: "giochi",
       index: "D",
       label: "GIOCHI",
-      title: "Perdere bene è quasi vincere."
+      title: "Se perdi, deve essere colpa tua."
     },
     {
       id: "storie",
       index: "E",
       label: "STORIE",
-      title: "Il fondo di Vaekh è solo l’inizio."
+      title: "Ogni potere presenta il conto."
     }
   ];
 
