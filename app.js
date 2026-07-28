@@ -6,31 +6,31 @@
       id: "app-web",
       index: "A",
       label: "APP / WEB",
-      title: "Il software deve togliere lavoro."
+      title: "APP / WEB"
     },
     {
       id: "community",
       index: "B",
       label: "COMMUNITY",
-      title: "Persone vere. Frizione minima."
+      title: "COMMUNITY"
     },
     {
       id: "editoriale",
       index: "C",
       label: "EDITORIALE",
-      title: "Prima i fatti. Poi il rumore."
+      title: "EDITORIALE"
     },
     {
       id: "giochi",
       index: "D",
       label: "GIOCHI",
-      title: "Se perdi, deve essere colpa tua."
+      title: "GIOCHI"
     },
     {
       id: "storie",
       index: "E",
       label: "STORIE",
-      title: "Ogni potere presenta il conto."
+      title: "STORIE"
     }
   ];
 

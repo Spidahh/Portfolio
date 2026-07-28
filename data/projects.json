@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-28T14:44:15.1708463+02:00",
+  "generatedAt": "2026-07-28T15:07:38.7408060+02:00",
   "projects": [
     {
       "id": "guardalo",
@@ -11,14 +11,14 @@
       "accent": "#c8ff3d",
       "visualInk": "#090a0d",
       "publicCopy": {
-        "tagline": "Basta scegliere male gli anime.",
-        "pitch": "Ti dice cosa guardare, da dove iniziare e quante serate stai per perdere. Percorsi curati, zero spoiler e soltanto piattaforme legali.",
+        "tagline": "La prossima ossessione è già qui.",
+        "pitch": "Percorsi fatti a mano, zero spoiler e il tempo giusto per ogni storia. Aprilo quando vuoi qualcosa di bello, non qualcosa a caso.",
         "role": "Ideazione · editoriale · sviluppo",
         "status": "Online",
         "cta": "Apri GUARDALO",
         "category": "app-web",
         "variant": "guide",
-        "visual": "assets/projects/guardalo-live.png"
+        "visual": "assets/projects/guardalo-cover.png"
       },
       "publicUrl": "https://guardalo.vercel.app/",
       "repositoryUrl": "https://github.com/Spidahh/guardalo",
@@ -33,14 +33,14 @@
       "accent": "#ffb13d",
       "visualInk": "#090a0d",
       "publicCopy": {
-        "tagline": "Il gruppo vota. L’algoritmo si prende la colpa.",
-        "pitch": "Condividi un link. Ognuno indica date, mete e vincoli. Organizzamici incrocia lavoro, viaggi, auto e posti letto e propone la soluzione che fa protestare meno persone.",
+        "tagline": "La serata esiste. Manca solo una data.",
+        "pitch": "Un link nel gruppo, qualche voto e finalmente si decide. Tu porta gli amici.",
         "role": "Ideazione · prodotto · sviluppo",
         "status": "Beta online",
         "cta": "Prova Organizzamici",
         "category": "app-web",
         "variant": "social",
-        "visual": "assets/projects/organizzamici-live.png"
+        "visual": "assets/projects/organizzamici-cover.png"
       },
       "publicUrl": "https://spidahh.github.io/Organizzamici/",
       "repositoryUrl": "https://github.com/Spidahh/Organizzamici",
@@ -55,8 +55,8 @@
       "accent": "#7aa2ff",
       "visualInk": "#090a0d",
       "publicCopy": {
-        "tagline": "Memoria personale, con le ricevute.",
-        "pitch": "Scrivi una cosa una volta. Smem0 conserva l’originale, collega quello che torna, segnala le contraddizioni e ti ricorda i conti rimasti aperti. Tutto sul tuo dispositivo.",
+        "tagline": "Le cose importanti tornano quando servono.",
+        "pitch": "Ricordi, impegni e fili lasciati aperti. Smem0 li tiene vicini senza chiederti dove li avevi messi.",
         "role": "Ideazione · prodotto · sviluppo",
         "status": "Prova locale",
         "cta": "",
@@ -77,14 +77,14 @@
       "accent": "#8d73ff",
       "visualInk": "#ffffff",
       "publicCopy": {
-        "tagline": "Meno profili. Più conversazioni.",
-        "pitch": "Chat e videochat per adulti, senza registrazione: scegli un’area, un nickname e sei dentro. Stanze, incontri casuali e privati; io ne ho curato l’identità grafica nel team CFV.",
+        "tagline": "Entra e vedi chi c’è.",
+        "pitch": "Scegli un nome, entra in una stanza e parla. Camera facoltativa; profili da lucidare, nessuno.",
         "role": "Grafica nel team CFV",
         "status": "Codice pronto · non online",
         "cta": "",
         "category": "community",
         "variant": "community",
-        "visual": "assets/projects/chatfreevideo-live.png"
+        "visual": "assets/projects/chatfreevideo-cover.png"
       },
       "publicUrl": "",
       "repositoryUrl": "",
@@ -99,8 +99,8 @@
       "accent": "#ff5f57",
       "visualInk": "#ffffff",
       "publicCopy": {
-        "tagline": "Prima il fatto, poi il partito.",
-        "pitch": "Mette dichiarazioni, decisioni e conseguenze sulla stessa linea temporale. Ogni scheda mostra fonti e correzioni: abbastanza per farsi un’opinione senza sorbirsi un talk show.",
+        "tagline": "Le parole passano. I fatti restano.",
+        "pitch": "Dichiarazioni, decisioni e conseguenze sulla stessa linea del tempo. Il rumore resta fuori.",
         "role": "Ideazione · ricerca · prodotto",
         "status": "Progetto editoriale",
         "cta": "",
@@ -121,8 +121,8 @@
       "accent": "#ff8a3d",
       "visualInk": "#090a0d",
       "publicCopy": {
-        "tagline": "Arena FPS. Otto abilità. Zero alibi.",
-        "pitch": "Scegli una classe, costruisci il loadout e prova a non sprecare tutte le abilità nei primi dieci secondi. Il server combatte già; il client pubblico deve ancora entrare nell’arena.",
+        "tagline": "Otto abilità. Nessun alibi.",
+        "pitch": "Costruisci il loadout, entra nell’arena e scopri in dieci secondi se avevi un piano o soltanto coraggio.",
         "role": "Game design · sviluppo",
         "status": "Prototipo avanzato",
         "cta": "",
@@ -143,8 +143,8 @@
       "accent": "#e7ff66",
       "visualInk": "#090a0d",
       "publicCopy": {
-        "tagline": "Quattro volumi. Ogni potere lascia una crepa.",
-        "pitch": "Kel risale Vaekh, una città costruita dentro una ferita verticale, usando un potere che gli presenta il conto ogni volta. La saga copre quattro volumi; il primo è in scrittura.",
+        "tagline": "Dal fondo si sale. Il prezzo lo decide Vaekh.",
+        "pitch": "Kel ha un dono che lo salva e lo consuma. Sopra di lui: una città verticale, quattro volumi e nessuna via facile.",
         "role": "Autore · worldbuilding",
         "status": "Volume I in scrittura",
         "cta": "",
