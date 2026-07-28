@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-28T15:58:01.9954117+02:00",
+  "generatedAt": "2026-07-28T16:09:39.8566822+02:00",
   "projects": [
     {
       "id": "guardalo",
@@ -234,10 +234,10 @@
       "visualInk": "#090a0d",
       "publicCopy": {
         "kind": "Progression fantasy",
-        "tagline": "Il mondo si spezza. Kel ci vede un’impresa.",
-        "pitch": "Frattura è una progression fantasy adulta in quattro volumi: regioni separate da ferite fisiche, poteri che restituiscono sempre il colpo e due fondatori che trasformano una catastrofe nell’occasione di costruire la propria Compagnia.",
-        "role": "Autore · worldbuilding",
-        "status": "Apertura in revisione",
+        "tagline": "La montagna si apre. Sotto, qualcuno è già passato.",
+        "pitch": "Kel e Mira hanno scommesso tre anni di guadagni sul Nero di Vetta: abbatterlo significa fondare la loro Compagnia. Ma durante la caccia la montagna si apre e li inghiotte con la creatura. In fondo trovano un mare verticale, il campo di una spedizione vecchia di ottant’anni e un potere che Kel non avrebbe dovuto avere.",
+        "role": "Scritto da Francesco Magistà",
+        "status": "Storia in revisione",
         "cta": "",
         "dialogCta": "Entra nella storia",
         "category": "stories",
@@ -247,14 +247,14 @@
         "visual": "assets/projects/frattura.png",
         "layout": "wide",
         "detail": {
-          "lead": "La magia non apre porte senza chiedere qualcosa in cambio. Kel decide comunque di attraversarle.",
-          "body": "Nel mondo di Frattura le distanze sono politiche, fisiche e mostruose. Kel e Mira incontrano una crepa capace di collegare regioni lontane e capiscono che può diventare il primo affare della loro Compagnia. Ogni potere ha una regola, una via, un ritorno e una frattura che resta addosso a chi lo usa.",
-          "now": "La saga e l’architettura dei quattro volumi sono approvate. L’apertura del primo volume è in revisione; la prosa non è ancora ripartita."
+          "lead": "La montagna si è aperta oggi. Il campo là sotto aspetta da ottant’anni.",
+          "body": "Kel vuole diventare abbastanza forte da scegliere le proprie imprese. Mira vuole fondare una Compagnia che nessun ricco possa comprare. La caccia che dovrebbe renderli indipendenti li scaraventa in una cavità impossibile, dove un mare corre in verticale e qualcuno ha lasciato prove di essere passato prima di loro. Kel ne esce con un potere raro, una ferita e la domanda che li trascinerà tra mostri, città mobili, guerre e luoghi saldati insieme: chi esplorava le Fratture ottant’anni prima?",
+          "now": "Una progression fantasy adulta di azione, mistero e crescita. La storia globale è in revisione; la divisione in quattro volumi resta l’ultima approvata."
         },
         "details": [
-          "Kel e Mira trasformano una frattura fra regioni lontane nell’occasione di fondare una Compagnia propria.",
-          "I poteri non sono mosse gratuite: hanno una regola, una via, un ritorno e una crepa.",
-          "La saga e i quattro volumi sono approvati; la nuova apertura deve essere validata prima di riprendere la prosa."
+          "Kel e Mira rischiano tre anni di guadagni nella caccia che può renderli finalmente indipendenti.",
+          "Ogni Frattura apre un luogo fisico impossibile e lascia una traccia della stessa spedizione scomparsa.",
+          "La storia globale è in revisione; la divisione in quattro volumi resta l’ultima approvata."
         ]
       },
       "publicUrl": "",
