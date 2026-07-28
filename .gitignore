@@ -1,2 +1,6 @@
-# strumenti locali di anteprima — non fanno parte del sito
+# La parte pubblica è versionabile; stato gestionale e scansioni restano locali.
 .claude/
+studio/projects.local.json
+studio/discovery.json
+studio/health.json
+studio/state/

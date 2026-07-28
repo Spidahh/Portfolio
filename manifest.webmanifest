@@ -1,0 +1,9 @@
+{
+  "name": "Spidah Studio",
+  "short_name": "Spidah",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#090a0d",
+  "theme_color": "#090a0d",
+  "description": "Project OS e portfolio di Francesco Magistà."
+}
