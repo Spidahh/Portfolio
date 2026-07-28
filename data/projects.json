@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-28T13:26:48.6924641+02:00",
+  "generatedAt": "2026-07-28T14:12:11.6903785+02:00",
   "projects": [
     {
       "id": "guardalo",
@@ -11,11 +11,14 @@
       "accent": "#c8ff3d",
       "visualInk": "#090a0d",
       "publicCopy": {
-        "tagline": "Scegliere un anime dovrebbe richiedere meno tempo che guardarlo.",
-        "story": "Apri una piattaforma, scorri duecento copertine e quaranta minuti dopo stai ancora decidendo. GUARDALO fa l’opposto: niente catalogo infinito, ma percorsi curati, atmosfera, durata vera e piattaforme legali. Ti porta fino a una scelta e poi si toglie di mezzo.",
-        "now": "È già online e si aggiorna con AniList. La sfida adesso non è aggiungere altra roba: è diventare il posto che apri quando vuoi guardare qualcosa ma non sai cosa.",
-        "cta": "Trovami qualcosa da guardare",
-        "availability": "Online, vivo e pronto a salvarti la serata."
+        "tagline": "Basta scegliere male gli anime.",
+        "pitch": "Ti dice cosa guardare, da dove iniziare e quante serate stai per perdere. Percorsi curati, zero spoiler e soltanto piattaforme legali.",
+        "role": "Ideazione · editoriale · sviluppo",
+        "status": "Online",
+        "cta": "Apri GUARDALO",
+        "category": "app-web",
+        "variant": "guide",
+        "visual": "assets/projects/guardalo.png"
       },
       "publicUrl": "https://guardalo.vercel.app/",
       "repositoryUrl": "https://github.com/Spidahh/guardalo",
@@ -30,11 +33,14 @@
       "accent": "#ffb13d",
       "visualInk": "#090a0d",
       "publicCopy": {
-        "tagline": "La democrazia applicata al gruppo WhatsApp. Con meno sangue.",
-        "story": "Mettere d’accordo otto amici significa date, passaggi, posti letto, mete e almeno una persona che risponde tre giorni dopo. Organizzamici prende quel caos e lo trasforma in una decisione condivisa: ognuno vota, l’app incrocia le risposte e il gruppo smette finalmente di ripetere «per me va bene tutto».",
-        "now": "La beta è online e funziona anche senza configurazioni complicate. Ora deve dimostrare una cosa semplice: far arrivare gruppi reali dall’invito all’evento deciso senza perdersi per strada.",
-        "cta": "Organizza qualcosa senza litigare",
-        "availability": "Beta pubblica: puoi già provarla con il tuo gruppo."
+        "tagline": "Mettere d’accordo gli amici, finalmente.",
+        "pitch": "Date, mete, auto, posti letto e risorse condivise in un solo evento. Il gruppo vota; Organizzamici trova la soluzione meno dolorosa.",
+        "role": "Ideazione · prodotto · sviluppo",
+        "status": "Beta online",
+        "cta": "Prova Organizzamici",
+        "category": "app-web",
+        "variant": "social",
+        "visual": "assets/projects/organizzamici.png"
       },
       "publicUrl": "https://spidahh.github.io/Organizzamici/",
       "repositoryUrl": "https://github.com/Spidahh/Organizzamici",
@@ -49,11 +55,14 @@
       "accent": "#7aa2ff",
       "visualInk": "#090a0d",
       "publicCopy": {
-        "tagline": "Una seconda memoria per chi usa la prima soprattutto per dimenticare.",
-        "story": "Smem0 non è l’ennesima app di note dove seppellire cose che non rileggerai. Gli mandi testi, link, immagini, documenti o vocali; lui conserva l’originale, collega ciò che sa già, segnala contraddizioni e continua a ricordarti i cicli rimasti aperti: prestiti, scadenze, promesse e quel famoso «poi ci penso».",
-        "now": "La prova locale è completa; cloud, calendario e agente domestico devono ancora superare il collaudo con account reali. Finché non succede, non fingerò che sia un servizio pronto per i tuoi dati personali.",
+        "tagline": "La memoria che non si limita a prendere appunti.",
+        "pitch": "Gli racconti una cosa una volta. Quando serve, ritrova l’originale, i collegamenti e anche quella promessa che speravi avesse dimenticato.",
+        "role": "Ideazione · prodotto · sviluppo",
+        "status": "Prova locale",
         "cta": "",
-        "availability": "Non è pubblico: prima viene la fiducia, poi il link."
+        "category": "app-web",
+        "variant": "memory",
+        "visual": "assets/projects/smem0.png"
       },
       "publicUrl": "",
       "repositoryUrl": "",
@@ -62,17 +71,20 @@
     {
       "id": "webchat",
       "name": "WEBCHAT",
-      "displayName": "WEBCHAT",
+      "displayName": "ChatFreeVideo",
       "suite": "utility",
       "phase": "Pilot",
       "accent": "#8d73ff",
       "visualInk": "#ffffff",
       "publicCopy": {
-        "tagline": "Entrare, parlare, vedere chi c’è. Senza compilare il censimento.",
-        "story": "WEBCHAT riprende l’immediatezza delle vecchie chat e la ricostruisce con stanze, messaggi privati, video, roulette, app mobile e quattordici lingue. Il lavoro serio, però, è quello che non fa scena: moderazione, limiti anti-abuso, segnalazioni, consenso e un’infrastruttura che non crolli appena la stanza si riempie.",
-        "now": "Il prodotto passa build e test realtime, ma non è ancora un luogo pubblico. Prima del lancio servono un’identità definitiva, regole di sicurezza chiare e un pilot piccolo abbastanza da capire cosa si rompe.",
+        "tagline": "Entra. Parla. Accendi la camera se ti va.",
+        "pitch": "Una chat e videochat per adulti che parte senza registrazione e lascia scegliere tra stanze, incontri casuali e conversazioni private. La mia parte è l’identità grafica.",
+        "role": "Grafica nel team CFV",
+        "status": "Codice pronto · non online",
         "cta": "",
-        "availability": "Il codice è pronto. La piazza, responsabilmente, non è ancora aperta."
+        "category": "community",
+        "variant": "community",
+        "visual": "assets/projects/chatfreevideo.svg"
       },
       "publicUrl": "",
       "repositoryUrl": "",
@@ -87,11 +99,14 @@
       "accent": "#ff5f57",
       "visualInk": "#ffffff",
       "publicCopy": {
-        "tagline": "Le dichiarazioni passano. Le conseguenze hanno una memoria più lunga.",
-        "story": "Politicometro non vuole dare voti ai politici e nemmeno vincere discussioni. Vuole collegare ciò che viene detto a ciò che succede dopo, con fonti, contesto, diritto di correzione e una cronologia leggibile anche da chi non passa la giornata nei talk show. Una memoria pubblica verificabile, non un pagellone travestito da verità.",
-        "now": "Metodo, rischi e struttura sono già scritti; l’applicazione no. Il prossimo passo è un prototipo con pochi casi inattaccabili, abbastanza chiaro da capire se il formato aiuta davvero le persone.",
+        "tagline": "Prima il fatto, poi il partito.",
+        "pitch": "Schede rapide e verificabili che collegano dichiarazioni, decisioni e conseguenze. Fonti, cronologie e correzioni al posto della solita curva.",
+        "role": "Ideazione · ricerca · prodotto",
+        "status": "Progetto editoriale",
         "cta": "",
-        "availability": "È ancora un progetto editoriale in costruzione, non un verdetto automatico."
+        "category": "editoriale",
+        "variant": "press",
+        "visual": ""
       },
       "publicUrl": "",
       "repositoryUrl": "https://github.com/Spidahh/Politicometro",
@@ -106,11 +121,14 @@
       "accent": "#ff8a3d",
       "visualInk": "#090a0d",
       "publicCopy": {
-        "tagline": "Un’arena PvP progettata per farti dire «ultima partita» sette volte.",
-        "story": "RAGEQUIT è un combattimento 3D nel browser dove la vittoria dovrebbe arrivare perché hai letto l’avversario, combinato bene le abilità e imparato dai tuoi errori — non perché hai comprato statistiche migliori. Classi, cinquantatré abilità, bot di allenamento e server autoritativo esistono per sostenere quel momento perfetto in cui perdi male e vuoi immediatamente riprovare.",
-        "now": "Il server è online e il prototipo è avanzato, ma il client non è ancora raggiungibile come gioco pubblico. Il traguardo che conta è un link da mandare a qualcuno e dieci partite complete da osservare.",
+        "tagline": "Arena FPS. Otto abilità. Zero alibi.",
+        "pitch": "Scegli una classe, costruisci il loadout e prova a non sprecare tutte le abilità nei primi dieci secondi. Il server combatte già; il client pubblico deve ancora entrare nell’arena.",
+        "role": "Game design · sviluppo",
+        "status": "Prototipo avanzato",
         "cta": "",
-        "availability": "Non ancora giocabile dal pubblico. Il controller può stare tranquillo, per ora."
+        "category": "giochi",
+        "variant": "game",
+        "visual": "assets/projects/ragequit.webp"
       },
       "publicUrl": "",
       "repositoryUrl": "https://github.com/Spidahh/Ragequit",
@@ -125,15 +143,18 @@
       "accent": "#e7ff66",
       "visualInk": "#090a0d",
       "publicCopy": {
-        "tagline": "Sette libri, un mondo rotto e la pessima idea di voler sapere cosa c’è dall’altra parte.",
-        "story": "Frattura è una saga dark fantasy d’avventura costruita come un mistero che continua ad allargarsi. Il mondo, il cast e le sue regole non sono decorazione: sono un sistema di indizi, promesse e conseguenze pensato per ricompensare chi presta attenzione senza trasformare la storia in un’enciclopedia con le spade.",
-        "now": "La vecchia prosa è stata archiviata, il canone è stato ripulito e il cancello di scrittura è finalmente aperto. Ora viene la parte meno rassicurante: smettere di progettare il mondo e cominciare davvero il primo libro.",
+        "tagline": "Quattro volumi. Ogni potere lascia una crepa.",
+        "pitch": "Dark fantasy d’azione. Kel parte dal fondo verticale di Vaekh e si fa strada con coraggio, brutalità e un dono che smette di funzionare proprio quando dovrebbe salvarlo. Il Volume I è in scrittura.",
+        "role": "Autore · worldbuilding",
+        "status": "Volume I in scrittura",
         "cta": "",
-        "availability": "La prima stesura sta per iniziare. L’estratto arriverà quando meriterà di essere letto."
+        "category": "storie",
+        "variant": "story",
+        "visual": "assets/projects/frattura.png"
       },
       "publicUrl": "",
-      "repositoryUrl": "",
-      "repositoryPublic": false
+      "repositoryUrl": "https://github.com/Spidahh/Frattura",
+      "repositoryPublic": true
     }
   ]
 }

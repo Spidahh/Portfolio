@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Spidah — i progetti di Francesco Magistà</title>
-  <meta name="description" content="App, giochi, storie e playlist costruiti e curati da Francesco Magistà, online Spidah.">
-  <meta name="theme-color" content="#090a0d">
+  <title>Spidah — app, giochi, storie e playlist</title>
+  <meta name="description" content="I progetti di Francesco Magistà, online Spidah: app, prodotti web, giochi, storie e playlist.">
+  <meta name="theme-color" content="#07090c">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Spidah — app, giochi, storie e musica">
-  <meta property="og:description" content="Una persona, parecchi progetti e pochissima voglia di fare cose normali.">
+  <meta property="og:title" content="Spidah — faccio cose. Alcune funzionano.">
+  <meta property="og:description" content="App, giochi, storie e playlist di Francesco Magistà.">
   <meta property="og:url" content="https://spidahh.github.io/Portfolio/">
   <meta property="og:image" content="https://spidahh.github.io/Portfolio/assets/og-spidah-portfolio.png">
   <meta property="og:image:alt" content="Spidah — Faccio cose. Alcune funzionano. App, giochi, storie e playlist.">
@@ -17,10 +17,10 @@
   <link rel="canonical" href="https://spidahh.github.io/Portfolio/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,650;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23090a0d'/%3E%3Cpath d='M8 10h16v4H13v2h9v4h-9v2h11v4H8z' fill='%23c8ff3d'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2307090c'/%3E%3Cpath d='M8 10h16v4H13v2h9v4h-9v2h11v4H8z' fill='%23c8ff3d'/%3E%3C/svg%3E">
 </head>
 <body>
   <div class="progress" id="progress" aria-hidden="true"></div>
@@ -28,186 +28,127 @@
   <header class="site-header">
     <a class="brand" href="#top" aria-label="Spidah, torna all'inizio">
       <span class="brand-mark">S</span>
-      <span><strong>Francesco</strong> / Spidah</span>
+      <strong>SPIDAH</strong>
     </a>
-    <nav class="nav" aria-label="Navigazione principale">
+    <nav class="desktop-nav" aria-label="Navigazione principale">
       <a href="#progetti">Progetti</a>
       <a href="#playlist">Playlist</a>
-      <a href="#chi-sono">Chi sono</a>
-      <a class="nav-contact" href="#contatti">Contatti <span>↓</span></a>
+      <a href="#contatti">Contatti</a>
     </nav>
-    <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-nav">Menu</button>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-nav">MENU</button>
   </header>
 
   <nav class="mobile-nav" id="mobile-nav" aria-label="Navigazione mobile" hidden>
     <a href="#progetti">Progetti</a>
     <a href="#playlist">Playlist</a>
-    <a href="#chi-sono">Chi sono</a>
     <a href="#contatti">Contatti</a>
   </nav>
 
   <main id="top">
-    <section class="hero shell">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="live-dot"></span> Francesco Magistà · online Spidah</p>
-        <h1>Faccio cose.<br><span>Alcune funzionano.</span></h1>
-        <p class="hero-lead">App per evitare il caos, un gioco per crearlo apposta, una saga dark fantasy e dodici playlist per sopravvivere nel mezzo. Questo è il mio portfolio, non una presentazione aziendale.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#progetti">Fammi vedere <span id="hero-project-label">i progetti</span> <span>↓</span></a>
-          <a class="button secondary" href="#playlist">Metti qualcosa in cuffia <span>↓</span></a>
-        </div>
-      </div>
+    <section class="hero">
+      <h1 class="sr-only">Spidah — faccio cose. Alcune funzionano.</h1>
+      <img src="assets/og-spidah-portfolio.png" alt="" fetchpriority="high">
+      <a class="hero-jump" href="#progetti">GUARDA I PROGETTI <span>↓</span></a>
+    </section>
 
-      <div class="hero-poster" aria-label="Indice visivo del portfolio">
-        <div class="poster-topline">
-          <span>SPIDAH / COSE CHE FACCIO</span>
-          <span class="poster-state">MAI FINITO</span>
-        </div>
-        <div class="orbit">
-          <div class="orbit-core">
-            <span class="orbit-logo">FM</span>
-            <strong>SPIDAH</strong>
-            <small>una persona</small>
-          </div>
-          <span class="orbit-node n1">APP</span>
-          <span class="orbit-node n2">GIOCHI</span>
-          <span class="orbit-node n3">STORIE</span>
-          <span class="orbit-node n4">MUSICA</span>
-        </div>
-        <div class="poster-stats">
-          <div><strong id="hero-project-count">--</strong><span>progetti</span></div>
-          <div><strong>12</strong><span>playlist</span></div>
-          <div><strong>01</strong><span>persona</span></div>
-        </div>
+    <div class="marquee" aria-hidden="true">
+      <div>
+        <span>APP</span><i>✳</i><span>COMMUNITY</span><i>✳</i><span>GIOCHI</span><i>✳</i><span>STORIE</span><i>✳</i><span>PLAYLIST</span><i>✳</i>
+        <span>APP</span><i>✳</i><span>COMMUNITY</span><i>✳</i><span>GIOCHI</span><i>✳</i><span>STORIE</span><i>✳</i><span>PLAYLIST</span><i>✳</i>
+      </div>
+    </div>
+
+    <section class="projects" id="progetti">
+      <header class="projects-intro shell">
+        <p class="index-label">01 / PROGETTI</p>
+        <h2>Cose diverse.<br><span>Ognuna con il suo carattere.</span></h2>
+      </header>
+      <div id="project-sections" aria-live="polite">
+        <p class="loading shell">Sto recuperando i progetti…</p>
       </div>
     </section>
 
-    <section class="ticker" aria-label="Progetti in evidenza">
-      <div>GUARDALO <i>✦</i> ORGANIZZAMICI <i>✦</i> SMEM0 <i>✦</i> WEBCHAT <i>✦</i> POLITICOMETRO <i>✦</i> RAGEQUIT <i>✦</i> FRATTURA</div>
-    </section>
-
-    <section class="section shell" id="progetti">
-      <div class="section-head">
+    <section class="playlist-section" id="playlist">
+      <div class="playlist-head shell">
         <div>
-          <p class="kicker">Le cose che sto costruendo</p>
-          <h2>Non ho scelto una nicchia.<br>Ho scelto di non annoiarmi.</h2>
+          <p class="index-label dark-label">02 / PLAYLIST</p>
+          <h2>Dodici modi<br>di non stare in silenzio.</h2>
         </div>
-        <p>Alcuni progetti sono già online, altri stanno ancora imparando a camminare senza cadere. Qui trovi cosa sono davvero, perché esistono e a che punto sono — raccontati come progetti, non come liste della spesa.</p>
+        <a class="spotify-all" href="https://open.spotify.com/user/uhlxjkxuufd9gbsgn62oz00ep" target="_blank" rel="noopener">TUTTO SU SPOTIFY ↗</a>
       </div>
 
-      <div class="filters" role="group" aria-label="Filtra i progetti">
-        <button class="filter active" type="button" data-filter="all" aria-pressed="true">Tutti <span id="filter-total-count">--</span></button>
-        <button class="filter" type="button" data-filter="utility" aria-pressed="false">App &amp; strumenti</button>
-        <button class="filter" type="button" data-filter="editorial" aria-pressed="false">Contenuti</button>
-        <button class="filter" type="button" data-filter="play" aria-pressed="false">Giochi</button>
-        <button class="filter" type="button" data-filter="story" aria-pressed="false">Storie</button>
-      </div>
-      <p class="sr-only" id="filter-status" aria-live="polite"></p>
-
-      <div class="project-grid" id="project-grid" aria-live="polite">
-        <p class="loading">Sto recuperando i progetti…</p>
-      </div>
-    </section>
-
-    <section class="section playlist-section" id="playlist">
-      <div class="shell">
-        <div class="section-head">
-          <div>
-            <p class="kicker">Dodici modi diversi di non stare in silenzio</p>
-            <h2>Le playlist sono tornate.<br>Dove dovevano stare.</h2>
-          </div>
-          <p>Non faccio musica: la inseguo, la divido per umore e poi passo troppo tempo a decidere l’ordine perfetto. C’è roba per lavorare, guidare, innamorarsi, perdere la testa o semplicemente tenere fuori il resto del mondo.</p>
-        </div>
-
-        <div class="playlist-grid">
-          <a class="playlist-card" href="https://open.spotify.com/playlist/30I943TwY7ANxtmVrgoeLZ" target="_blank" rel="noopener">
-            <div class="playlist-cover"><img src="https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8420ea0d36e5815e4df35e247b" alt="Copertina della playlist Sottosfondo" loading="lazy"></div>
-            <h3>Sottosfondo</h3><p>Lo-fi · Chill</p>
-          </a>
-          <a class="playlist-card" href="https://open.spotify.com/playlist/5wp0oohWN1HoAzvZqhIcBV" target="_blank" rel="noopener">
-            <div class="playlist-cover"><img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84b4421e92ef24c2cda422cc50" alt="Copertina della playlist Definitivamente bella" loading="lazy"></div>
-            <h3>Definitivamente bella</h3><p>Hit · Mix</p>
-          </a>
-          <a class="playlist-card" href="https://open.spotify.com/playlist/2Qp1dOfNXOrGJrxxFxqcvh" target="_blank" rel="noopener">
-            <div class="playlist-cover"><img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da847eadc273932893f6986ee1da" alt="Copertina della playlist Rap Italiano" loading="lazy"></div>
-            <h3>Rap Italiano</h3><p>Hip-Hop</p>
-          </a>
-          <a class="playlist-card" href="https://open.spotify.com/playlist/3tbfFbIRVELTifW86O2rNj" target="_blank" rel="noopener">
-            <div class="playlist-cover"><img src="https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84a5930437740a201d11de0e12" alt="Copertina della playlist Astare Relax" loading="lazy"></div>
-            <h3>Astare Relax</h3><p>Ambient</p>
-          </a>
-          <a class="playlist-card" href="https://open.spotify.com/playlist/1DUsXa8l2dIIhG7YkuOirK" target="_blank" rel="noopener">
-            <div class="playlist-cover"><img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84f84f258bed68ba1e77fe3115" alt="Copertina della playlist Bassbondanza" loading="lazy"></div>
-            <h3>Bassbondanza</h3><p>Bass · Electronic</p>
-          </a>
-          <a class="playlist-card" href="https://open.spotify.com/playlist/26QxZ2aHgTIBXzLPH1NPMG" target="_blank" rel="noopener">
-            <div class="playlist-cover"><img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84be00fab8b19d0ad0f32c92c6" alt="Copertina della playlist ElectroThings" loading="lazy"></div>
-            <h3>ElectroThings</h3><p>Electro · Synth</p>
-          </a>
-          <a class="playlist-card" href="https://open.spotify.com/playlist/6CJtiJA4E4ItJ888qSs2mW" target="_blank" rel="noopener">
-            <div class="playlist-cover"><img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8453c8cb8509c3feeccdab8951" alt="Copertina della playlist Italiana" loading="lazy"></div>
-            <h3>Italiana</h3><p>Pop italiano</p>
-          </a>
-          <a class="playlist-card" href="https://open.spotify.com/playlist/2fGlkkuU6bpTJQzekgPMGm" target="_blank" rel="noopener">
-            <div class="playlist-cover"><img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84b290ccdcc4e755d59114758f" alt="Copertina della playlist Love It" loading="lazy"></div>
-            <h3>Love It</h3><p>Romantic</p>
-          </a>
-          <a class="playlist-card" href="https://open.spotify.com/playlist/1kL5LBxd53GpYwx7c4LOj5" target="_blank" rel="noopener">
-            <div class="playlist-cover"><img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8478f30945bc498ba4393c8aab" alt="Copertina della playlist Reggae Music" loading="lazy"></div>
-            <h3>Reggae Music</h3><p>Reggae · Dub</p>
-          </a>
-          <a class="playlist-card" href="https://open.spotify.com/playlist/25Y6Kt39iokGDYheflbjfx" target="_blank" rel="noopener">
-            <div class="playlist-cover"><img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84da8b3036d4246e6ddd00a39b" alt="Copertina della playlist Rock, Metal e il Diavolo" loading="lazy"></div>
-            <h3>Rock, Metal &amp; Il Diavolo</h3><p>Rock · Metal</p>
-          </a>
-          <a class="playlist-card" href="https://open.spotify.com/playlist/0cp6DP806RkTK8UHQ2MfI6" target="_blank" rel="noopener">
-            <div class="playlist-cover"><img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84387782c80fe0cd7541079701" alt="Copertina della playlist Straniera" loading="lazy"></div>
-            <h3>Straniera</h3><p>Internazionale</p>
-          </a>
-          <a class="playlist-card" href="https://open.spotify.com/playlist/5O04i4e6B9KtRbh5t248iI" target="_blank" rel="noopener">
-            <div class="playlist-cover"><img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84a3721d1d51e3921d1b04f5f3" alt="Copertina della playlist Anime" loading="lazy"></div>
-            <h3>Anime</h3><p>OST · J-Pop</p>
-          </a>
-        </div>
-
-        <div class="playlist-footer">
-          <a class="button primary dark" href="https://open.spotify.com/user/uhlxjkxuufd9gbsgn62oz00ep" target="_blank" rel="noopener">Apri tutto su Spotify <span>↗</span></a>
-        </div>
-      </div>
-    </section>
-
-    <section class="about-section shell" id="chi-sono">
-      <div class="about-grid">
-        <div class="about-stamp"><strong>FM</strong></div>
-        <div class="about-copy">
-          <p class="kicker">Chi c’è dietro</p>
-          <h2>Non sono uno studio.<br>Sono Francesco.</h2>
-          <p>Online uso il nome Spidah. Progetto prodotti digitali, scrivo una saga, costruisco giochi e curo playlist. Non perché facciano tutti parte di un piano segreto, ma perché mi interessano cose diverse e non ho mai visto un buon motivo per fingere il contrario.</p>
-          <p>Il punto in comune è più semplice: quando qualcosa mi manca, mi annoia o funziona male, provo a costruirne una versione che abbia più senso per me. A volte diventa un sito online. A volte diventa sette libri da scrivere. Succede.</p>
-        </div>
+      <div class="playlist-grid shell">
+        <a class="playlist-card" href="https://open.spotify.com/playlist/30I943TwY7ANxtmVrgoeLZ" target="_blank" rel="noopener">
+          <img src="https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8420ea0d36e5815e4df35e247b" alt="" loading="lazy">
+          <span>01</span><h3>Sottosfondo</h3><p>Lo-fi · Chill</p>
+        </a>
+        <a class="playlist-card" href="https://open.spotify.com/playlist/5wp0oohWN1HoAzvZqhIcBV" target="_blank" rel="noopener">
+          <img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84b4421e92ef24c2cda422cc50" alt="" loading="lazy">
+          <span>02</span><h3>Definitivamente bella</h3><p>Hit · Mix</p>
+        </a>
+        <a class="playlist-card" href="https://open.spotify.com/playlist/2Qp1dOfNXOrGJrxxFxqcvh" target="_blank" rel="noopener">
+          <img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da847eadc273932893f6986ee1da" alt="" loading="lazy">
+          <span>03</span><h3>Rap Italiano</h3><p>Hip-Hop</p>
+        </a>
+        <a class="playlist-card" href="https://open.spotify.com/playlist/3tbfFbIRVELTifW86O2rNj" target="_blank" rel="noopener">
+          <img src="https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84a5930437740a201d11de0e12" alt="" loading="lazy">
+          <span>04</span><h3>Astare Relax</h3><p>Ambient</p>
+        </a>
+        <a class="playlist-card" href="https://open.spotify.com/playlist/1DUsXa8l2dIIhG7YkuOirK" target="_blank" rel="noopener">
+          <img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84f84f258bed68ba1e77fe3115" alt="" loading="lazy">
+          <span>05</span><h3>Bassbondanza</h3><p>Bass · Electronic</p>
+        </a>
+        <a class="playlist-card" href="https://open.spotify.com/playlist/26QxZ2aHgTIBXzLPH1NPMG" target="_blank" rel="noopener">
+          <img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84be00fab8b19d0ad0f32c92c6" alt="" loading="lazy">
+          <span>06</span><h3>ElectroThings</h3><p>Electro · Synth</p>
+        </a>
+        <a class="playlist-card" href="https://open.spotify.com/playlist/6CJtiJA4E4ItJ888qSs2mW" target="_blank" rel="noopener">
+          <img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8453c8cb8509c3feeccdab8951" alt="" loading="lazy">
+          <span>07</span><h3>Italiana</h3><p>Pop italiano</p>
+        </a>
+        <a class="playlist-card" href="https://open.spotify.com/playlist/2fGlkkuU6bpTJQzekgPMGm" target="_blank" rel="noopener">
+          <img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84b290ccdcc4e755d59114758f" alt="" loading="lazy">
+          <span>08</span><h3>Love It</h3><p>Romantic</p>
+        </a>
+        <a class="playlist-card" href="https://open.spotify.com/playlist/1kL5LBxd53GpYwx7c4LOj5" target="_blank" rel="noopener">
+          <img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8478f30945bc498ba4393c8aab" alt="" loading="lazy">
+          <span>09</span><h3>Reggae Music</h3><p>Reggae · Dub</p>
+        </a>
+        <a class="playlist-card" href="https://open.spotify.com/playlist/25Y6Kt39iokGDYheflbjfx" target="_blank" rel="noopener">
+          <img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84da8b3036d4246e6ddd00a39b" alt="" loading="lazy">
+          <span>10</span><h3>Rock, Metal &amp; Il Diavolo</h3><p>Rock · Metal</p>
+        </a>
+        <a class="playlist-card" href="https://open.spotify.com/playlist/0cp6DP806RkTK8UHQ2MfI6" target="_blank" rel="noopener">
+          <img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84387782c80fe0cd7541079701" alt="" loading="lazy">
+          <span>11</span><h3>Straniera</h3><p>Internazionale</p>
+        </a>
+        <a class="playlist-card" href="https://open.spotify.com/playlist/5O04i4e6B9KtRbh5t248iI" target="_blank" rel="noopener">
+          <img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84a3721d1d51e3921d1b04f5f3" alt="" loading="lazy">
+          <span>12</span><h3>Anime</h3><p>OST · J-Pop</p>
+        </a>
       </div>
     </section>
 
     <section class="contact shell" id="contatti">
-      <p class="kicker">Francesco Magistà · Italia</p>
-      <h2>Vuoi provare qualcosa,<br>collaborare o dirmi che sono fuori di testa?</h2>
-      <a href="mailto:magistaf@gmail.com">magistaf@gmail.com <span>↗</span></a>
+      <p class="index-label">03 / CONTATTI</p>
+      <h2>Se vuoi usare una cosa,<br>migliorarla o farne una insieme:</h2>
+      <a href="mailto:magistaf@gmail.com">MAGISTAF@GMAIL.COM ↗</a>
     </section>
   </main>
 
   <footer class="footer shell">
-    <div class="brand footer-brand"><span class="brand-mark">S</span><span><strong>Francesco</strong> / Spidah</span></div>
-    <p>Una persona, parecchi progetti. © <span id="year">2026</span></p>
+    <a class="brand footer-brand" href="#top"><span class="brand-mark">S</span><strong>SPIDAH</strong></a>
+    <p>Francesco Magistà · <span id="year">2026</span></p>
     <nav aria-label="Link esterni">
-      <a href="https://github.com/spidahh" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://www.instagram.com/francesco_noncista/" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://open.spotify.com/user/uhlxjkxuufd9gbsgn62oz00ep" target="_blank" rel="noopener">Spotify</a>
+      <a href="https://github.com/spidahh" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="https://www.instagram.com/francesco_noncista/" target="_blank" rel="noopener">Instagram ↗</a>
+      <a href="https://open.spotify.com/user/uhlxjkxuufd9gbsgn62oz00ep" target="_blank" rel="noopener">Spotify ↗</a>
     </nav>
   </footer>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <button class="back-to-top" id="back-to-top" type="button" aria-label="Torna all'inizio">↑</button>
-  <noscript>Questo portfolio usa JavaScript soltanto per caricare e filtrare i progetti.</noscript>
+  <noscript>Attiva JavaScript per vedere il catalogo dei progetti.</noscript>
   <script src="app.js" defer></script>
 </body>
 </html>
