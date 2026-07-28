@@ -1,9 +1,9 @@
 {
-  "name": "Spidah Studio",
+  "name": "Spidah — Portfolio di Francesco Magistà",
   "short_name": "Spidah",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#090a0d",
   "theme_color": "#090a0d",
-  "description": "Project OS e portfolio di Francesco Magistà."
+  "description": "App, giochi, storie e playlist di Francesco Magistà."
 }

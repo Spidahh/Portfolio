@@ -1,6 +1,2 @@
-# La parte pubblica è versionabile; stato gestionale e scansioni restano locali.
-.claude/
-studio/projects.local.json
-studio/discovery.json
-studio/health.json
-studio/state/
+.DS_Store
+Thumbs.db
