@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-28T15:07:38.7408060+02:00",
+  "generatedAt": "2026-07-28T15:29:01.7767320+02:00",
   "projects": [
     {
       "id": "guardalo",
@@ -11,14 +11,21 @@
       "accent": "#c8ff3d",
       "visualInk": "#090a0d",
       "publicCopy": {
-        "tagline": "La prossima ossessione è già qui.",
-        "pitch": "Percorsi fatti a mano, zero spoiler e il tempo giusto per ogni storia. Aprilo quando vuoi qualcosa di bello, non qualcosa a caso.",
+        "kind": "Guida agli anime",
+        "tagline": "Meno scrolling. Più serie giuste.",
+        "pitch": "GUARDALO non ti scarica addosso un catalogo infinito: ti porta da «non so cosa vedere» a un titolo preciso, con percorsi curati, durata reale, zero spoiler e link legali.",
         "role": "Ideazione · editoriale · sviluppo",
         "status": "Online",
         "cta": "Apri GUARDALO",
-        "category": "app-web",
+        "category": "apps",
         "variant": "guide",
-        "visual": "assets/projects/guardalo-cover.png"
+        "visual": "assets/projects/guardalo-live.png",
+        "layout": "wide",
+        "details": [
+          "Percorsi editoriali per entrare in un genere senza partire alla cieca.",
+          "Schede spoiler-free con atmosfera, durata e punto di partenza.",
+          "Online, gratuito e senza account obbligatorio."
+        ]
       },
       "publicUrl": "https://guardalo.vercel.app/",
       "repositoryUrl": "https://github.com/Spidahh/guardalo",
@@ -33,14 +40,21 @@
       "accent": "#ffb13d",
       "visualInk": "#090a0d",
       "publicCopy": {
-        "tagline": "La serata esiste. Manca solo una data.",
-        "pitch": "Un link nel gruppo, qualche voto e finalmente si decide. Tu porta gli amici.",
+        "kind": "Organizzatore di gruppo",
+        "tagline": "Il gruppo smette di discutere. La data appare.",
+        "pitch": "Crei l’evento, mandi un link e ognuno segna quando c’è. Organizzamici incrocia disponibilità, viaggi, auto e posti letto per trasformare la chat infinita in un piano vero.",
         "role": "Ideazione · prodotto · sviluppo",
         "status": "Beta online",
         "cta": "Prova Organizzamici",
-        "category": "app-web",
+        "category": "apps",
         "variant": "social",
-        "visual": "assets/projects/organizzamici-cover.png"
+        "visual": "assets/projects/organizzamici-live.png",
+        "layout": "standard",
+        "details": [
+          "Un solo link per invitare il gruppo e raccogliere le disponibilità.",
+          "La data migliore viene spiegata, non estratta da una scatola nera.",
+          "Auto, posti letto e risorse restano attaccati all’evento."
+        ]
       },
       "publicUrl": "https://spidahh.github.io/Organizzamici/",
       "repositoryUrl": "https://github.com/Spidahh/Organizzamici",
@@ -55,14 +69,21 @@
       "accent": "#7aa2ff",
       "visualInk": "#090a0d",
       "publicCopy": {
-        "tagline": "Le cose importanti tornano quando servono.",
-        "pitch": "Ricordi, impegni e fili lasciati aperti. Smem0 li tiene vicini senza chiederti dove li avevi messi.",
+        "kind": "Memoria personale",
+        "tagline": "Una memoria che conserva anche il perché.",
+        "pitch": "Gli racconti una cosa, incolli un documento o mandi una nota vocale. Smem0 tiene l’originale, collega ciò che cambia, segnala i conflitti e riporta a galla scadenze e promesse aperte.",
         "role": "Ideazione · prodotto · sviluppo",
-        "status": "Prova locale",
+        "status": "Pilot locale",
         "cta": "",
-        "category": "app-web",
+        "category": "apps",
         "variant": "memory",
-        "visual": "assets/projects/smem0.png"
+        "visual": "assets/projects/smem0.png",
+        "layout": "standard",
+        "details": [
+          "Testo, documenti, immagini e audio entrano dalla stessa conversazione.",
+          "Ogni aggiornamento conserva la fonte originale e mostra i conflitti.",
+          "La prova locale funziona; il percorso cloud deve ancora superare il collaudo completo."
+        ]
       },
       "publicUrl": "",
       "repositoryUrl": "",
@@ -77,14 +98,21 @@
       "accent": "#8d73ff",
       "visualInk": "#ffffff",
       "publicCopy": {
-        "tagline": "Entra e vedi chi c’è.",
-        "pitch": "Scegli un nome, entra in una stanza e parla. Camera facoltativa; profili da lucidare, nessuno.",
-        "role": "Grafica nel team CFV",
-        "status": "Codice pronto · non online",
+        "kind": "Chat e videochat 18+",
+        "tagline": "Una stanza, una faccia, nessun profilo da costruire.",
+        "pitch": "ChatFreeVideo è una piattaforma 18+ di chat e videochat senza registrazione: stanze per lingua e interessi, conversazioni private, roulette e moderazione. Il prodotto è pronto al pilot, ma non è ancora pubblico.",
+        "role": "Identità visiva e grafica · team CFV",
+        "status": "Pilot da pubblicare",
         "cta": "",
-        "category": "community",
+        "category": "apps",
         "variant": "community",
-        "visual": "assets/projects/chatfreevideo-cover.png"
+        "visual": "assets/projects/chatfreevideo-live.png",
+        "layout": "wide",
+        "details": [
+          "Ingresso con nickname, senza costruire un profilo o registrare un account.",
+          "Chat, video 1:1, stanze, roulette e interfaccia in quattordici lingue.",
+          "Build e test realtime sono pronti; il servizio pubblico richiede ancora deploy e pilot controllato."
+        ]
       },
       "publicUrl": "",
       "repositoryUrl": "",
@@ -95,18 +123,25 @@
       "name": "Politicometro",
       "displayName": "Politicometro",
       "suite": "editorial",
-      "phase": "Prototype",
+      "phase": "Discovery",
       "accent": "#ff5f57",
       "visualInk": "#ffffff",
       "publicCopy": {
-        "tagline": "Le parole passano. I fatti restano.",
-        "pitch": "Dichiarazioni, decisioni e conseguenze sulla stessa linea del tempo. Il rumore resta fuori.",
+        "kind": "Memoria politica",
+        "tagline": "La politica senza la curva.",
+        "pitch": "Politicometro segue un caso oltre il titolo del giorno: cosa è stato detto, cosa è successo davvero, quali prove esistono e che fine ha fatto. Il progetto è in fase di definizione editoriale.",
         "role": "Ideazione · ricerca · prodotto",
-        "status": "Progetto editoriale",
+        "status": "In progettazione",
         "cta": "",
-        "category": "editoriale",
+        "category": "apps",
         "variant": "press",
-        "visual": ""
+        "visual": "",
+        "layout": "standard",
+        "details": [
+          "Ogni scheda separa dichiarazioni, fatti, prove, responsabilità e parti ancora ignote.",
+          "I casi vengono seguiti nel tempo invece di morire con il ciclo delle notizie.",
+          "Metodo e formati sono definiti; il prototipo navigabile deve ancora essere costruito."
+        ]
       },
       "publicUrl": "",
       "repositoryUrl": "https://github.com/Spidahh/Politicometro",
@@ -121,14 +156,21 @@
       "accent": "#ff8a3d",
       "visualInk": "#090a0d",
       "publicCopy": {
-        "tagline": "Otto abilità. Nessun alibi.",
-        "pitch": "Costruisci il loadout, entra nell’arena e scopri in dieci secondi se avevi un piano o soltanto coraggio.",
+        "kind": "Arena FPS multiplayer",
+        "tagline": "Costruisci otto abilità. Poi prova a sopravvivere.",
+        "pitch": "RAGEQUIT è un arena FPS multiplayer nel browser con quattro classi, loadout da otto abilità e combattimento gestito dal server. Il server gira già; il prossimo passo è un client pubblico da playtest.",
         "role": "Game design · sviluppo",
-        "status": "Prototipo avanzato",
+        "status": "Playtest in preparazione",
         "cta": "",
-        "category": "giochi",
+        "category": "games",
         "variant": "game",
-        "visual": "assets/projects/ragequit.webp"
+        "visual": "assets/projects/ragequit.webp",
+        "layout": "standard",
+        "details": [
+          "Tank, Arciere, Mago e Ibrido costruiscono loadout diversi con cinquantatré abilità.",
+          "Training, bot, persistenza e server multiplayer sono già implementati.",
+          "Il server è online, ma il client non è ancora pubblicato come esperienza giocabile."
+        ]
       },
       "publicUrl": "",
       "repositoryUrl": "https://github.com/Spidahh/Ragequit",
@@ -143,14 +185,21 @@
       "accent": "#e7ff66",
       "visualInk": "#090a0d",
       "publicCopy": {
-        "tagline": "Dal fondo si sale. Il prezzo lo decide Vaekh.",
-        "pitch": "Kel ha un dono che lo salva e lo consuma. Sopra di lui: una città verticale, quattro volumi e nessuna via facile.",
+        "kind": "Progression fantasy",
+        "tagline": "Un mondo immenso si spezza. Kel decide di usarne la crepa.",
+        "pitch": "Frattura è una saga adulta in quattro volumi: città impossibili, poteri con un costo fisico e una Compagnia nata durante una catastrofe. La storia globale è approvata; l’apertura del primo volume è in revisione.",
         "role": "Autore · worldbuilding",
-        "status": "Volume I in scrittura",
+        "status": "Apertura in revisione",
         "cta": "",
-        "category": "storie",
+        "category": "stories",
         "variant": "story",
-        "visual": "assets/projects/frattura.png"
+        "visual": "assets/projects/frattura.png",
+        "layout": "wide",
+        "details": [
+          "Kel e Mira trasformano una frattura fra regioni lontane nell’occasione di fondare una Compagnia propria.",
+          "I poteri non sono mosse gratuite: hanno una regola, una via, un ritorno e una crepa.",
+          "La saga e i quattro volumi sono approvati; la nuova apertura deve essere validata prima di riprendere la prosa."
+        ]
       },
       "publicUrl": "",
       "repositoryUrl": "https://github.com/Spidahh/Frattura",

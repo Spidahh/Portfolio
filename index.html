@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260728c">
+  <link rel="stylesheet" href="styles.css?v=20260728d">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2307090c'/%3E%3Cpath d='M8 10h16v4H13v2h9v4h-9v2h11v4H8z' fill='%23c8ff3d'/%3E%3C/svg%3E">
 </head>
@@ -31,7 +31,7 @@
       <strong>SPIDAH</strong>
     </a>
     <nav class="desktop-nav" aria-label="Navigazione principale">
-      <a href="#progetti">Progetti</a>
+      <a href="#progetti">Lavori</a>
       <a href="#playlist">Playlist</a>
       <a href="#contatti">Contatti</a>
     </nav>
@@ -39,31 +39,46 @@
   </header>
 
   <nav class="mobile-nav" id="mobile-nav" aria-label="Navigazione mobile" hidden>
-    <a href="#progetti">Progetti</a>
+    <a href="#progetti">Lavori</a>
     <a href="#playlist">Playlist</a>
     <a href="#contatti">Contatti</a>
   </nav>
 
   <main id="top">
-    <section class="hero">
-      <h1 class="sr-only">Spidah — faccio cose. Alcune funzionano.</h1>
-      <img src="assets/og-spidah-portfolio.png" alt="" fetchpriority="high">
+    <section class="hero shell" aria-labelledby="hero-title">
+      <p class="hero-kicker">SPIDAH / FRANCESCO MAGISTÀ</p>
+      <div class="hero-grid">
+        <h1 id="hero-title">FACCIO COSE.<br><span>ALCUNE</span><br>FUNZIONANO.</h1>
+        <div class="hero-side">
+          <p>App da usare.<br>Giochi da rompere.<br>Storie in cui restare.</p>
+          <a href="#progetti">VEDI I PROGETTI <span>↓</span></a>
+        </div>
+      </div>
+      <span class="hero-stamp" aria-hidden="true">S✳</span>
     </section>
 
     <div class="marquee" aria-hidden="true">
       <div>
-        <span>APP</span><i>✳</i><span>COMMUNITY</span><i>✳</i><span>GIOCHI</span><i>✳</i><span>STORIE</span><i>✳</i><span>PLAYLIST</span><i>✳</i>
-        <span>APP</span><i>✳</i><span>COMMUNITY</span><i>✳</i><span>GIOCHI</span><i>✳</i><span>STORIE</span><i>✳</i><span>PLAYLIST</span><i>✳</i>
+        <span>GUARDALO</span><i>✳</i><span>ORGANIZZAMICI</span><i>✳</i><span>SMEM0</span><i>✳</i><span>CHATFREEVIDEO</span><i>✳</i><span>POLITICOMETRO</span><i>✳</i><span>RAGEQUIT</span><i>✳</i><span>FRATTURA</span><i>✳</i>
+        <span>GUARDALO</span><i>✳</i><span>ORGANIZZAMICI</span><i>✳</i><span>SMEM0</span><i>✳</i><span>CHATFREEVIDEO</span><i>✳</i><span>POLITICOMETRO</span><i>✳</i><span>RAGEQUIT</span><i>✳</i><span>FRATTURA</span><i>✳</i>
       </div>
     </div>
 
     <section class="projects" id="progetti">
-      <header class="projects-intro shell">
-        <p class="index-label">01 / PROGETTI</p>
-        <h2>Progetti.</h2>
+      <header class="projects-head shell">
+        <div>
+          <p class="index-label">01 / PROGETTI</p>
+          <h2>COSE FATTE.<br><span>O QUASI.</span></h2>
+        </div>
+        <div class="project-filters" role="group" aria-label="Filtra i progetti">
+          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">TUTTI</button>
+          <button class="filter-button" type="button" data-filter="apps" aria-pressed="false">APP &amp; SITI</button>
+          <button class="filter-button" type="button" data-filter="games" aria-pressed="false">GIOCHI</button>
+          <button class="filter-button" type="button" data-filter="stories" aria-pressed="false">STORIE</button>
+        </div>
       </header>
-      <div id="project-sections" aria-live="polite">
-        <p class="loading shell">Sto recuperando i progetti…</p>
+      <div class="project-grid shell" id="project-grid" aria-live="polite">
+        <p class="loading">Sto recuperando i progetti…</p>
       </div>
     </section>
 
@@ -130,7 +145,8 @@
 
     <section class="contact shell" id="contatti">
       <p class="index-label">03 / CONTATTI</p>
-      <h2>Se vuoi usare una cosa,<br>migliorarla o farne una insieme:</h2>
+      <h2>HAI VISTO QUALCOSA<br>CHE TI SERVE?</h2>
+      <p>Per usarla, migliorarla o costruirne un’altra insieme.</p>
       <a href="mailto:magistaf@gmail.com">MAGISTAF@GMAIL.COM ↗</a>
     </section>
   </main>
@@ -146,8 +162,12 @@
   </footer>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <dialog class="project-dialog" id="project-dialog" aria-labelledby="dialog-title">
+    <button class="dialog-close" type="button" aria-label="Chiudi">×</button>
+    <div id="dialog-content"></div>
+  </dialog>
   <button class="back-to-top" id="back-to-top" type="button" aria-label="Torna all'inizio">↑</button>
   <noscript>Attiva JavaScript per vedere il catalogo dei progetti.</noscript>
-  <script src="app.js?v=20260728c" defer></script>
+  <script src="app.js?v=20260728d" defer></script>
 </body>
 </html>
