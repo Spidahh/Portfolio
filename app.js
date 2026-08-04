@@ -16,8 +16,10 @@ function normalizeProject(item) {
     kind: copy.kind,
     visual: copy.visual,
     visualAlt: copy.visualAlt,
+    visualFit: copy.visualFit || "cover",
     tagline: copy.tagline,
     pitch: copy.pitch,
+    role: copy.role || "",
     linkLabel: copy.linkLabel || "Apri il progetto",
     publicUrl: item.publicUrl
   };
@@ -57,6 +59,18 @@ function actionMarkup(project) {
   `;
 }
 
+function pitchMarkup(project) {
+  if (!project.pitch) return "";
+
+  return `<p class="project-pitch">${escapeHtml(project.pitch)}</p>`;
+}
+
+function roleMarkup(project) {
+  if (!project.role) return "";
+
+  return `<p class="project-role"><span>Ruolo</span> ${escapeHtml(project.role)}</p>`;
+}
+
 function mediaMarkup(project, index) {
   if (!project.visual) {
     return `
@@ -76,12 +90,16 @@ function mediaMarkup(project, index) {
     >
   `;
 
+  const mediaClass = project.visualFit === "contain"
+    ? "project-media project-media--contain"
+    : "project-media";
+
   if (!project.publicUrl) {
-    return `<div class="project-media">${image}</div>`;
+    return `<div class="${mediaClass}">${image}</div>`;
   }
 
   return `
-    <a class="project-media" href="${escapeHtml(project.publicUrl)}" target="_blank" rel="noopener" aria-label="${escapeHtml(project.linkLabel)}">
+    <a class="${mediaClass}" href="${escapeHtml(project.publicUrl)}" target="_blank" rel="noopener" aria-label="${escapeHtml(project.linkLabel)}">
       ${image}
     </a>
   `;
@@ -95,7 +113,8 @@ function renderProjects() {
         <p class="project-kind">${escapeHtml(project.kind)}</p>
         <h3>${escapeHtml(project.name)}</h3>
         <p class="project-tagline">${escapeHtml(project.tagline)}</p>
-        <p class="project-pitch">${escapeHtml(project.pitch)}</p>
+        ${pitchMarkup(project)}
+        ${roleMarkup(project)}
         ${actionMarkup(project)}
       </div>
       ${mediaMarkup(project, index)}

@@ -4,14 +4,13 @@
       "id": "guardalo",
       "name": "GUARDALO",
       "publicCopy": {
-        "kind": "Piattaforma editoriale · Anime",
-        "tagline": "Un modo più semplice per scegliere cosa guardare.",
-        "pitch": "Piattaforma bilingue dedicata agli anime, con percorsi tematici, filtri e schede senza spoiler.",
+        "kind": "Sito · Anime · IT e EN",
+        "tagline": "Scegliere cosa guardare senza perderci un’ora.",
+        "pitch": "Consiglia anime partendo dai gusti e dal tempo che hai. Percorsi per entrare in un genere e schede senza spoiler, con la durata reale e dove vederlo legalmente. In italiano e in inglese.",
+        "role": "Ideazione, contenuti e sviluppo",
         "linkLabel": "Visita GUARDALO",
-        "theme": "guardalo",
-        "logo": "assets/logos/guardalo.svg",
         "visual": "assets/projects/guardalo-live.png",
-        "visualAlt": "Schermata pubblica di GUARDALO."
+        "visualAlt": "La home di GUARDALO."
       },
       "publicUrl": "https://guardalo.vercel.app/"
     },
@@ -19,14 +18,13 @@
       "id": "organizzamici",
       "name": "Organizzamici",
       "publicCopy": {
-        "kind": "Applicazione web · Organizzazione",
-        "tagline": "Organizzare un gruppo, senza perdersi nella chat.",
-        "pitch": "Applicazione web per raccogliere disponibilità e necessità logistiche in un solo evento condivisibile.",
+        "kind": "App web · Gruppi ed eventi",
+        "tagline": "La data giusta, senza cento messaggi.",
+        "pitch": "Un solo link raccoglie le disponibilità di tutti e mostra la data che funziona per il gruppo. Nello stesso evento restano attaccati viaggi, auto, posti letto e cose da portare.",
+        "role": "Ideazione, design e sviluppo",
         "linkLabel": "Apri Organizzamici",
-        "theme": "organizzamici",
-        "logo": "assets/logos/organizzamici.svg",
         "visual": "assets/projects/organizzamici-live.png",
-        "visualAlt": "Schermata pubblica di Organizzamici."
+        "visualAlt": "La schermata iniziale di Organizzamici."
       },
       "publicUrl": "https://spidahh.github.io/Organizzamici/"
     },
@@ -34,28 +32,39 @@
       "id": "speso",
       "name": "Speso",
       "publicCopy": {
-        "kind": "Applicazione web · Spesa",
-        "tagline": "Dalle ricette alla lista della spesa.",
-        "pitch": "Applicazione per scegliere cosa cucinare e ottenere una lista unica, ordinata per reparto.",
+        "kind": "App web · Cucina e spesa",
+        "tagline": "Decidi le cene, la lista si scrive da sola.",
+        "pitch": "Si scelgono i piatti della settimana e la spesa esce già divisa per reparto, nell’ordine delle corsie. Tiene conto di cosa c’è in dispensa e funziona anche senza connessione.",
+        "role": "Ideazione, design e sviluppo",
         "linkLabel": "Apri Speso",
-        "theme": "speso",
-        "logo": "assets/logos/speso.svg",
         "visual": "assets/projects/speso.png",
-        "visualAlt": "Schermata pubblica di Speso."
+        "visualAlt": "La schermata di Speso con la lista della spesa."
       },
       "publicUrl": "https://spidahh.github.io/Speso/"
+    },
+    {
+      "id": "ragequit",
+      "name": "RAGEQUIT",
+      "publicCopy": {
+        "kind": "Videogioco · Arena multiplayer",
+        "tagline": "Il tuo stile lo decidi prima della partita.",
+        "pitch": "Arena PvP che gira nel browser: quattro classi e un set di abilità da comporre prima di entrare. Il modo in cui le combini decide come si combatte.",
+        "role": "Game design e sviluppo",
+        "visual": "assets/projects/ragequit.webp",
+        "visualAlt": "Illustrazione di RAGEQUIT."
+      },
+      "publicUrl": ""
     },
     {
       "id": "smem0",
       "name": "Smem0",
       "publicCopy": {
-        "kind": "Strumento digitale · Informazioni",
-        "tagline": "Note e fonti, ritrovate con una domanda.",
-        "pitch": "Sistema di memoria personale per organizzare note, file, scadenze e collegamenti tra informazioni.",
-        "theme": "smem0",
-        "logo": "assets/logos/smem0.svg",
-        "visual": "assets/projects/smem0.png",
-        "visualAlt": "Concept visivo dell’interfaccia di Smem0."
+        "kind": "App · Note e memoria personale",
+        "tagline": "Ritrovare le cose facendo una domanda.",
+        "pitch": "Note, documenti, foto e vocali finiscono nello stesso posto e si ritrovano chiedendo, invece di cercare tra le cartelle. Ogni risposta resta collegata al file da cui viene.",
+        "role": "Ideazione, design e sviluppo",
+        "visual": "assets/projects/smem0.jpg",
+        "visualAlt": "L’interfaccia di Smem0."
       },
       "publicUrl": ""
     },
@@ -63,13 +72,12 @@
       "id": "webchat",
       "name": "ChatFreeVideo",
       "publicCopy": {
-        "kind": "Piattaforma web · Chat 18+",
-        "tagline": "Un accesso diretto a chat e videochat.",
-        "pitch": "Interfaccia multilingue per conversazioni pubbliche e private, con accesso tramite nickname e strumenti di moderazione.",
-        "theme": "chatfreevideo",
-        "logo": "assets/logos/chatfreevideo.svg",
+        "kind": "Identità visiva · Piattaforma 18+",
+        "tagline": "Un’interfaccia che si capisce subito.",
+        "pitch": "Piattaforma di chat e videochat per maggiorenni, con accesso tramite nickname e interfaccia in quattordici lingue. Ho lavorato alla grafica e all’identità visiva insieme al team del prodotto.",
+        "role": "Identità visiva e grafica",
         "visual": "assets/projects/chatfreevideo-live.png",
-        "visualAlt": "Schermata dell’interfaccia di ChatFreeVideo."
+        "visualAlt": "L’interfaccia di ChatFreeVideo."
       },
       "publicUrl": ""
     },
@@ -77,27 +85,12 @@
       "id": "politicometro",
       "name": "Politicometro",
       "publicCopy": {
-        "kind": "Progetto civico-editoriale",
-        "tagline": "Promesse, fatti e fonti nello stesso percorso.",
-        "pitch": "Progetto per seguire dichiarazioni e decisioni pubbliche nel tempo, collegando fonti, aggiornamenti e conseguenze.",
-        "theme": "politicometro",
-        "logo": "",
+        "kind": "Progetto editoriale · Politica",
+        "tagline": "Una promessa e quello che succede dopo.",
+        "pitch": "Un formato per seguire dichiarazioni e decisioni pubbliche oltre il giorno in cui vengono fatte, tenendo insieme fonti, aggiornamenti e conseguenze.",
+        "role": "Ideazione e ricerca",
         "visual": "assets/projects/politicometro-concept.svg",
         "visualAlt": "Concept editoriale di Politicometro."
-      },
-      "publicUrl": ""
-    },
-    {
-      "id": "ragequit",
-      "name": "RAGEQUIT",
-      "publicCopy": {
-        "kind": "Videogioco · Arena FPS",
-        "tagline": "Un’arena costruita intorno alle abilità.",
-        "pitch": "Gioco multiplayer in browser in cui classi e combinazioni di abilità definiscono il modo di combattere.",
-        "theme": "ragequit",
-        "logo": "assets/logos/ragequit.webp",
-        "visual": "assets/projects/ragequit.webp",
-        "visualAlt": "Immagine di RAGEQUIT."
       },
       "publicUrl": ""
     },
@@ -105,13 +98,13 @@
       "id": "frattura",
       "name": "Frattura",
       "publicCopy": {
-        "kind": "Narrativa fantasy",
-        "tagline": "Una saga fantasy originale.",
-        "pitch": "Un progetto narrativo dedicato alla costruzione di un mondo fantastico e di una storia di ampio respiro.",
-        "theme": "frattura",
-        "logo": "",
-        "visual": "assets/projects/frattura.png",
-        "visualAlt": "Copertina di Frattura."
+        "kind": "Narrativa",
+        "tagline": "Saga fantasy adulta di progressione, avventura e mistero.",
+        "pitch": "",
+        "role": "Scrittura",
+        "visual": "assets/projects/frattura.jpg",
+        "visualAlt": "Copertina di Frattura.",
+        "visualFit": "contain"
       },
       "publicUrl": ""
     }

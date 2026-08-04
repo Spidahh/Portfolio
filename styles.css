@@ -157,6 +157,7 @@ img {
 }
 
 .hero-intro {
+  max-width: 46ch;
   margin: 42px 0 30px;
   color: #303440;
   font-size: clamp(17px, 1.45vw, 22px);
@@ -366,6 +367,11 @@ img {
   letter-spacing: -0.08em;
 }
 
+.section-number--inline {
+  margin: 0 0 10px;
+  font-size: clamp(28px, 2.6vw, 38px);
+}
+
 .section-label,
 .project-kind {
   margin: 0 0 12px;
@@ -432,10 +438,30 @@ img {
 
 .project-pitch {
   max-width: 48ch;
-  margin: 24px 0 28px;
+  margin: 24px 0 16px;
   color: #424754;
   font-size: 15px;
   line-height: 1.62;
+}
+
+.project-tagline + .project-role {
+  margin-top: 24px;
+}
+
+.project-role {
+  margin: 0 0 26px;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.project-role span {
+  margin-right: 10px;
+  color: var(--blue);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .project-media {
@@ -456,6 +482,23 @@ img {
 
 .project-media:hover img {
   transform: scale(1.015);
+}
+
+.project-media--contain {
+  padding: clamp(20px, 2.4vw, 36px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: var(--ink);
+  background: var(--ink);
+}
+
+.project-media--contain img {
+  width: auto;
+  height: clamp(300px, 30vw, 470px);
+  max-width: 100%;
+  aspect-ratio: auto;
+  object-fit: contain;
 }
 
 .project-media--identity {
@@ -520,11 +563,11 @@ img {
 }
 
 .playlist-heading h2 {
-  max-width: 10ch;
+  max-width: 12ch;
   margin: 0 0 30px;
-  font-size: clamp(42px, 4.8vw, 68px);
-  line-height: 0.96;
-  letter-spacing: -0.055em;
+  font-size: clamp(34px, 3.6vw, 52px);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
 }
 
 .playlist-rail {
@@ -603,9 +646,17 @@ img {
 .contact-heading h2 {
   max-width: 14ch;
   margin: 0;
-  font-size: clamp(43px, 5vw, 72px);
-  line-height: 0.96;
-  letter-spacing: -0.055em;
+  font-size: clamp(38px, 4.2vw, 60px);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+}
+
+.contact-note {
+  max-width: 44ch;
+  margin: 24px 0 0;
+  color: #424754;
+  font-size: 15px;
+  line-height: 1.62;
 }
 
 .contact-links {
@@ -711,7 +762,7 @@ noscript {
   }
 
   .playlist-heading h2 {
-    max-width: 13ch;
+    max-width: 16ch;
   }
 
   .playlist-rail {
@@ -844,6 +895,10 @@ noscript {
     font-size: 38px;
   }
 
+  .section-number--inline {
+    font-size: 26px;
+  }
+
   .project-entry {
     scroll-margin-top: 80px;
     padding: 34px 0 42px;
@@ -866,8 +921,12 @@ noscript {
   }
 
   .project-pitch {
-    margin: 20px 0 24px;
+    margin: 20px 0 14px;
     font-size: 14px;
+  }
+
+  .project-role {
+    margin-bottom: 22px;
   }
 
   .project-media {
@@ -876,6 +935,11 @@ noscript {
 
   .project-media img {
     aspect-ratio: 16 / 10;
+  }
+
+  .project-media--contain img {
+    height: clamp(280px, 78vw, 400px);
+    aspect-ratio: auto;
   }
 
   .project-media--identity {
@@ -892,8 +956,8 @@ noscript {
   }
 
   .playlist-heading h2 {
-    max-width: 11ch;
-    font-size: clamp(44px, 13vw, 62px);
+    max-width: 13ch;
+    font-size: clamp(34px, 10vw, 48px);
   }
 
   .playlist-rail {
@@ -926,7 +990,7 @@ noscript {
   }
 
   .contact-heading h2 {
-    font-size: clamp(44px, 13vw, 62px);
+    font-size: clamp(38px, 11vw, 54px);
   }
 
   .contact-links a {
