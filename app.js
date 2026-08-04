@@ -21,7 +21,8 @@ function normalizeProject(item) {
     pitch: copy.pitch,
     role: copy.role || "",
     linkLabel: copy.linkLabel || "Apri il progetto",
-    publicUrl: item.publicUrl
+    publicUrl: item.publicUrl,
+    repositoryUrl: item.repositoryUrl || ""
   };
 }
 
@@ -50,13 +51,25 @@ function renderJumpList() {
 }
 
 function actionMarkup(project) {
-  if (!project.publicUrl) return "";
+  const links = [];
 
-  return `
-    <a class="project-action" href="${escapeHtml(project.publicUrl)}" target="_blank" rel="noopener">
-      ${escapeHtml(project.linkLabel)} <span aria-hidden="true">↗</span>
+  if (project.publicUrl) {
+    links.push({href: project.publicUrl, label: project.linkLabel, primary: true});
+  }
+
+  if (project.repositoryUrl) {
+    links.push({href: project.repositoryUrl, label: "Codice su GitHub", primary: false});
+  }
+
+  if (!links.length) return "";
+
+  const items = links.map((link) => `
+    <a class="project-action${link.primary ? "" : " project-action--ghost"}" href="${escapeHtml(link.href)}" target="_blank" rel="noopener">
+      ${escapeHtml(link.label)} <span aria-hidden="true">↗</span>
     </a>
-  `;
+  `).join("");
+
+  return `<div class="project-actions">${items}</div>`;
 }
 
 function pitchMarkup(project) {

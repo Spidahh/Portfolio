@@ -464,6 +464,21 @@ img {
   text-transform: uppercase;
 }
 
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 28px;
+}
+
+.project-action--ghost {
+  color: var(--ink);
+  border-bottom-color: var(--line);
+}
+
+.project-action--ghost:hover {
+  border-bottom-color: var(--ink);
+}
+
 .project-media {
   min-width: 0;
   overflow: hidden;

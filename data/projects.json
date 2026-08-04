@@ -12,7 +12,8 @@
         "visual": "assets/projects/guardalo-live.png",
         "visualAlt": "La home di GUARDALO."
       },
-      "publicUrl": "https://guardalo.vercel.app/"
+      "publicUrl": "https://guardalo.vercel.app/",
+      "repositoryUrl": "https://github.com/Spidahh/guardalo"
     },
     {
       "id": "organizzamici",
@@ -26,7 +27,8 @@
         "visual": "assets/projects/organizzamici-live.png",
         "visualAlt": "La schermata iniziale di Organizzamici."
       },
-      "publicUrl": "https://spidahh.github.io/Organizzamici/"
+      "publicUrl": "https://spidahh.github.io/Organizzamici/",
+      "repositoryUrl": "https://github.com/Spidahh/Organizzamici"
     },
     {
       "id": "speso",
@@ -40,7 +42,8 @@
         "visual": "assets/projects/speso.png",
         "visualAlt": "La schermata di Speso con la lista della spesa."
       },
-      "publicUrl": "https://spidahh.github.io/Speso/"
+      "publicUrl": "https://spidahh.github.io/Speso/",
+      "repositoryUrl": "https://github.com/Spidahh/Speso"
     },
     {
       "id": "ragequit",
@@ -53,7 +56,8 @@
         "visual": "assets/projects/ragequit.webp",
         "visualAlt": "Illustrazione di RAGEQUIT."
       },
-      "publicUrl": ""
+      "publicUrl": "",
+      "repositoryUrl": "https://github.com/Spidahh/Ragequit"
     },
     {
       "id": "smem0",
@@ -92,7 +96,8 @@
         "visual": "assets/projects/politicometro-concept.svg",
         "visualAlt": "Concept editoriale di Politicometro."
       },
-      "publicUrl": ""
+      "publicUrl": "",
+      "repositoryUrl": "https://github.com/Spidahh/Politicometro"
     },
     {
       "id": "frattura",
@@ -106,7 +111,8 @@
         "visualAlt": "Copertina di Frattura.",
         "visualFit": "contain"
       },
-      "publicUrl": ""
+      "publicUrl": "",
+      "repositoryUrl": "https://github.com/Spidahh/Frattura"
     }
   ]
 }
