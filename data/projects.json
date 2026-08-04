@@ -1,265 +1,119 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-07-28T16:26:02.0774963+02:00",
   "projects": [
     {
       "id": "guardalo",
       "name": "GUARDALO",
-      "displayName": "GUARDALO",
-      "suite": "editorial",
-      "phase": "Live",
-      "accent": "#c8ff3d",
-      "visualInk": "#090a0d",
       "publicCopy": {
-        "kind": "Consigli anime · IT / EN",
-        "tagline": "Anime consigliati in base ai tuoi gusti.",
-        "pitch": "GUARDALO è un sito in italiano e inglese che consiglia anime in base ai gusti e al tempo disponibile. Aiuta chi comincia a trovare un punto d’ingresso e chi ne ha già visti molti a scoprire titoli meno ovvi.",
-        "role": "Ideazione · direzione editoriale · sviluppo",
-        "status": "Online",
-        "cta": "Apri GUARDALO",
-        "dialogCta": "Vedi come funziona",
-        "category": "apps",
+        "kind": "Piattaforma editoriale · Anime",
+        "tagline": "Un modo più semplice per scegliere cosa guardare.",
+        "pitch": "Piattaforma bilingue dedicata agli anime, con percorsi tematici, filtri e schede senza spoiler.",
+        "linkLabel": "Visita GUARDALO",
         "theme": "guardalo",
-        "variant": "guide",
         "logo": "assets/logos/guardalo.svg",
         "visual": "assets/projects/guardalo-live.png",
-        "layout": "wide",
-        "detail": {
-          "lead": "Per chi vuole iniziare bene. E per chi pensa di aver già visto tutto.",
-          "body": "Il motore di consigli parte dai gusti, dal tempo disponibile e dal tipo di esperienza cercata. I percorsi guidano chi è nuovo; chi conosce già molti titoli può evitare le classifiche ripetitive. Le schede sono senza spoiler e indicano durata reale e streaming legale.",
-          "now": "Online in italiano e inglese, gratis e senza account."
-        },
-        "details": [
-          "Percorsi editoriali per entrare in un genere senza partire alla cieca.",
-          "Schede spoiler-free con atmosfera, durata e punto di partenza.",
-          "Online, gratuito e senza account obbligatorio."
-        ]
+        "visualAlt": "Schermata pubblica di GUARDALO."
       },
-      "publicUrl": "https://guardalo.vercel.app/",
-      "repositoryUrl": "https://github.com/Spidahh/guardalo",
-      "repositoryPublic": true
+      "publicUrl": "https://guardalo.vercel.app/"
     },
     {
       "id": "organizzamici",
       "name": "Organizzamici",
-      "displayName": "Organizzamici",
-      "suite": "utility",
-      "phase": "Live",
-      "accent": "#ffb13d",
-      "visualInk": "#090a0d",
       "publicCopy": {
-        "kind": "Eventi di gruppo",
-        "tagline": "Trova la data che funziona davvero per il gruppo.",
-        "pitch": "Organizzamici raccoglie in un solo link disponibilità, spostamenti, auto e posti letto, poi mostra la data migliore. È pensato per cene, viaggi e ritrovi che non dovrebbero richiedere cento messaggi.",
-        "role": "Ideazione · prodotto · sviluppo",
-        "status": "Beta online",
-        "cta": "Crea un evento",
-        "dialogCta": "Vedi come funziona",
-        "category": "apps",
+        "kind": "Applicazione web · Organizzazione",
+        "tagline": "Organizzare un gruppo, senza perdersi nella chat.",
+        "pitch": "Applicazione web per raccogliere disponibilità e necessità logistiche in un solo evento condivisibile.",
+        "linkLabel": "Apri Organizzamici",
         "theme": "organizzamici",
-        "variant": "social",
         "logo": "assets/logos/organizzamici.svg",
         "visual": "assets/projects/organizzamici-live.png",
-        "layout": "standard",
-        "detail": {
-          "lead": "Un link al posto di cento messaggi.",
-          "body": "L’organizzatore condivide l’invito e ognuno indica disponibilità e spostamenti. Il risultato mostra l’opzione migliore e spiega perché, mentre auto, tratte, posti letto e cose da portare restano collegati allo stesso evento.",
-          "now": "La beta è online: si può già creare e condividere un evento."
-        },
-        "details": [
-          "Un solo link per invitare il gruppo e raccogliere le disponibilità.",
-          "La data migliore viene spiegata, non estratta da una scatola nera.",
-          "Auto, posti letto e risorse restano attaccati all’evento."
-        ]
+        "visualAlt": "Schermata pubblica di Organizzamici."
       },
-      "publicUrl": "https://spidahh.github.io/Organizzamici/",
-      "repositoryUrl": "https://github.com/Spidahh/Organizzamici",
-      "repositoryPublic": true
+      "publicUrl": "https://spidahh.github.io/Organizzamici/"
+    },
+    {
+      "id": "speso",
+      "name": "Speso",
+      "publicCopy": {
+        "kind": "Applicazione web · Spesa",
+        "tagline": "Dalle ricette alla lista della spesa.",
+        "pitch": "Applicazione per scegliere cosa cucinare e ottenere una lista unica, ordinata per reparto.",
+        "linkLabel": "Apri Speso",
+        "theme": "speso",
+        "logo": "assets/logos/speso.svg",
+        "visual": "assets/projects/speso.png",
+        "visualAlt": "Schermata pubblica di Speso."
+      },
+      "publicUrl": "https://spidahh.github.io/Speso/"
     },
     {
       "id": "smem0",
       "name": "Smem0",
-      "displayName": "Smem0",
-      "suite": "utility",
-      "phase": "Pilot",
-      "accent": "#7aa2ff",
-      "visualInk": "#090a0d",
       "publicCopy": {
-        "kind": "Memoria personale",
-        "tagline": "Una memoria personale che conserva fonti e cambiamenti.",
-        "pitch": "Smem0 raccoglie note, documenti, vocali e scadenze e permette di ritrovarli facendo una domanda. Conserva le fonti e distingue ciò che era vero prima da ciò che è cambiato.",
-        "role": "Ideazione · prodotto · sviluppo",
-        "status": "Pilot locale",
-        "cta": "",
-        "dialogCta": "Guarda il progetto",
-        "category": "apps",
+        "kind": "Strumento digitale · Informazioni",
+        "tagline": "Note e fonti, ritrovate con una domanda.",
+        "pitch": "Sistema di memoria personale per organizzare note, file, scadenze e collegamenti tra informazioni.",
         "theme": "smem0",
-        "variant": "memory",
         "logo": "assets/logos/smem0.svg",
         "visual": "assets/projects/smem0.png",
-        "layout": "standard",
-        "detail": {
-          "lead": "Le informazioni cambiano. La loro storia non dovrebbe sparire.",
-          "body": "Testo, file, immagini e audio entrano dalla stessa conversazione. Smem0 collega ogni risposta all’originale e rende visibili aggiornamenti, contraddizioni, prestiti, promesse e scadenze.",
-          "now": "La prova locale funziona. Il percorso cloud è ancora in collaudo e non viene presentato come servizio pubblico."
-        },
-        "details": [
-          "Testo, documenti, immagini e audio entrano dalla stessa conversazione.",
-          "Ogni aggiornamento conserva la fonte originale e mostra i conflitti.",
-          "La prova locale funziona; il percorso cloud deve ancora superare il collaudo completo."
-        ]
+        "visualAlt": "Concept visivo dell’interfaccia di Smem0."
       },
-      "publicUrl": "",
-      "repositoryUrl": "",
-      "repositoryPublic": false
+      "publicUrl": ""
     },
     {
       "id": "webchat",
-      "name": "WEBCHAT",
-      "displayName": "ChatFreeVideo",
-      "suite": "utility",
-      "phase": "Pilot",
-      "accent": "#8d73ff",
-      "visualInk": "#ffffff",
+      "name": "ChatFreeVideo",
       "publicCopy": {
-        "kind": "Chat e videochat 18+",
-        "tagline": "Chat e videochat senza registrazione.",
-        "pitch": "ChatFreeVideo è una piattaforma 18+ per entrare in chat o videochat con un nickname, senza creare un account. Stanze per lingua e interessi, conversazioni private, roulette e moderazione rendono l’ingresso immediato.",
-        "role": "Identità visiva e grafica · team CFV",
-        "status": "Pilot da pubblicare",
-        "cta": "",
-        "dialogCta": "Guarda il progetto",
-        "category": "apps",
+        "kind": "Piattaforma web · Chat 18+",
+        "tagline": "Un accesso diretto a chat e videochat.",
+        "pitch": "Interfaccia multilingue per conversazioni pubbliche e private, con accesso tramite nickname e strumenti di moderazione.",
         "theme": "chatfreevideo",
-        "variant": "community",
         "logo": "assets/logos/chatfreevideo.svg",
         "visual": "assets/projects/chatfreevideo-live.png",
-        "layout": "wide",
-        "detail": {
-          "lead": "Scegli un nickname e sei dentro.",
-          "body": "L’esperienza parte da area e lingua, poi passa alle stanze, alle conversazioni private o alla roulette video. L’interfaccia supporta quattordici lingue e integra moderazione, segnalazioni e limiti per un prodotto destinato esclusivamente a maggiorenni.",
-          "now": "Il prodotto è pronto per un pilot controllato, ma non è ancora aperto al pubblico."
-        },
-        "details": [
-          "Ingresso con nickname, senza costruire un profilo o registrare un account.",
-          "Chat, video 1:1, stanze, roulette e interfaccia in quattordici lingue.",
-          "Build e test realtime sono pronti; il servizio pubblico richiede ancora deploy e pilot controllato."
-        ]
+        "visualAlt": "Schermata dell’interfaccia di ChatFreeVideo."
       },
-      "publicUrl": "",
-      "repositoryUrl": "",
-      "repositoryPublic": false
+      "publicUrl": ""
     },
     {
       "id": "politicometro",
       "name": "Politicometro",
-      "displayName": "Politicometro",
-      "suite": "editorial",
-      "phase": "Discovery",
-      "accent": "#ff5f57",
-      "visualInk": "#ffffff",
       "publicCopy": {
         "kind": "Progetto civico-editoriale",
-        "tagline": "Segui una promessa politica fino alle conseguenze.",
-        "pitch": "Politicometro trasforma dichiarazioni e decisioni pubbliche in casi che restano aggiornati nel tempo. Collega promesse, fatti, fonti, responsabilità e correzioni, così una notizia non scompare quando finisce il rumore.",
-        "role": "Ideazione · ricerca · prodotto",
-        "status": "In progettazione",
-        "cta": "",
-        "dialogCta": "Vedi il concept",
-        "category": "apps",
+        "tagline": "Promesse, fatti e fonti nello stesso percorso.",
+        "pitch": "Progetto per seguire dichiarazioni e decisioni pubbliche nel tempo, collegando fonti, aggiornamenti e conseguenze.",
         "theme": "politicometro",
-        "variant": "press",
         "logo": "",
         "visual": "assets/projects/politicometro-concept.svg",
-        "layout": "standard",
-        "detail": {
-          "lead": "Il titolo del giorno è solo l’inizio del caso.",
-          "body": "Ogni scheda separa dichiarazioni, fatti documentabili e parti ancora sconosciute. Le fonti restano collegate, le correzioni sono pubbliche e il caso continua ad aggiornarsi quando arrivano nuovi atti o conseguenze.",
-          "now": "Metodo e formato sono definiti. L’immagine mostrata è un concept editoriale; il prototipo navigabile deve ancora essere costruito."
-        },
-        "details": [
-          "Ogni scheda separa dichiarazioni, fatti, prove, responsabilità e parti ancora ignote.",
-          "I casi vengono seguiti nel tempo invece di morire con il ciclo delle notizie.",
-          "Metodo e formati sono definiti; il prototipo navigabile deve ancora essere costruito."
-        ]
+        "visualAlt": "Concept editoriale di Politicometro."
       },
-      "publicUrl": "",
-      "repositoryUrl": "https://github.com/Spidahh/Politicometro",
-      "repositoryPublic": true
+      "publicUrl": ""
     },
     {
       "id": "ragequit",
       "name": "RAGEQUIT",
-      "displayName": "RAGEQUIT",
-      "suite": "play",
-      "phase": "Prototype",
-      "accent": "#ff8a3d",
-      "visualInk": "#090a0d",
       "publicCopy": {
-        "kind": "Arena FPS multiplayer",
-        "tagline": "Scegli otto abilità e costruisci il tuo stile di combattimento.",
-        "pitch": "RAGEQUIT è un arena FPS multiplayer nel browser con quattro classi e un loadout da otto abilità scelto dal giocatore. Ogni partita dipende da come combini movimento, controllo, difesa e danno.",
-        "role": "Game design · sviluppo",
-        "status": "Playtest in preparazione",
-        "cta": "",
-        "dialogCta": "Vedi il gioco",
-        "category": "games",
+        "kind": "Videogioco · Arena FPS",
+        "tagline": "Un’arena costruita intorno alle abilità.",
+        "pitch": "Gioco multiplayer in browser in cui classi e combinazioni di abilità definiscono il modo di combattere.",
         "theme": "ragequit",
-        "variant": "game",
         "logo": "assets/logos/ragequit.webp",
         "visual": "assets/projects/ragequit.webp",
-        "layout": "standard",
-        "detail": {
-          "lead": "Il loadout è la tua vera classe.",
-          "body": "Tank, Arciere, Mago e Ibrido cambiano ritmo, distanza e rischio. Cinquantatré abilità permettono di costruire combinazioni diverse; training, bot e persistenza sono già implementati per preparare il primo playtest pubblico.",
-          "now": "Il server è online. Manca ancora un client pubblico raggiungibile con un link per il primo playtest."
-        },
-        "details": [
-          "Tank, Arciere, Mago e Ibrido costruiscono loadout diversi con cinquantatré abilità.",
-          "Training, bot, persistenza e server multiplayer sono già implementati.",
-          "Il server è online, ma il client non è ancora pubblicato come esperienza giocabile."
-        ]
+        "visualAlt": "Immagine di RAGEQUIT."
       },
-      "publicUrl": "",
-      "repositoryUrl": "https://github.com/Spidahh/Ragequit",
-      "repositoryPublic": true
+      "publicUrl": ""
     },
     {
       "id": "frattura",
       "name": "Frattura",
-      "displayName": "Frattura",
-      "suite": "story",
-      "phase": "Production",
-      "accent": "#e7ff66",
-      "visualInk": "#090a0d",
       "publicCopy": {
-        "kind": "Saga progression fantasy",
-        "tagline": "Una caccia. Una montagna aperta. Un campo vecchio di ottant’anni.",
-        "pitch": "Kel e Mira rischiano tutto nella caccia al Nero di Vetta per fondare la loro Compagnia. Quando la montagna li inghiotte insieme alla creatura, trovano un mare verticale, il campo di una spedizione scomparsa e il primo indizio di un mistero molto più grande.",
-        "role": "Scritto da Francesco Magistà",
-        "status": "Storia in revisione",
-        "cta": "",
-        "dialogCta": "Leggi la storia",
-        "category": "stories",
+        "kind": "Narrativa fantasy",
+        "tagline": "Una saga fantasy originale.",
+        "pitch": "Un progetto narrativo dedicato alla costruzione di un mondo fantastico e di una storia di ampio respiro.",
         "theme": "frattura",
-        "variant": "story",
         "logo": "",
         "visual": "assets/projects/frattura.png",
-        "layout": "wide",
-        "detail": {
-          "lead": "La montagna si è aperta oggi. Il campo là sotto aspetta da ottant’anni.",
-          "body": "Kel vuole diventare abbastanza forte da scegliere le proprie imprese. Mira vuole fondare una Compagnia che nessun ricco possa comprare. La caccia che dovrebbe renderli indipendenti li scaraventa in una cavità impossibile, dove un mare corre in verticale e qualcuno ha lasciato prove di essere passato prima di loro. Kel ne esce con un potere raro, una ferita e la domanda che li trascinerà tra mostri, città mobili, guerre e luoghi saldati insieme: chi esplorava le Fratture ottant’anni prima?",
-          "now": "Una progression fantasy adulta di azione, mistero e crescita. La storia globale è in revisione; la divisione in quattro volumi resta l’ultima approvata."
-        },
-        "details": [
-          "Kel e Mira rischiano tre anni di guadagni nella caccia che può renderli finalmente indipendenti.",
-          "Ogni Frattura apre un luogo fisico impossibile e lascia una traccia della stessa spedizione scomparsa.",
-          "La storia globale è in revisione; la divisione in quattro volumi resta l’ultima approvata."
-        ]
+        "visualAlt": "Copertina di Frattura."
       },
-      "publicUrl": "",
-      "repositoryUrl": "https://github.com/Spidahh/Frattura",
-      "repositoryPublic": true
+      "publicUrl": ""
     }
   ]
 }

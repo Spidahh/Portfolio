@@ -1,9 +1,9 @@
 {
-  "name": "Spidah — Portfolio di Francesco Magistà",
-  "short_name": "Spidah",
+  "name": "Francesco Noncistà — Portfolio",
+  "short_name": "Portfolio",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#07090c",
-  "theme_color": "#07090c",
-  "description": "App, giochi, storie e playlist di Francesco Magistà."
+  "background_color": "#f4f3ee",
+  "theme_color": "#f4f3ee",
+  "description": "App, giochi, strumenti digitali, narrativa e playlist di Francesco Noncistà."
 }
