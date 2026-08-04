@@ -73,19 +73,6 @@
       "publicUrl": ""
     },
     {
-      "id": "webchat",
-      "name": "ChatFreeVideo",
-      "publicCopy": {
-        "kind": "Grafica · Piattaforma 18+",
-        "tagline": "Chat e videochat senza registrazione.",
-        "pitch": "Si entra con un nickname, senza account: stanze pubbliche, conversazioni private e video, con l’interfaccia in quattordici lingue.",
-        "role": "Identità visiva e grafica",
-        "visual": "assets/projects/chatfreevideo-live.png",
-        "visualAlt": "L’interfaccia di ChatFreeVideo."
-      },
-      "publicUrl": ""
-    },
-    {
       "id": "politicometro",
       "name": "Politicometro",
       "publicCopy": {
