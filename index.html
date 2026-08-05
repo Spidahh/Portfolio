@@ -11,8 +11,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="styles.css?v=2026-08-05c">
-  <script src="app.js?v=2026-08-05c" defer></script>
+  <link rel="stylesheet" href="styles.css?v=2026-08-05d">
+  <script src="app.js?v=2026-08-05d" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#progetti">Vai ai progetti</a>
@@ -56,13 +56,11 @@
         </dl>
       </div>
 
-      <a class="hero-showcase reveal reveal--delay" href="#guardalo" aria-label="Vai al progetto GUARDALO">
-        <div class="showcase-topline"><span>In evidenza</span><strong>GUARDALO</strong></div>
-        <div class="showcase-image">
-          <img src="assets/projects/guardalo.webp" alt="Visual di GUARDALO." fetchpriority="high">
-        </div>
-        <div class="showcase-foot"><span>Sito anime · IT / EN</span><span>Vai al progetto ↗</span></div>
-      </a>
+      <nav class="hero-showcase reveal reveal--delay" aria-label="Indice dei progetti">
+        <div class="showcase-topline"><span>Indice</span><strong id="showcase-count">--</strong></div>
+        <ul class="showcase-list" id="showcase-list"></ul>
+        <div class="showcase-foot"><span>Tre gruppi</span><span>Scegli da dove partire</span></div>
+      </nav>
     </section>
 
     <section class="statement" aria-label="In breve">

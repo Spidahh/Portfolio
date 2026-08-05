@@ -5,6 +5,8 @@ const filtersEl = document.querySelector("#project-filters");
 const playlistGridEl = document.querySelector("#playlist-grid");
 const statProjectsEl = document.querySelector("#stat-projects");
 const statOnlineEl = document.querySelector("#stat-online");
+const showcaseListEl = document.querySelector("#showcase-list");
+const showcaseCountEl = document.querySelector("#showcase-count");
 
 const playlists = [
   ["Sottosfondo", "Lo-fi · Chill", "https://open.spotify.com/playlist/30I943TwY7ANxtmVrgoeLZ"],
@@ -114,6 +116,25 @@ function renderFilters(groups) {
   filtersEl.innerHTML = buttons.join("");
 }
 
+function renderShowcase(groups) {
+  if (!showcaseListEl) return;
+
+  const projects = groups.flatMap((group) => group.projects);
+
+  if (showcaseCountEl) showcaseCountEl.textContent = `${pad(projects.length)} progetti`;
+
+  showcaseListEl.innerHTML = projects.map((project, position) => `
+    <li class="showcase-item" data-tone="${esc(project.tone || "violet")}">
+      <a href="#${esc(project.id)}">
+        <span class="showcase-dot" aria-hidden="true"></span>
+        <span class="showcase-name">${esc(project.name)}</span>
+        <span class="showcase-kind">${esc(project.kind)}</span>
+        <span class="showcase-index" aria-hidden="true">${pad(position + 1)}</span>
+      </a>
+    </li>
+  `).join("");
+}
+
 function renderStats(groups) {
   const all = groups.flatMap((group) => group.projects);
   if (statProjectsEl) statProjectsEl.textContent = pad(all.length);
@@ -198,6 +219,7 @@ async function init() {
 
   renderFilters(groups);
   renderProjects(groups);
+  renderShowcase(groups);
   renderStats(groups);
   setupFilters();
   setupReveal();
