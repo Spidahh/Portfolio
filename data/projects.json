@@ -3,15 +3,15 @@
     {
       "id": "prodotti",
       "label": "App e siti",
-      "title": "App e siti da usare",
-      "description": "Tre progetti online: si aprono da qui e si provano subito.",
+      "title": "App e siti online",
+      "description": "",
       "projects": [
         {
           "id": "guardalo",
           "name": "GUARDALO",
           "kind": "Sito · Anime · IT e EN",
           "tagline": "Scegliere cosa guardare senza perderci un’ora.",
-          "pitch": "Consiglia anime partendo dai gusti e dal tempo che hai. Percorsi per entrare in un genere e schede senza spoiler, con la durata reale e dove vederlo legalmente. In italiano e in inglese.",
+          "pitch": "Consiglia anime partendo dai gusti e dal tempo che hai. Percorsi per entrare in un genere e schede senza spoiler, con la durata reale e dove vederlo legalmente.",
           "role": "Ideazione, contenuti e sviluppo",
           "image": "assets/projects/guardalo.webp",
           "alt": "Visual di GUARDALO.",
@@ -51,7 +51,7 @@
       "id": "strumenti",
       "label": "Strumenti ed editoria",
       "title": "Strumenti e progetti editoriali",
-      "description": "Un’app per tenere insieme le proprie informazioni e un formato per seguire la politica nel tempo.",
+      "description": "",
       "projects": [
         {
           "id": "smem0",
@@ -82,7 +82,7 @@
       "id": "mondi",
       "label": "Gioco e narrativa",
       "title": "Gioco e narrativa",
-      "description": "Un’arena multiplayer nel browser e una saga fantasy.",
+      "description": "",
       "projects": [
         {
           "id": "ragequit",

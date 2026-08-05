@@ -55,8 +55,10 @@ function projectCard(project, index) {
     ? `<p class="project-description">${esc(project.pitch)}</p>`
     : "";
 
+  const plain = project.pitch ? "" : " project-card--plain";
+
   return `
-    <article class="project-card reveal" id="${esc(project.id)}" data-tone="${esc(project.tone || "violet")}">
+    <article class="project-card reveal${plain}" id="${esc(project.id)}" data-tone="${esc(project.tone || "violet")}">
       <div class="project-card__top">
         <span class="project-index">${pad(index)}</span>
         <span class="project-meta">${esc(project.kind)}</span>
@@ -91,11 +93,15 @@ function renderProjects(groups) {
       return projectCard(project, index);
     }).join("");
 
+    const description = group.description
+      ? `<p>${esc(group.description)}</p>`
+      : "";
+
     return `
       <section class="project-group" data-group="${esc(group.id)}">
         <div class="group-heading">
           <h3>${esc(group.title)}</h3>
-          <p>${esc(group.description)}</p>
+          ${description}
         </div>
         <div class="project-list">${cards}</div>
       </section>
