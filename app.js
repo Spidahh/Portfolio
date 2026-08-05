@@ -1,32 +1,27 @@
 const dataUrl = "data/projects.json";
 
-const projectList = document.querySelector("#project-list");
-const jumpList = document.querySelector("#project-jump-list");
-const jumpCount = document.querySelector("#jump-count");
-const projectsCount = document.querySelector("#projects-count");
+const groupsEl = document.querySelector("#project-groups");
+const filtersEl = document.querySelector("#project-filters");
+const playlistGridEl = document.querySelector("#playlist-grid");
+const statProjectsEl = document.querySelector("#stat-projects");
+const statOnlineEl = document.querySelector("#stat-online");
 
-let projects = [];
+const playlists = [
+  ["Sottosfondo", "Lo-fi · Chill", "https://open.spotify.com/playlist/30I943TwY7ANxtmVrgoeLZ"],
+  ["Definitivamente bella", "Hit · Mix", "https://open.spotify.com/playlist/5wp0oohWN1HoAzvZqhIcBV"],
+  ["Rap Italiano", "Hip-Hop", "https://open.spotify.com/playlist/2Qp1dOfNXOrGJrxxFxqcvh"],
+  ["Astare Relax", "Ambient", "https://open.spotify.com/playlist/3tbfFbIRVELTifW86O2rNj"],
+  ["Bassbondanza", "Bass · Electronic", "https://open.spotify.com/playlist/1DUsXa8l2dIIhG7YkuOirK"],
+  ["ElectroThings", "Electro · Synth", "https://open.spotify.com/playlist/26QxZ2aHgTIBXzLPH1NPMG"],
+  ["Italiana", "Pop italiano", "https://open.spotify.com/playlist/6CJtiJA4E4ItJ888qSs2mW"],
+  ["Love It", "Romantic", "https://open.spotify.com/playlist/2fGlkkuU6bpTJQzekgPMGm"],
+  ["Reggae Music", "Reggae · Dub", "https://open.spotify.com/playlist/1kL5LBxd53GpYwx7c4LOj5"],
+  ["Rock, Metal & Il Diavolo", "Rock · Metal", "https://open.spotify.com/playlist/25Y6Kt39iokGDYheflbjfx"],
+  ["Straniera", "Internazionale", "https://open.spotify.com/playlist/0cp6DP806RkTK8UHQ2MfI6"],
+  ["Anime", "OST · J-Pop", "https://open.spotify.com/playlist/5O04i4e6B9KtRbh5t248iI"]
+];
 
-function normalizeProject(item) {
-  const copy = item.publicCopy;
-
-  return {
-    id: item.id,
-    name: item.name,
-    kind: copy.kind,
-    visual: copy.visual,
-    visualAlt: copy.visualAlt,
-    visualFit: copy.visualFit || "cover",
-    tagline: copy.tagline,
-    pitch: copy.pitch,
-    role: copy.role || "",
-    linkLabel: copy.linkLabel || "Apri il progetto",
-    publicUrl: item.publicUrl,
-    repositoryUrl: item.repositoryUrl || ""
-  };
-}
-
-function escapeHtml(value = "") {
+function esc(value = "") {
   return String(value)
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
@@ -35,156 +30,183 @@ function escapeHtml(value = "") {
     .replaceAll("'", "&#039;");
 }
 
-function projectNumber(index) {
-  return String(index + 1).padStart(2, "0");
+function pad(value) {
+  return String(value).padStart(2, "0");
 }
 
-function renderJumpList() {
-  jumpList.innerHTML = projects.map((project, index) => `
-    <li>
-      <a href="#${escapeHtml(project.id)}">
-        <span class="jump-index">${projectNumber(index)}</span>
-        <span class="jump-name">${escapeHtml(project.name)}</span>
-      </a>
-    </li>
-  `).join("");
-}
-
-function actionMarkup(project) {
+function projectLinks(project) {
   const links = [];
 
   if (project.publicUrl) {
-    links.push({href: project.publicUrl, label: project.linkLabel, primary: true});
+    links.push(`<a class="project-link" href="${esc(project.publicUrl)}" target="_blank" rel="noopener">Apri il progetto <span aria-hidden="true">↗</span></a>`);
   }
 
   if (project.repositoryUrl) {
-    links.push({href: project.repositoryUrl, label: "Codice su GitHub", primary: false});
+    links.push(`<a class="project-link project-link--soft" href="${esc(project.repositoryUrl)}" target="_blank" rel="noopener">Codice su GitHub <span aria-hidden="true">↗</span></a>`);
   }
 
-  if (!links.length) return "";
-
-  const items = links.map((link) => `
-    <a class="project-action${link.primary ? "" : " project-action--ghost"}" href="${escapeHtml(link.href)}" target="_blank" rel="noopener">
-      ${escapeHtml(link.label)} <span aria-hidden="true">↗</span>
-    </a>
-  `).join("");
-
-  return `<div class="project-actions">${items}</div>`;
+  return links.length ? `<div class="project-actions">${links.join("")}</div>` : "";
 }
 
-function pitchMarkup(project) {
-  if (!project.pitch) return "";
-
-  return `<p class="project-pitch">${escapeHtml(project.pitch)}</p>`;
-}
-
-function roleMarkup(project) {
-  if (!project.role) return "";
-
-  return `<p class="project-role"><span>Ruolo</span> ${escapeHtml(project.role)}</p>`;
-}
-
-function mediaMarkup(project, index) {
-  if (!project.visual) {
-    return `
-      <div class="project-media project-media--identity" aria-hidden="true">
-        <span class="identity-number">${projectNumber(index)}</span>
-        <strong>${escapeHtml(project.name)}</strong>
-        <span class="identity-kind">${escapeHtml(project.kind)}</span>
-      </div>
-    `;
-  }
-
-  const image = `
-    <img
-      src="${escapeHtml(project.visual)}"
-      alt="${escapeHtml(project.visualAlt)}"
-      ${index === 0 ? 'fetchpriority="high"' : 'loading="lazy"'}
-    >
-  `;
-
-  const mediaClass = project.visualFit === "contain"
-    ? "project-media project-media--contain"
-    : "project-media";
-
-  if (!project.publicUrl) {
-    return `<div class="${mediaClass}">${image}</div>`;
-  }
+function projectCard(project, index) {
+  const description = project.pitch
+    ? `<p class="project-description">${esc(project.pitch)}</p>`
+    : "";
 
   return `
-    <a class="${mediaClass}" href="${escapeHtml(project.publicUrl)}" target="_blank" rel="noopener" aria-label="${escapeHtml(project.linkLabel)}">
-      ${image}
-    </a>
+    <article class="project-card reveal" id="${esc(project.id)}" data-tone="${esc(project.tone || "violet")}">
+      <div class="project-card__top">
+        <span class="project-index">${pad(index)}</span>
+        <span class="project-meta">${esc(project.kind)}</span>
+      </div>
+      <div class="project-media">
+        <img src="${esc(project.image)}" alt="${esc(project.alt)}" loading="${index <= 2 ? "eager" : "lazy"}">
+      </div>
+      <div class="project-card__body">
+        <div>
+          <div class="project-title-row">
+            <span class="project-dot" aria-hidden="true"></span>
+            <h4>${esc(project.name)}</h4>
+          </div>
+          <p class="project-tagline">${esc(project.tagline)}</p>
+        </div>
+        <div>
+          ${description}
+          <p class="project-role"><strong>Ruolo:</strong> ${esc(project.role)}</p>
+          ${projectLinks(project)}
+        </div>
+      </div>
+    </article>
   `;
 }
 
-function renderProjects() {
-  projectList.innerHTML = projects.map((project, index) => `
-    <article class="project-entry" id="${escapeHtml(project.id)}">
-      <p class="project-number" aria-hidden="true">${projectNumber(index)}</p>
-      <div class="project-copy">
-        <p class="project-kind">${escapeHtml(project.kind)}</p>
-        <h3>${escapeHtml(project.name)}</h3>
-        <p class="project-tagline">${escapeHtml(project.tagline)}</p>
-        ${pitchMarkup(project)}
-        ${roleMarkup(project)}
-        ${actionMarkup(project)}
+function renderProjects(groups) {
+  let index = 0;
+
+  groupsEl.innerHTML = groups.map((group) => {
+    const cards = group.projects.map((project) => {
+      index += 1;
+      return projectCard(project, index);
+    }).join("");
+
+    return `
+      <section class="project-group" data-group="${esc(group.id)}">
+        <div class="group-heading">
+          <h3>${esc(group.title)}</h3>
+          <p>${esc(group.description)}</p>
+        </div>
+        <div class="project-list">${cards}</div>
+      </section>
+    `;
+  }).join("");
+}
+
+function renderFilters(groups) {
+  const total = groups.reduce((sum, group) => sum + group.projects.length, 0);
+
+  const buttons = [`<button class="filter-button is-active" type="button" data-filter="all">Tutti <span>${pad(total)}</span></button>`]
+    .concat(groups.map((group) => `
+      <button class="filter-button" type="button" data-filter="${esc(group.id)}">
+        ${esc(group.label || group.title)} <span>${pad(group.projects.length)}</span>
+      </button>
+    `));
+
+  filtersEl.innerHTML = buttons.join("");
+}
+
+function renderStats(groups) {
+  const all = groups.flatMap((group) => group.projects);
+  if (statProjectsEl) statProjectsEl.textContent = pad(all.length);
+  if (statOnlineEl) statOnlineEl.textContent = pad(all.filter((project) => project.publicUrl).length);
+}
+
+function renderPlaylists() {
+  playlistGridEl.innerHTML = playlists.map((item, index) => `
+    <a class="playlist-card reveal" href="${esc(item[2])}" target="_blank" rel="noopener">
+      <span class="playlist-number">${pad(index + 1)}</span>
+      <div>
+        <h3>${esc(item[0])}</h3>
+        <p>${esc(item[1])}</p>
       </div>
-      ${mediaMarkup(project, index)}
-    </article>
+      <span class="playlist-arrow" aria-hidden="true">↗</span>
+    </a>
   `).join("");
 }
 
-function updateCount() {
-  const count = String(projects.length).padStart(2, "0");
-  jumpCount.textContent = count;
-  projectsCount.textContent = count;
+function setupFilters() {
+  const buttons = [...document.querySelectorAll(".filter-button")];
+  const groups = [...document.querySelectorAll(".project-group")];
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      buttons.forEach((item) => item.classList.toggle("is-active", item === button));
+      const filter = button.dataset.filter;
+      groups.forEach((group) => {
+        group.hidden = filter !== "all" && group.dataset.group !== filter;
+      });
+    });
+  });
 }
 
-function initSectionNavigation() {
-  const navLinks = [...document.querySelectorAll(".main-nav a")];
-  const sections = navLinks
-    .map((link) => document.querySelector(link.getAttribute("href")))
-    .filter(Boolean);
+function setupNavigation() {
+  const toggle = document.querySelector(".nav-toggle");
+  const nav = document.querySelector(".main-nav");
+  if (!toggle || !nav) return;
 
-  if (!("IntersectionObserver" in window)) return;
+  const closeMenu = () => {
+    nav.classList.remove("is-open");
+    toggle.setAttribute("aria-expanded", "false");
+  };
 
-  const observer = new IntersectionObserver((entries) => {
-    const visible = entries
-      .filter((entry) => entry.isIntersecting)
-      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-
-    if (!visible) return;
-
-    navLinks.forEach((link) => {
-      const active = link.getAttribute("href") === `#${visible.target.id}`;
-      if (active) link.setAttribute("aria-current", "true");
-      else link.removeAttribute("aria-current");
-    });
-  }, {
-    rootMargin: "-20% 0px -62%",
-    threshold: [0, 0.1, 0.35]
+  toggle.addEventListener("click", () => {
+    const next = !nav.classList.contains("is-open");
+    nav.classList.toggle("is-open", next);
+    toggle.setAttribute("aria-expanded", String(next));
   });
 
-  sections.forEach((section) => observer.observe(section));
+  nav.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeMenu();
+  });
+}
+
+function setupReveal() {
+  const elements = [...document.querySelectorAll(".reveal")];
+
+  if (!("IntersectionObserver" in window)) {
+    elements.forEach((item) => item.classList.add("is-visible"));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-visible");
+      observer.unobserve(entry.target);
+    });
+  }, {threshold: 0.12, rootMargin: "0px 0px -40px"});
+
+  elements.forEach((item) => observer.observe(item));
 }
 
 async function init() {
   const response = await fetch(dataUrl);
-  if (!response.ok) {
-    throw new Error(`Catalogo non disponibile (${response.status})`);
-  }
+  if (!response.ok) throw new Error(`Catalogo non disponibile (${response.status})`);
 
   const data = await response.json();
-  projects = data.projects.map(normalizeProject);
-  updateCount();
-  renderJumpList();
-  renderProjects();
-  initSectionNavigation();
+  const groups = data.groups;
+
+  renderFilters(groups);
+  renderProjects(groups);
+  renderStats(groups);
+  setupFilters();
+  setupReveal();
 }
 
+renderPlaylists();
+setupNavigation();
 document.querySelector("#year").textContent = new Date().getFullYear();
 
 init().catch((error) => {
-  projectList.innerHTML = `<p class="load-error">Non riesco a caricare i progetti. ${escapeHtml(error.message)}</p>`;
+  groupsEl.innerHTML = `<p class="load-error">Non riesco a caricare i progetti. ${esc(error.message)}</p>`;
 });

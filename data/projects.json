@@ -1,104 +1,113 @@
 {
-  "projects": [
+  "groups": [
     {
-      "id": "guardalo",
-      "name": "GUARDALO",
-      "publicCopy": {
-        "kind": "Sito · Anime · IT e EN",
-        "tagline": "Scegliere cosa guardare senza perderci un’ora.",
-        "pitch": "Consiglia anime partendo dai gusti e dal tempo che hai. Percorsi per entrare in un genere e schede senza spoiler, con la durata reale e dove vederlo legalmente. In italiano e in inglese.",
-        "role": "Ideazione, contenuti e sviluppo",
-        "linkLabel": "Visita GUARDALO",
-        "visual": "assets/projects/guardalo-live.png",
-        "visualAlt": "La home di GUARDALO."
-      },
-      "publicUrl": "https://guardalo.vercel.app/",
-      "repositoryUrl": "https://github.com/Spidahh/guardalo"
+      "id": "prodotti",
+      "label": "App e siti",
+      "title": "App e siti da usare",
+      "description": "Tre progetti online: si aprono da qui e si provano subito.",
+      "projects": [
+        {
+          "id": "guardalo",
+          "name": "GUARDALO",
+          "kind": "Sito · Anime · IT e EN",
+          "tagline": "Scegliere cosa guardare senza perderci un’ora.",
+          "pitch": "Consiglia anime partendo dai gusti e dal tempo che hai. Percorsi per entrare in un genere e schede senza spoiler, con la durata reale e dove vederlo legalmente. In italiano e in inglese.",
+          "role": "Ideazione, contenuti e sviluppo",
+          "image": "assets/projects/guardalo.webp",
+          "alt": "Visual di GUARDALO.",
+          "tone": "violet",
+          "publicUrl": "https://guardalo.vercel.app/",
+          "repositoryUrl": "https://github.com/Spidahh/guardalo"
+        },
+        {
+          "id": "organizzamici",
+          "name": "Organizzamici",
+          "kind": "App web · Gruppi ed eventi",
+          "tagline": "La data giusta, senza cento messaggi.",
+          "pitch": "Un solo link raccoglie le disponibilità di tutti e mostra la data che funziona per il gruppo. Nello stesso evento restano attaccati viaggi, auto, posti letto e cose da portare.",
+          "role": "Ideazione, design e sviluppo",
+          "image": "assets/projects/organizzamici.webp",
+          "alt": "Visual di Organizzamici.",
+          "tone": "green",
+          "publicUrl": "https://spidahh.github.io/Organizzamici/",
+          "repositoryUrl": "https://github.com/Spidahh/Organizzamici"
+        },
+        {
+          "id": "speso",
+          "name": "Speso",
+          "kind": "App web · Cucina e spesa",
+          "tagline": "Decidi le cene, la lista si scrive da sola.",
+          "pitch": "Si scelgono i piatti della settimana e la spesa esce già divisa per reparto, nell’ordine delle corsie. Tiene conto di cosa c’è in dispensa e funziona anche senza connessione.",
+          "role": "Ideazione, design e sviluppo",
+          "image": "assets/projects/speso.webp",
+          "alt": "Visual di Speso.",
+          "tone": "orange",
+          "publicUrl": "https://spidahh.github.io/Speso/",
+          "repositoryUrl": "https://github.com/Spidahh/Speso"
+        }
+      ]
     },
     {
-      "id": "organizzamici",
-      "name": "Organizzamici",
-      "publicCopy": {
-        "kind": "App web · Gruppi ed eventi",
-        "tagline": "La data giusta, senza cento messaggi.",
-        "pitch": "Un solo link raccoglie le disponibilità di tutti e mostra la data che funziona per il gruppo. Nello stesso evento restano attaccati viaggi, auto, posti letto e cose da portare.",
-        "role": "Ideazione, design e sviluppo",
-        "linkLabel": "Apri Organizzamici",
-        "visual": "assets/projects/organizzamici-live.png",
-        "visualAlt": "La schermata iniziale di Organizzamici."
-      },
-      "publicUrl": "https://spidahh.github.io/Organizzamici/",
-      "repositoryUrl": "https://github.com/Spidahh/Organizzamici"
+      "id": "strumenti",
+      "label": "Strumenti ed editoria",
+      "title": "Strumenti e progetti editoriali",
+      "description": "Un’app per tenere insieme le proprie informazioni e un formato per seguire la politica nel tempo.",
+      "projects": [
+        {
+          "id": "smem0",
+          "name": "Smem0",
+          "kind": "App · Note e memoria personale",
+          "tagline": "Ritrovare le cose facendo una domanda.",
+          "pitch": "Note, documenti, foto e vocali finiscono nello stesso posto e si ritrovano chiedendo, invece di cercare tra le cartelle. Ogni risposta resta collegata al file da cui viene.",
+          "role": "Ideazione, design e sviluppo",
+          "image": "assets/projects/smem0.webp",
+          "alt": "Visual di Smem0.",
+          "tone": "cyan"
+        },
+        {
+          "id": "politicometro",
+          "name": "Politicometro",
+          "kind": "Progetto editoriale · Politica",
+          "tagline": "Una promessa e quello che succede dopo.",
+          "pitch": "Un formato per seguire dichiarazioni e decisioni pubbliche oltre il giorno in cui vengono fatte, tenendo insieme fonti, aggiornamenti e conseguenze.",
+          "role": "Ideazione e ricerca",
+          "image": "assets/projects/politicometro.webp",
+          "alt": "Visual di Politicometro.",
+          "tone": "blue",
+          "repositoryUrl": "https://github.com/Spidahh/Politicometro"
+        }
+      ]
     },
     {
-      "id": "speso",
-      "name": "Speso",
-      "publicCopy": {
-        "kind": "App web · Cucina e spesa",
-        "tagline": "Decidi le cene, la lista si scrive da sola.",
-        "pitch": "Si scelgono i piatti della settimana e la spesa esce già divisa per reparto, nell’ordine delle corsie. Tiene conto di cosa c’è in dispensa e funziona anche senza connessione.",
-        "role": "Ideazione, design e sviluppo",
-        "linkLabel": "Apri Speso",
-        "visual": "assets/projects/speso.png",
-        "visualAlt": "La schermata di Speso con la lista della spesa."
-      },
-      "publicUrl": "https://spidahh.github.io/Speso/",
-      "repositoryUrl": "https://github.com/Spidahh/Speso"
-    },
-    {
-      "id": "ragequit",
-      "name": "RAGEQUIT",
-      "publicCopy": {
-        "kind": "Videogioco · Arena multiplayer",
-        "tagline": "Il tuo stile lo decidi prima della partita.",
-        "pitch": "Arena PvP che gira nel browser: quattro classi e un set di abilità da comporre prima di entrare. Il modo in cui le combini decide come si combatte.",
-        "role": "Game design e sviluppo",
-        "visual": "assets/projects/ragequit.webp",
-        "visualAlt": "Illustrazione di RAGEQUIT."
-      },
-      "publicUrl": "",
-      "repositoryUrl": "https://github.com/Spidahh/Ragequit"
-    },
-    {
-      "id": "smem0",
-      "name": "Smem0",
-      "publicCopy": {
-        "kind": "App · Note e memoria personale",
-        "tagline": "Ritrovare le cose facendo una domanda.",
-        "pitch": "Note, documenti, foto e vocali finiscono nello stesso posto e si ritrovano chiedendo, invece di cercare tra le cartelle. Ogni risposta resta collegata al file da cui viene.",
-        "role": "Ideazione, design e sviluppo",
-        "visual": "assets/projects/smem0.jpg",
-        "visualAlt": "L’interfaccia di Smem0."
-      },
-      "publicUrl": ""
-    },
-    {
-      "id": "politicometro",
-      "name": "Politicometro",
-      "publicCopy": {
-        "kind": "Progetto editoriale · Politica",
-        "tagline": "Una promessa e quello che succede dopo.",
-        "pitch": "Un formato per seguire dichiarazioni e decisioni pubbliche oltre il giorno in cui vengono fatte, tenendo insieme fonti, aggiornamenti e conseguenze.",
-        "role": "Ideazione e ricerca",
-        "visual": "assets/projects/politicometro-concept.svg",
-        "visualAlt": "Concept editoriale di Politicometro."
-      },
-      "publicUrl": "",
-      "repositoryUrl": "https://github.com/Spidahh/Politicometro"
-    },
-    {
-      "id": "frattura",
-      "name": "Frattura",
-      "publicCopy": {
-        "kind": "Narrativa",
-        "tagline": "Saga fantasy adulta di progressione, avventura e mistero.",
-        "pitch": "",
-        "role": "Scrittura",
-        "visual": "assets/projects/frattura.jpg",
-        "visualAlt": "Copertina di Frattura.",
-        "visualFit": "contain"
-      },
-      "publicUrl": ""
+      "id": "mondi",
+      "label": "Gioco e narrativa",
+      "title": "Gioco e narrativa",
+      "description": "Un’arena multiplayer nel browser e una saga fantasy.",
+      "projects": [
+        {
+          "id": "ragequit",
+          "name": "RAGEQUIT",
+          "kind": "Videogioco · Arena multiplayer",
+          "tagline": "Il tuo stile lo decidi prima della partita.",
+          "pitch": "Arena PvP che gira nel browser: quattro classi e un set di abilità da comporre prima di entrare. Il modo in cui le combini decide come si combatte.",
+          "role": "Game design e sviluppo",
+          "image": "assets/projects/ragequit.webp",
+          "alt": "Illustrazione di RAGEQUIT.",
+          "tone": "red",
+          "repositoryUrl": "https://github.com/Spidahh/Ragequit"
+        },
+        {
+          "id": "frattura",
+          "name": "Frattura",
+          "kind": "Narrativa",
+          "tagline": "Saga fantasy adulta di progressione, avventura e mistero.",
+          "pitch": "",
+          "role": "Scrittura",
+          "image": "assets/projects/frattura.webp",
+          "alt": "Visual di Frattura.",
+          "tone": "gold"
+        }
+      ]
     }
   ]
 }

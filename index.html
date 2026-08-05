@@ -3,144 +3,129 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portfolio di Francesco Noncistà: app e siti da usare, un gioco, progetti grafici, scrittura e playlist.">
-  <meta name="theme-color" content="#f4f3ee">
+  <meta name="description" content="Portfolio di Francesco Noncistà: app e siti da usare, un videogioco, progetti editoriali, narrativa e playlist.">
+  <meta name="theme-color" content="#f3efe8">
   <title>Francesco Noncistà — Portfolio</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23f4f3ee'/%3E%3Ccircle cx='32' cy='32' r='26' fill='none' stroke='%230d42ed' stroke-width='3'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial,sans-serif' font-size='31' font-weight='700' fill='%230b0d12'%3ES%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="styles.css">
-  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=2026-08-05c">
+  <script src="app.js?v=2026-08-05c" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#progetti">Vai ai progetti</a>
 
-  <header class="site-header">
-    <a class="signature" href="#top" aria-label="Torna all’inizio">
-      <span class="signature-mark" aria-hidden="true">S</span>
-      <span>Francesco Noncistà</span>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Torna all’inizio">
+      <span class="brand-mark" aria-hidden="true">F</span>
+      <span class="brand-copy">
+        <strong>Francesco Noncistà</strong>
+        <small>App · giochi · storie</small>
+      </span>
     </a>
-    <nav class="main-nav" aria-label="Navigazione principale">
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span>
+      <span class="sr-only">Apri il menu</span>
+    </button>
+
+    <nav class="main-nav" id="main-nav" aria-label="Navigazione principale">
       <a href="#progetti">Progetti</a>
-      <a href="#playlist">Playlist</a>
-      <a href="#contatti">Contatti</a>
+      <a href="#metodo">Come lavoro</a>
+      <a href="#musica">Musica</a>
+      <a class="nav-cta" href="#contatti">Contatti</a>
     </nav>
   </header>
 
-  <main id="top">
+  <main>
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <h1 id="hero-title">Progetti da usare, giocare e leggere.</h1>
-        <p class="hero-intro">Faccio app e siti, un gioco, grafica e scrittura. Qui sotto ci sono tutti, quelli che puoi aprire subito per primi.</p>
-        <a class="text-link" href="#progetti">Vai ai progetti <span aria-hidden="true">↓</span></a>
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span></span> Portfolio · 2026</p>
+        <h1 id="hero-title">Progetti da <em>usare</em>, giocare e leggere.</h1>
+        <p class="hero-intro">App e siti, un videogioco, progetti editoriali e scrittura. Li penso, li disegno e li costruisco.</p>
+        <div class="hero-actions">
+          <a class="button button--dark" href="#progetti">Vai ai progetti <span aria-hidden="true">↓</span></a>
+          <a class="button button--ghost" href="#contatti">Scrivimi <span aria-hidden="true">↗</span></a>
+        </div>
+        <dl class="hero-stats" aria-label="Numeri del portfolio">
+          <div><dt id="stat-projects">--</dt><dd>progetti</dd></div>
+          <div><dt id="stat-online">--</dt><dd>già online, da provare</dd></div>
+          <div><dt>01</dt><dd>persona, dall’idea al codice</dd></div>
+        </dl>
       </div>
 
-      <a class="hero-visual" href="#guardalo" aria-label="Vai al progetto GUARDALO">
-        <span class="hero-visual-label">01 / GUARDALO</span>
-        <span class="hero-visual-frame">
-          <img src="assets/projects/guardalo-live.png" alt="La home di GUARDALO." fetchpriority="high">
-        </span>
+      <a class="hero-showcase reveal reveal--delay" href="#guardalo" aria-label="Vai al progetto GUARDALO">
+        <div class="showcase-topline"><span>In evidenza</span><strong>GUARDALO</strong></div>
+        <div class="showcase-image">
+          <img src="assets/projects/guardalo.webp" alt="Visual di GUARDALO." fetchpriority="high">
+        </div>
+        <div class="showcase-foot"><span>Sito anime · IT / EN</span><span>Vai al progetto ↗</span></div>
       </a>
     </section>
 
-    <nav class="project-jump" aria-label="Indice dei progetti">
-      <p class="jump-title">Indice dei progetti <span id="jump-count">--</span></p>
-      <ol id="project-jump-list"></ol>
-    </nav>
-
-    <section class="projects" id="progetti" aria-labelledby="projects-title">
-      <div class="section-heading">
-        <p class="section-number" aria-hidden="true">01</p>
-        <div>
-          <p class="section-label"><span id="projects-count">--</span> progetti</p>
-          <h2 id="projects-title">Progetti</h2>
-        </div>
-      </div>
-      <div id="project-list" class="project-list" aria-live="polite"></div>
+    <section class="statement" aria-label="In breve">
+      <p class="statement-index">01 / IN BREVE</p>
+      <p class="statement-copy">Ogni progetto qui sotto l’ho <strong>pensato, disegnato e costruito</strong>. Dove c’è qualcosa da provare, trovi il link.</p>
     </section>
 
-    <section class="playlists" id="playlist" aria-labelledby="playlist-title">
-      <div class="playlist-layout">
-        <div class="playlist-heading">
-          <p class="section-number section-number--inline" aria-hidden="true">02</p>
-          <p class="section-label">Playlist Spotify</p>
-          <h2 id="playlist-title">Dodici playlist, dal lo-fi al metal.</h2>
-          <a class="text-link text-link--red" href="https://open.spotify.com/user/uhlxjkxuufd9gbsgn62oz00ep" target="_blank" rel="noopener">Profilo Spotify <span aria-hidden="true">↗</span></a>
+    <section class="projects" id="progetti" aria-labelledby="projects-title">
+      <div class="section-intro reveal">
+        <div>
+          <p class="eyebrow"><span></span> I progetti</p>
+          <h2 id="projects-title">Divisi per quello che sono, non per quanto sono avanti.</h2>
         </div>
-
-        <div class="playlist-rail" aria-label="Playlist Spotify">
-          <a class="playlist-item" href="https://open.spotify.com/playlist/30I943TwY7ANxtmVrgoeLZ" target="_blank" rel="noopener">
-            <img src="https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da8420ea0d36e5815e4df35e247b" alt="" loading="lazy">
-            <span class="playlist-number">01</span><strong>Sottosfondo</strong><small>Lo-fi · Chill</small>
-          </a>
-          <a class="playlist-item" href="https://open.spotify.com/playlist/5wp0oohWN1HoAzvZqhIcBV" target="_blank" rel="noopener">
-            <img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84b4421e92ef24c2cda422cc50" alt="" loading="lazy">
-            <span class="playlist-number">02</span><strong>Definitivamente bella</strong><small>Hit · Mix</small>
-          </a>
-          <a class="playlist-item" href="https://open.spotify.com/playlist/2Qp1dOfNXOrGJrxxFxqcvh" target="_blank" rel="noopener">
-            <img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da847eadc273932893f6986ee1da" alt="" loading="lazy">
-            <span class="playlist-number">03</span><strong>Rap Italiano</strong><small>Hip-Hop</small>
-          </a>
-          <a class="playlist-item" href="https://open.spotify.com/playlist/3tbfFbIRVELTifW86O2rNj" target="_blank" rel="noopener">
-            <img src="https://image-cdn-fa.spotifycdn.com/image/ab67706c0000da84a5930437740a201d11de0e12" alt="" loading="lazy">
-            <span class="playlist-number">04</span><strong>Astare Relax</strong><small>Ambient</small>
-          </a>
-          <a class="playlist-item" href="https://open.spotify.com/playlist/1DUsXa8l2dIIhG7YkuOirK" target="_blank" rel="noopener">
-            <img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84f84f258bed68ba1e77fe3115" alt="" loading="lazy">
-            <span class="playlist-number">05</span><strong>Bassbondanza</strong><small>Bass · Electronic</small>
-          </a>
-          <a class="playlist-item" href="https://open.spotify.com/playlist/26QxZ2aHgTIBXzLPH1NPMG" target="_blank" rel="noopener">
-            <img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84be00fab8b19d0ad0f32c92c6" alt="" loading="lazy">
-            <span class="playlist-number">06</span><strong>ElectroThings</strong><small>Electro · Synth</small>
-          </a>
-          <a class="playlist-item" href="https://open.spotify.com/playlist/6CJtiJA4E4ItJ888qSs2mW" target="_blank" rel="noopener">
-            <img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8453c8cb8509c3feeccdab8951" alt="" loading="lazy">
-            <span class="playlist-number">07</span><strong>Italiana</strong><small>Pop italiano</small>
-          </a>
-          <a class="playlist-item" href="https://open.spotify.com/playlist/2fGlkkuU6bpTJQzekgPMGm" target="_blank" rel="noopener">
-            <img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84b290ccdcc4e755d59114758f" alt="" loading="lazy">
-            <span class="playlist-number">08</span><strong>Love It</strong><small>Romantic</small>
-          </a>
-          <a class="playlist-item" href="https://open.spotify.com/playlist/1kL5LBxd53GpYwx7c4LOj5" target="_blank" rel="noopener">
-            <img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8478f30945bc498ba4393c8aab" alt="" loading="lazy">
-            <span class="playlist-number">09</span><strong>Reggae Music</strong><small>Reggae · Dub</small>
-          </a>
-          <a class="playlist-item" href="https://open.spotify.com/playlist/25Y6Kt39iokGDYheflbjfx" target="_blank" rel="noopener">
-            <img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84da8b3036d4246e6ddd00a39b" alt="" loading="lazy">
-            <span class="playlist-number">10</span><strong>Rock, Metal &amp; Il Diavolo</strong><small>Rock · Metal</small>
-          </a>
-          <a class="playlist-item" href="https://open.spotify.com/playlist/0cp6DP806RkTK8UHQ2MfI6" target="_blank" rel="noopener">
-            <img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84387782c80fe0cd7541079701" alt="" loading="lazy">
-            <span class="playlist-number">11</span><strong>Straniera</strong><small>Internazionale</small>
-          </a>
-          <a class="playlist-item" href="https://open.spotify.com/playlist/5O04i4e6B9KtRbh5t248iI" target="_blank" rel="noopener">
-            <img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84a3721d1d51e3921d1b04f5f3" alt="" loading="lazy">
-            <span class="playlist-number">12</span><strong>Anime</strong><small>OST · J-Pop</small>
-          </a>
-        </div>
+        <p>App che si possono aprire subito, strumenti e formati editoriali, un gioco e una saga fantasy.</p>
       </div>
+
+      <nav class="project-filters" id="project-filters" aria-label="Filtra i progetti"></nav>
+
+      <div id="project-groups" class="project-groups" aria-live="polite"></div>
+    </section>
+
+    <section class="method" id="metodo" aria-labelledby="method-title">
+      <div class="method-head reveal">
+        <p class="eyebrow eyebrow--light"><span></span> Come lavoro</p>
+        <h2 id="method-title">Faccio da solo tutti i passaggi, dall’idea al sito online.</h2>
+      </div>
+      <div class="method-grid">
+        <article class="method-card reveal"><span>01</span><h3>Idea</h3><p>Parto da un problema concreto e da cosa serve davvero a chi lo userà.</p></article>
+        <article class="method-card reveal"><span>02</span><h3>Identità</h3><p>Nome, colori, logo e tono: il progetto deve sembrare una cosa sola.</p></article>
+        <article class="method-card reveal"><span>03</span><h3>Interfaccia</h3><p>Organizzo schermate e contenuti perché si capiscano senza istruzioni.</p></article>
+        <article class="method-card reveal"><span>04</span><h3>Codice</h3><p>Sviluppo, provo e correggo finché regge anche fuori dal mio computer.</p></article>
+      </div>
+    </section>
+
+    <section class="music" id="musica" aria-labelledby="music-title">
+      <div class="section-intro section-intro--music reveal">
+        <div>
+          <p class="eyebrow"><span></span> Playlist</p>
+          <h2 id="music-title">Dodici playlist, dal lo-fi al metal.</h2>
+        </div>
+        <p>Musica messa insieme negli anni: elettronica, rap, reggae, rock, pop italiano e colonne sonore anime.</p>
+      </div>
+      <div class="playlist-grid" id="playlist-grid"></div>
+      <a class="music-link" href="https://open.spotify.com/user/uhlxjkxuufd9gbsgn62oz00ep" target="_blank" rel="noopener">Apri il profilo Spotify <span aria-hidden="true">↗</span></a>
     </section>
 
     <section class="contact" id="contatti" aria-labelledby="contact-title">
-      <div class="contact-heading">
-        <p class="section-number section-number--inline" aria-hidden="true">03</p>
-        <p class="section-label">Contatti</p>
+      <div class="contact-copy reveal">
+        <p class="eyebrow eyebrow--light"><span></span> Contatti</p>
         <h2 id="contact-title">Hai una domanda o vuoi collaborare?</h2>
-        <p class="contact-note">Mi chiamo Francesco. Penso, disegno e costruisco quasi tutto quello che c’è qui sopra, dall’idea al codice. Se ti serve una mano su qualcosa del genere, scrivimi.</p>
+        <p>Mi chiamo Francesco. Penso, disegno e costruisco i progetti che hai visto qui sopra. Se ti serve una mano su qualcosa del genere, scrivimi.</p>
       </div>
-      <div class="contact-links">
-        <a href="mailto:magistaf@gmail.com"><span>Email</span><span aria-hidden="true">↗</span></a>
-        <a href="https://github.com/spidahh" target="_blank" rel="noopener"><span>GitHub</span><span aria-hidden="true">↗</span></a>
-        <a href="https://www.instagram.com/francesco_noncista/" target="_blank" rel="noopener"><span>Instagram</span><span aria-hidden="true">↗</span></a>
+      <div class="contact-links reveal reveal--delay">
+        <a href="mailto:magistaf@gmail.com"><span>Email</span><strong>magistaf@gmail.com</strong><i>↗</i></a>
+        <a href="https://github.com/spidahh" target="_blank" rel="noopener"><span>GitHub</span><strong>@spidahh</strong><i>↗</i></a>
+        <a href="https://www.instagram.com/francesco_noncista/" target="_blank" rel="noopener"><span>Instagram</span><strong>@francesco_noncista</strong><i>↗</i></a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <span>© <span id="year"></span> Francesco Noncistà</span>
-    <a href="#top">Su <span aria-hidden="true">↑</span></a>
+    <a href="#top">Torna su ↑</a>
   </footer>
 
   <noscript>Per vedere l’elenco dei progetti è necessario attivare JavaScript.</noscript>
