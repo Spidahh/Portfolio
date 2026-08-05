@@ -9,18 +9,18 @@ const showcaseListEl = document.querySelector("#showcase-list");
 const showcaseCountEl = document.querySelector("#showcase-count");
 
 const playlists = [
-  ["Sottosfondo", "Lo-fi · Chill", "https://open.spotify.com/playlist/30I943TwY7ANxtmVrgoeLZ", "01-sottosfondo"],
-  ["Definitivamente bella", "Hit · Mix", "https://open.spotify.com/playlist/5wp0oohWN1HoAzvZqhIcBV", "02-definitivamente-bella"],
-  ["Rap Italiano", "Hip-Hop", "https://open.spotify.com/playlist/2Qp1dOfNXOrGJrxxFxqcvh", "03-rap-italiano"],
-  ["Astare Relax", "Ambient", "https://open.spotify.com/playlist/3tbfFbIRVELTifW86O2rNj", "04-astare-relax"],
-  ["Bassbondanza", "Bass · Electronic", "https://open.spotify.com/playlist/1DUsXa8l2dIIhG7YkuOirK", "05-bassbondanza"],
-  ["ElectroThings", "Electro · Synth", "https://open.spotify.com/playlist/26QxZ2aHgTIBXzLPH1NPMG", "06-electrothings"],
-  ["Italiana", "Pop italiano", "https://open.spotify.com/playlist/6CJtiJA4E4ItJ888qSs2mW", "07-italiana"],
-  ["Love It", "Romantic", "https://open.spotify.com/playlist/2fGlkkuU6bpTJQzekgPMGm", "08-love-it"],
-  ["Reggae Music", "Reggae · Dub", "https://open.spotify.com/playlist/1kL5LBxd53GpYwx7c4LOj5", "09-reggae-music"],
-  ["Rock, Metal & Il Diavolo", "Rock · Metal", "https://open.spotify.com/playlist/25Y6Kt39iokGDYheflbjfx", "10-rock-metal"],
-  ["Straniera", "Internazionale", "https://open.spotify.com/playlist/0cp6DP806RkTK8UHQ2MfI6", "11-straniera"],
-  ["Anime", "OST · J-Pop", "https://open.spotify.com/playlist/5O04i4e6B9KtRbh5t248iI", "12-anime"]
+  ["Sottosfondo", "Lo-fi · Chill", "https://open.spotify.com/playlist/30I943TwY7ANxtmVrgoeLZ", "01"],
+  ["Definitivamente bella", "Hit · Mix", "https://open.spotify.com/playlist/5wp0oohWN1HoAzvZqhIcBV", "02"],
+  ["Rap Italiano", "Hip-Hop", "https://open.spotify.com/playlist/2Qp1dOfNXOrGJrxxFxqcvh", "03"],
+  ["Astare Relax", "Ambient", "https://open.spotify.com/playlist/3tbfFbIRVELTifW86O2rNj", "04"],
+  ["Bassbondanza", "Bass · Electronic", "https://open.spotify.com/playlist/1DUsXa8l2dIIhG7YkuOirK", "05"],
+  ["ElectroThings", "Electro · Synth", "https://open.spotify.com/playlist/26QxZ2aHgTIBXzLPH1NPMG", "06"],
+  ["Italiana", "Pop italiano", "https://open.spotify.com/playlist/6CJtiJA4E4ItJ888qSs2mW", "07"],
+  ["Love It", "Romantic", "https://open.spotify.com/playlist/2fGlkkuU6bpTJQzekgPMGm", "08"],
+  ["Reggae Music", "Reggae · Dub", "https://open.spotify.com/playlist/1kL5LBxd53GpYwx7c4LOj5", "09"],
+  ["Rock, Metal & Il Diavolo", "Rock · Metal", "https://open.spotify.com/playlist/25Y6Kt39iokGDYheflbjfx", "10"],
+  ["Straniera", "Internazionale", "https://open.spotify.com/playlist/0cp6DP806RkTK8UHQ2MfI6", "11"],
+  ["Anime", "OST · J-Pop", "https://open.spotify.com/playlist/5O04i4e6B9KtRbh5t248iI", "12"]
 ];
 
 function esc(value = "") {
@@ -154,7 +154,7 @@ function renderPlaylists() {
         <span class="playlist-number">${pad(index + 1)}</span>
         <span class="playlist-arrow" aria-hidden="true">↗</span>
       </span>
-      <img class="playlist-cover" src="assets/playlists/${esc(item[3])}.svg" alt="" loading="lazy">
+      <img class="playlist-cover" src="assets/playlists/${esc(item[3])}.jpg" alt="" loading="lazy">
       <span class="playlist-text">
         <strong>${esc(item[0])}</strong>
         <small>${esc(item[1])}</small>
