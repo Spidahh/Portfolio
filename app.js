@@ -56,22 +56,31 @@ function projectCard(project, index, variant) {
     ? `<p class="project-description">${esc(project.pitch)}</p>`
     : "";
 
+  const intestazione = `
+    <p class="project-kind"><span class="project-index">${pad(index)}</span>${esc(project.kind)}</p>
+    <div class="project-title-row">
+      <span class="project-dot" aria-hidden="true"></span>
+      <h4>${esc(project.name)}</h4>
+    </div>
+    <p class="project-tagline">${esc(project.tagline)}</p>
+  `;
+
+  const dettaglio = `
+    ${description}
+    <p class="project-role"><strong>Ruolo:</strong> ${esc(project.role)}</p>
+    ${projectLinks(project)}
+  `;
+
+  const corpo = variant === "feature"
+    ? `<div class="project-card__body"><div>${intestazione}</div><div>${dettaglio}</div></div>`
+    : `<div class="project-card__body">${intestazione}${dettaglio}</div>`;
+
   return `
     <article class="project-card project-card--${esc(variant)} reveal" id="${esc(project.id)}" data-tone="${esc(project.tone || "violet")}">
       <div class="project-media">
         <img src="${esc(project.image)}" alt="${esc(project.alt)}" loading="${index <= 2 ? "eager" : "lazy"}">
       </div>
-      <div class="project-card__body">
-        <p class="project-kind"><span class="project-index">${pad(index)}</span>${esc(project.kind)}</p>
-        <div class="project-title-row">
-          <span class="project-dot" aria-hidden="true"></span>
-          <h4>${esc(project.name)}</h4>
-        </div>
-        <p class="project-tagline">${esc(project.tagline)}</p>
-        ${description}
-        <p class="project-role"><strong>Ruolo:</strong> ${esc(project.role)}</p>
-        ${projectLinks(project)}
-      </div>
+      ${corpo}
     </article>
   `;
 }
