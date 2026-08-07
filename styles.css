@@ -213,6 +213,11 @@ button,a{-webkit-tap-highlight-color:transparent}
   font-size:12px;font-weight:700;text-decoration:none;transition:background .2s,color .2s
 }
 .project-link:hover{color:#fff;background:var(--ink)}
+.project-link--cta{
+  min-height:50px;padding:0 22px;color:#fff;background:var(--ink);font-size:13px;
+  box-shadow:0 8px 20px rgba(21,21,20,.16)
+}
+.project-link--cta:hover{background:var(--accent);border-color:var(--accent)}
 .project-link--soft{border-color:var(--line)}
 .load-error{width:var(--shell);margin:0 auto;color:#9b251d;font-size:16px}
 noscript{display:block;width:var(--shell);margin:0 auto;padding:24px 0;color:#9b251d}

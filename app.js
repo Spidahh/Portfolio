@@ -40,7 +40,8 @@ function projectLinks(project) {
   const links = [];
 
   if (project.publicUrl) {
-    links.push(`<a class="project-link" href="${esc(project.publicUrl)}" target="_blank" rel="noopener">Apri il progetto <span aria-hidden="true">↗</span></a>`);
+    const cta = project.cta || "Apri il progetto";
+    links.push(`<a class="project-link project-link--cta" href="${esc(project.publicUrl)}" target="_blank" rel="noopener">${esc(cta)} <span aria-hidden="true">↗</span></a>`);
   }
 
   if (project.repositoryUrl) {

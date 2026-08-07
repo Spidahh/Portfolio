@@ -1,18 +1,19 @@
 {
   "groups": [
     {
-      "id": "prodotti",
-      "label": "App e siti",
-      "title": "App e siti",
+      "id": "prova",
+      "label": "Da provare",
+      "title": "Da provare adesso",
       "description": "",
       "projects": [
         {
           "id": "guardalo",
           "name": "GUARDALO",
           "kind": "Sito · Anime · IT e EN",
-          "tagline": "Scegliere cosa guardare senza perderci un’ora.",
-          "pitch": "Consiglia anime partendo dai gusti e dal tempo che hai. Percorsi per entrare in un genere e schede senza spoiler, con la durata reale e dove vederlo legalmente.",
+          "tagline": "Smetti di scorrere. Inizia a guardare.",
+          "pitch": "Dici cosa ti va e quanto tempo hai, e ti arriva il titolo giusto: dove vederlo legalmente, quanto dura davvero, di cosa parla senza spoiler. Gratis, senza account, in italiano e in inglese.",
           "role": "Ideazione, contenuti e sviluppo",
+          "cta": "Trova cosa guardare",
           "image": "assets/projects/guardalo.webp",
           "alt": "Visual di GUARDALO.",
           "tone": "violet",
@@ -23,9 +24,10 @@
           "id": "organizzamici",
           "name": "Organizzamici",
           "kind": "App web · Gruppi ed eventi",
-          "tagline": "La data giusta, senza cento messaggi.",
-          "pitch": "Un solo link raccoglie le disponibilità di tutti e mostra la data che funziona per il gruppo. Nello stesso evento restano attaccati viaggi, auto, posti letto e cose da portare.",
+          "tagline": "Un link. La data giusta. Fine.",
+          "pitch": "Mandi l’invito, ognuno segna quando può e l’app tira fuori la serata che funziona per tutti. Auto, posti letto e cose da portare restano dentro l’evento, non dispersi in chat.",
           "role": "Ideazione, design e sviluppo",
+          "cta": "Crea il tuo evento",
           "image": "assets/projects/organizzamici.webp",
           "alt": "Visual di Organizzamici.",
           "tone": "green",
@@ -36,41 +38,24 @@
           "id": "speso",
           "name": "Speso",
           "kind": "App web · Cucina e spesa",
-          "tagline": "Decidi le cene, la lista si scrive da sola.",
-          "pitch": "Si scelgono i piatti della settimana e la spesa esce già divisa per reparto, nell’ordine delle corsie. Tiene conto di cosa c’è in dispensa e funziona anche senza connessione.",
+          "tagline": "Decidi le cene. Alla lista pensa lei.",
+          "pitch": "Scegli i piatti della settimana e la spesa si scrive da sola, ordinata come le corsie del tuo supermercato. Tiene conto di cosa hai già in dispensa e funziona anche senza campo.",
           "role": "Ideazione, design e sviluppo",
+          "cta": "Prova Speso",
           "image": "assets/projects/speso.webp",
           "alt": "Visual di Speso.",
           "tone": "orange",
           "publicUrl": "https://spidahh.github.io/Speso/",
           "repositoryUrl": "https://github.com/Spidahh/Speso"
-        }
-      ]
-    },
-    {
-      "id": "strumenti",
-      "label": "Strumenti ed editoria",
-      "title": "Strumenti e progetti editoriali",
-      "description": "",
-      "projects": [
-        {
-          "id": "smem0",
-          "name": "Smem0",
-          "kind": "App · Note e memoria personale",
-          "tagline": "Ritrovare le cose facendo una domanda.",
-          "pitch": "Note, documenti, foto e vocali finiscono nello stesso posto e si ritrovano chiedendo, invece di cercare tra le cartelle. Ogni risposta resta collegata al file da cui viene.",
-          "role": "Ideazione, design e sviluppo",
-          "image": "assets/projects/smem0.webp",
-          "alt": "Visual di Smem0.",
-          "tone": "cyan"
         },
         {
           "id": "politicometro",
           "name": "Politicometro",
           "kind": "Progetto editoriale · Politica",
           "tagline": "Dal dire al fare.",
-          "pitch": "Un formato per seguire dichiarazioni e decisioni pubbliche oltre il giorno in cui vengono fatte, tenendo insieme fonti, aggiornamenti e conseguenze.",
+          "pitch": "Chi ha promesso cosa, e com’è andata a finire. Ogni caso segue una dichiarazione nel tempo con fonti, atti e conseguenze, così non devi fidarti della memoria di nessuno.",
           "role": "Ideazione e ricerca",
+          "cta": "Apri Politicometro",
           "image": "assets/projects/politicometro.webp",
           "alt": "Visual di Politicometro.",
           "tone": "blue",
@@ -80,22 +65,33 @@
       ]
     },
     {
-      "id": "mondi",
-      "label": "Gioco e narrativa",
-      "title": "Gioco e narrativa",
+      "id": "altri",
+      "label": "Altri progetti",
+      "title": "Altri progetti",
       "description": "",
       "projects": [
         {
           "id": "ragequit",
           "name": "RAGEQUIT",
           "kind": "Videogioco · Arena multiplayer",
-          "tagline": "Il tuo stile lo decidi prima della partita.",
-          "pitch": "Arena PvP che gira nel browser: quattro classi e un set di abilità da comporre prima di entrare. Il modo in cui le combini decide come si combatte.",
+          "tagline": "Otto abilità. Nessuna scusa.",
+          "pitch": "Arena PvP che gira nel browser: scegli la classe, componi il tuo set di abilità ed entri. Non vince chi ha il personaggio più forte, vince chi combina meglio.",
           "role": "Game design e sviluppo",
           "image": "assets/projects/ragequit.webp",
           "alt": "Illustrazione di RAGEQUIT.",
           "tone": "red",
           "repositoryUrl": "https://github.com/Spidahh/Ragequit"
+        },
+        {
+          "id": "smem0",
+          "name": "Smem0",
+          "kind": "App · Note e memoria personale",
+          "tagline": "Non cercare più. Chiedi.",
+          "pitch": "Note, foto, documenti e vocali finiscono tutti nello stesso posto. Quando ti serve una cosa fai una domanda, e insieme alla risposta ti arriva il file da cui viene.",
+          "role": "Ideazione, design e sviluppo",
+          "image": "assets/projects/smem0.webp",
+          "alt": "Visual di Smem0.",
+          "tone": "cyan"
         },
         {
           "id": "frattura",
