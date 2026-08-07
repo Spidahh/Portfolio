@@ -197,6 +197,21 @@ function setupNavigation() {
   });
 }
 
+function setupScrollProgress() {
+  const bar = document.querySelector("#scroll-progress");
+  if (!bar) return;
+
+  const update = () => {
+    const scrollabile = document.documentElement.scrollHeight - window.innerHeight;
+    const quota = scrollabile > 0 ? window.scrollY / scrollabile : 0;
+    bar.style.transform = `scaleX(${Math.min(1, Math.max(0, quota)).toFixed(4)})`;
+  };
+
+  window.addEventListener("scroll", update, {passive: true});
+  window.addEventListener("resize", update);
+  update();
+}
+
 function setupReveal() {
   const elements = [...document.querySelectorAll(".reveal")];
 
@@ -233,6 +248,7 @@ async function init() {
 
 renderPlaylists();
 setupNavigation();
+setupScrollProgress();
 document.querySelector("#year").textContent = new Date().getFullYear();
 
 init().catch((error) => {

@@ -172,7 +172,12 @@ button,a{-webkit-tap-highlight-color:transparent}
   --accent:#6a5fff;
   scroll-margin-top:104px;
   position:relative;overflow:hidden;border:1px solid var(--line);border-radius:30px;background:var(--paper-2);
-  box-shadow:0 14px 44px rgba(42,35,27,.06)
+  box-shadow:0 14px 44px rgba(42,35,27,.06);
+  transition:transform .35s cubic-bezier(.4,0,.2,1),box-shadow .35s ease,border-color .35s ease
+}
+.project-card:hover{
+  transform:translateY(-5px);box-shadow:0 26px 66px rgba(42,35,27,.15);
+  border-color:color-mix(in srgb,var(--accent) 45%,var(--line))
 }
 [data-tone]{--accent:#6a5fff}
 [data-tone="green"]{--accent:#2a9b65}
@@ -201,6 +206,16 @@ button,a{-webkit-tap-highlight-color:transparent}
 .project-card--compact .project-description{font-size:14px}
 .project-card--compact .project-actions{margin-top:auto;padding-top:22px}
 
+.scroll-progress{
+  position:fixed;z-index:80;top:0;left:0;width:100%;height:3px;transform-origin:0 50%;
+  transform:scaleX(0);background:var(--violet);pointer-events:none
+}
+.project-card::before{
+  content:"";position:absolute;z-index:2;top:0;left:0;width:100%;height:4px;
+  background:var(--accent);transform:scaleX(0);transform-origin:0 50%;
+  transition:transform .45s cubic-bezier(.4,0,.2,1)
+}
+.project-card:hover::before,.project-card:focus-within::before{transform:scaleX(1)}
 .project-media{position:relative;overflow:hidden;background:#e6e2db}
 .project-media img{display:block;transition:transform .5s ease}
 .project-card:hover .project-media img{transform:scale(1.02)}
@@ -300,7 +315,9 @@ noscript{display:block;width:var(--shell);margin:0 auto;padding:24px 0;color:#9b
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .reveal{opacity:1;transform:none;transition:none}
-  .hero-showcase,.project-media img{transition:none}
+  .hero-showcase,.project-media img,.project-card,.project-card::before{transition:none}
+  .project-card:hover{transform:none}
+  .scroll-progress{display:none}
 }
 @media (max-width:1100px){
   :root{--shell:min(100% - 42px,1480px)}
