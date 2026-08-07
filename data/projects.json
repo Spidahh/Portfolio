@@ -3,7 +3,7 @@
     {
       "id": "prodotti",
       "label": "App e siti",
-      "title": "App e siti online",
+      "title": "App e siti",
       "description": "",
       "projects": [
         {
@@ -68,12 +68,13 @@
           "id": "politicometro",
           "name": "Politicometro",
           "kind": "Progetto editoriale · Politica",
-          "tagline": "Una promessa e quello che succede dopo.",
+          "tagline": "Dal dire al fare.",
           "pitch": "Un formato per seguire dichiarazioni e decisioni pubbliche oltre il giorno in cui vengono fatte, tenendo insieme fonti, aggiornamenti e conseguenze.",
           "role": "Ideazione e ricerca",
           "image": "assets/projects/politicometro.webp",
           "alt": "Visual di Politicometro.",
           "tone": "blue",
+          "publicUrl": "https://spidahh.github.io/Politicometro/",
           "repositoryUrl": "https://github.com/Spidahh/Politicometro"
         }
       ]
