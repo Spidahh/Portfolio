@@ -149,16 +149,11 @@ function renderStats(groups) {
 
 function renderPlaylists() {
   playlistGridEl.innerHTML = playlists.map((item, index) => `
-    <a class="playlist-card reveal" href="${esc(item[2])}" target="_blank" rel="noopener">
-      <span class="playlist-top">
-        <span class="playlist-number">${pad(index + 1)}</span>
-        <span class="playlist-arrow" aria-hidden="true">↗</span>
-      </span>
-      <img class="playlist-cover" src="assets/playlists/${esc(item[3])}.jpg" alt="" loading="lazy">
-      <span class="playlist-text">
-        <strong>${esc(item[0])}</strong>
-        <small>${esc(item[1])}</small>
-      </span>
+    <a class="playlist-card reveal" href="${esc(item[2])}" target="_blank" rel="noopener"
+       aria-label="${esc(item[0])} — ${esc(item[1])}">
+      <img class="playlist-cover" src="assets/playlists/${esc(item[3])}.jpg"
+           alt="Copertina della playlist ${esc(item[0])}" loading="lazy">
+      <span class="playlist-arrow" aria-hidden="true">↗</span>
     </a>
   `).join("");
 }
